@@ -1,0 +1,39 @@
+// txtctl.dlg
+
+// pagina 1 configurazione opzioni window roll ----------------------------
+
+DLGTEMPLATE DLG_TXTCTLGEN LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  SZ_NULL, DLG_TXTCTLGEN, 0, 0, 220, 156, NOT FS_DLGBORDER | WS_VISIBLE
+            PRESPARAMS PP_FONTNAMESIZE, SZ_FONTDLG
+    BEGIN
+        // gruppo selezione autoatica entryfield
+        CONTROL         SZ_NULL, GRP, 2, 118, 216, 30, WC_3DGROUPBOX,
+                        CCTL_FRAME0 | WS_GROUP | WS_VISIBLE
+        AUTOCHECKBOX    SZ_TCGEFAUTOSEL, CHK_TCGEFAUTOSEL, 5, 136, 200, 10
+        PUSHBUTTON      SZ_TCGEFAUTOSELBY, BTN_TCGEFAUTOSEL, 15, 121, 190, 13,
+                        NOT WS_TABSTOP
+        // gruppo mouse copy/paste
+        CONTROL         SZ_NULL, GRP, 2, 4, 216, 112,
+                        WC_3DGROUPBOX, CCTL_FRAME0 | WS_GROUP | WS_VISIBLE
+        AUTOCHECKBOX    SZ_TCGMOUCPYPST, CHK_TCGMOUCPYPST, 5, 105, 200, 10
+        AUTOCHECKBOX    SZ_TCGMCPYEF, CHK_TCGMCPYEF, 15, 92, 100, 10,
+                        NOT WS_TABSTOP
+        AUTOCHECKBOX    SZ_TCGMCPYMLE, CHK_TCGMCPYMLE, 115, 92, 100, 10,
+                        NOT WS_TABSTOP | WS_DISABLED
+        AUTOCHECKBOX    SZ_TCGMCPYSTXT, CHK_TCGMCPYSTXT, 15, 82, 100, 10,
+                        NOT WS_TABSTOP | WS_DISABLED
+        AUTOCHECKBOX    SZ_TCGMCPYLBOX, CHK_TCGMCPYLBOX, 115, 82, 100, 10,
+                        NOT WS_TABSTOP | WS_DISABLED
+        AUTOCHECKBOX    SZ_TCGMCPYLBTN, CHK_TCGMCPYBTN, 15, 72, 100, 10,
+                        NOT WS_TABSTOP | WS_DISABLED
+        PUSHBUTTON      SZ_TCGCPYBY, BTN_TCGCPYBY, 15, 49, 190, 13,
+                        NOT WS_TABSTOP
+        PUSHBUTTON      SZ_TCGCUTBY, BTN_TCGCUTBY, 15, 35, 190, 13,
+                        NOT WS_TABSTOP
+        PUSHBUTTON      SZ_TCGPSTINSBY, BTN_TCGPSTINSBY, 15, 21, 190, 13,
+                        NOT WS_TABSTOP
+        PUSHBUTTON      SZ_TCGOVRWRTBY, BTN_TCGOVRWRTBY, 15, 7, 190, 13,
+                        NOT WS_TABSTOP
+    END
+END

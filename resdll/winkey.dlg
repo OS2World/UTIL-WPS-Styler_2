@@ -1,0 +1,25 @@
+// winkey.dlg
+
+DLGTEMPLATE DLG_WINKEY LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", DLG_WINKEY, 0, 0, CX_PAGEDLG, CY_PAGEDLG, NOT FS_DLGBORDER |
+            WS_VISIBLE
+            PRESPARAMS PP_FONTNAMESIZE, SZ_FONTDLG
+    BEGIN
+        LTEXT           SZ_WKEYLEFT, GRP, 5, 135, 200, 8,
+                        DT_MNEMONIC
+        CONTROL         "", COMBO_WKLEFT, 5, 61, 210, 72, WC_COMBOBOX,
+                        CBS_DROPDOWNLIST | WS_GROUP | WS_TABSTOP |
+                        WS_VISIBLE
+        LTEXT           SZ_WKEYRIGHT, GRP, 5, 105, 200, 8,
+                        DT_MNEMONIC
+        CONTROL         "", COMBO_WKRIGHT, 5, 31, 210, 72, WC_COMBOBOX,
+                        CBS_DROPDOWNLIST | WS_GROUP | WS_TABSTOP |
+                        WS_VISIBLE
+        LTEXT           SZ_WKEYMENU, GRP, 5, 75, 200, 8,
+                        DT_MNEMONIC
+        CONTROL         "", COMBO_WKMENU, 5, 1, 210, 72, WC_COMBOBOX,
+                        CBS_DROPDOWNLIST | WS_GROUP | WS_TABSTOP |
+                        WS_VISIBLE
+    END
+END

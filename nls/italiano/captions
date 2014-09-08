@@ -1,0 +1,1107 @@
+//==========================================================================\
+// 001.h - international version strings                                    |
+// TOC                                                                      |
+// - init_errors:                                                           |
+// - preferences notebook major_and_minor_tabs                              |
+// - main_window_strings                                                    |
+// - General_page                                                           |
+// - main_windows_settings                                                  |
+// - active_inactive_titlebar settings                                      |
+// - titlebar_hiding page                                                   |
+// - window_rolling general preferences                                     |
+// - maximized_windows options                                              |
+// - window sizing_moving page                                              |
+// - text_controls_options                                                  |
+// - VIO_windows_options                                                    |
+// - mouse_options                                                          |
+// - windows_keys                                                           |
+// - exception_list dialog                                                  |
+// - mouse_keyboard_actions_events dialog                                   |
+// - bitmap_selection dialog                                                |
+// - help_strings (view.exe parameters).                                    |
+// - installer_unistaller strings                                           |
+// - registration_dialog strings                                            |
+//==========================================================================/
+
+#ifndef RES001_H_
+   #define RES001_H_
+
+
+//==========================================================================\
+// init_errors: error displayed in case of program initialization failure   |
+//==========================================================================/
+
+#define SZERR_LOADMOD       "Avvio fallito: SMARTWIN.DLL non ä caricata!"
+#define SZERR_REGCTLS       "Registrazione dei controlli fallita!"
+#define SZERR_LOADDLG       "Creazione della finestra principale fallita!"
+#define SZERR_OPENPROFILE   "Profilo di Styler/2: apertura fallita!"
+#define SZERR_FILLNOTEBOOK  "Notebook delle preferenze: inserzioni pagina fallite!"
+
+
+//==========================================================================\
+// - preferences notebook major_and_minor_tabs                              |
+//==========================================================================/
+
+#define SZ_PAGEXOFY         "pagina 1 di 2"
+
+#define SZ_SMARTWINDOWS     "Styler/2"
+#define SZ_PRODINFO         "Informazioni sul prodotto"
+#define SZ_GENERAL          "Generale"
+#define SZ_EXCEPTIONS       "Eccezioni"
+#define SZ_MAINWIN          "~Dialoghi"
+#define SZ_GENOPTS          "Opzioni generali"
+#define SZ_TITLEBAR         "~Barra del titolo"
+#define SZ_TBARACTIVEWIN    "Finestra attiva"
+#define SZ_TBARINACTWIN     "Finestra inattiva"
+#define SZ_TBARHIDING       "Eliminazione barra del titolo"
+#define SZ_WINDOWROLLING    "~Arrotolamento finestre"
+#define SZ_MAXWIN           "~Massimizzazione"
+#define SZ_SIZEMOVE         "Mo~vimento finestre"
+#define SZ_TXTCTLS          "~Controlli di testo"
+#define SZ_VIOWIN           "Finestre ~VIO"
+#define SZ_MOUSE            "~Mouse"
+#define SZ_MAPPINGS         "Mappatura"
+#define SZ_KEYBOARD         "~Tastiera"
+#define SZ_WINDOWSKEYS      "Tasti Windows"
+
+
+//==========================================================================\
+// -  main_window_strings                                                   |
+//==========================================================================/
+
+#define SZ_SMWDISABLED       "Styler/2 ä attualmente disabilitato!!!"
+#define SZ_SMWPREFDSBLD      "Styler/2 - (disabilitato)"
+#define SZ_SMARTWINPREF      "Styler/2 - Preferenze (non registrato)"
+#define SZ_SMARTWINPREFREG   "Styler/2 - Preferenze"
+#define SZ_EXPIRED           "Il periodo di valutazione di Styler/2 "\
+                             "ä terminato!"
+
+// Messaggi di help per la toolbar di contesto
+#define SZHLP_BTNONOFF      "Abilita/disabilita Styler/2"
+#define SZHLP_BTNAPPLY      "Applica le nuove impostazioni della barra "\
+                            "del titolo"
+#define SZHLP_BTNUNDO       "Regredisce le impostazioni ai valori precedenti"
+#define SZHLP_BTNDEF        "Imposta le varie funzioni ai valori predefiniti"
+#define SZHLP_BTNHLP        "Mostra la guida in linea"
+// Aiuto contestuale per la barra di stato
+#define SZHLP_STATUSBAR     "‘ possibile allargare la finestra se il testo "\
+                            "della guida contestuale non viene visualizzato "\
+                            "completamente"
+
+// messaggi di errore generici
+#define SZERR_ALLOC        "Impossibile allocare la memoria richiesta!"
+
+
+//==========================================================================\
+// - General_page                                                           |
+//==========================================================================/
+
+// Didascalie dei controlli
+#define SZ_APPLONEXIT       "A~pplicare all'uscita"
+#define SZ_SAVONEXIT        "~Salvare all'uscita"
+#define SZ_LASTVIEWED       "Memorizzare l'~ultima pagina visualizzata"
+#define SZ_APPLYALL         "~Applicare tutto"
+#define SZ_UNDOALL          "~Regredire tutto"
+#define SZ_DEFALL           "~Valori predefiniti"
+// progress dialog
+#define SZ_DEFALLING        "Ripristino dei valori predefiniti in corso..."
+#define SZ_GENPROGRESS      "Progresso"
+#define SZ_GENTIMEELAPS     "Tempo trascorso"
+#define SZ_GENSTOP          "~Stop"
+
+// Stringhe di aiuto
+#define SZHLP_APPLONEXIT    "Le preferenze modificate richiedenti il bottone "\
+                            """Applica"" sono applicate automaticamente "\
+                            "alla chiusura del programma"
+#define SZHLP_SAVONEXIT     "Se questa casella non ä spuntata, le nuove "\
+                            "impostazioni saranno valide solo per la "\
+                            "sessione corrente e non saranno salvate in "\
+                            "SMARTWIN.INI"
+#define SZHLP_LASTVIEWED    "Permette di riaprire il blocco delle preferenze "\
+                            "alla pagina visualizzata l'ultima "\
+                            "volta che si ä usato il programma"
+#define SZHLP_APPLYALL      "Applica le impostazioni modificate in ogni "\
+                            "pagina in cui sia richiesto"
+#define SZHLP_UNDOALL       "Annulla le impostazioni modificate in ogni pagina"
+#define SZHLP_DEFALL        "Riporta le opzioni di tutte le pagine ai "\
+                            "valori predefiniti"
+
+
+//==========================================================================\
+// - main_windows_settings                                                  |
+//==========================================================================/
+
+// didascalie di controllo
+#define SZ_MWUSESMWFONT     "~Non usare il carattere di sistema"
+#define SZ_MWOVERRDPPS      "~Sostituire anche caratteri non di sistema"
+#define SZ_MWIGNOREPP       ""
+#define SZ_MWDLGONLY        ""
+// help strings
+#define SZHLP_MWUSESMWFONT  "Forza tutte le finestre di dialogo a usare "\
+                            "il carattere impostato dall'utente"
+#define SZHLP_MWOVERRDPPS   "Forza l'uso del carattere impostato dall'utente "\
+                            "anche per le finestre che non usano il carattere "\
+                            "di sistema"
+#define SZHLP_MWFONT        "Imposta il carattere da usare nei dialoghi"
+#define SZ_FONTSAMPLE       "Styler/2 - testo di esempio"
+#define SZ_DLGFONT          "Selezione carattere"
+
+
+//==========================================================================\
+// - active_inactive_titlebar settings                                      |
+//==========================================================================/
+
+// didascalie (esempio della barra del titolo)
+#define SZ_TBARACTWINSMPL   "Finestra attiva - esempio"
+#define SZ_TBARINACTWINSMPL "Finestra inattiva - esempio"
+// titolo del dialogo dei font:
+#define SZ_TBARFONT         "Carattere della barra del titolo"
+// control captions
+#define SZ_ENTBARENH        "~Miglioramenti barre del titolo"
+#define SZ_TBOCNTXTMENU     "Menó ~contestuale"
+#define SZ_BKGND            "Sfondo:"
+#define SZ_SOLIDCOLOR       "Tinta ~unita"
+#define SZ_SHADE            "~Sfumatura"
+#define SZ_TBOVERRDPPS      "C~ambiare colori non predefiniti"
+#define SZ_BMP              "Imma~gine"
+#define SZ_SWAPCOLOR        "Scam~biare colori"
+#define SZ_HORZ             "~Orizzontale"
+#define SZ_VERTICAL         "~Verticale"
+#define SZ_HORZ3             "~Orizzontale-centrata"
+#define SZ_VERTICAL3         "~Verticale-centrata"
+#define SZ_OUTER            "~Esterno"
+#define SZ_INNER            "~Interno"
+#define SZ_B_KGND           "S~fondo"
+#define SZ_LEFT             "Si~nistra"
+#define SZ_RIGHT            "~Destra"
+#define SZ_TOP              "So~pra"
+#define SZ_BOTTOM           "So~tto"
+#define SZ_STRETCH          "~Adattare"
+#define SZ_BMPNOBMP         "B~MP:"
+#define SZ_3DBORDER         "Bordo 3D:"
+#define SZ_SHOW             "Mostrare bo~rdo"
+#define SZ_TXTSTYLE         "Stile testo:"
+#define SZ_TBCENTER         "~Centrato"
+#define SZ_3DEFFECT         "Testo ~3D"
+#define SZ_FONT             "~Carattere:"
+#define SZ_FGNDTXT          "~Primo piano"
+// Messaggi di aiuto
+#define SZHLP_ENTBARENH      "Abilita/disabilita i miglioramenti estetici "\
+                             "della barra del titolo"
+#define SZHLP_TBOCNTXTMENU   "Visualizza il menó di sistema quando si "\
+                             "clicca sulla barra del titolo"
+#define SZHLP_TITLEBARSAMPLE "Cliccare sulla barra del titolo per cambiare "\
+                             "i colori, la sfumatura o l\'immagine, "\
+                             "secondo la modalitÖ di sfondo corrente"
+#define SZHLP_TBMNSYS        "Imposta l'immagine del bottone del menó "\
+                             "di sistema della finestra"
+#define SZHLP_TBMNCLOSE      "Imposta l'immagine del bottone di chiusura "\
+                             "della finestra"
+#define SZHLP_TBMNHIDE       "Imposta l'immagine del bottone per "\
+                             "nascondere la finestra"
+#define SZHLP_TBMNMIN        "Imposta l'immagine del bottone di "\
+                             "minimizzazione della finestra"
+#define SZHLP_TBMNRES        "Imposta l'immagine del bottone di "\
+                             "ripristino della finestra"
+#define SZHLP_TBMNMAX        "Imposta l'immagine del bottone di "\
+                             "massimizzazione della finestra"
+#define SZHLP_RDBTN_SOLID    "Usa una tinta unita per lo sfondo della "\
+                             "barra del titolo"
+#define SZHLP_RDBTN_SHADE    "Usa una sfumatura come sfondo della barra "\
+                             "del titolo"
+#define SZHLP_RDBTN_BITMAP   "Usa un'immagine come sfondo della barra del "\
+                             "titolo"
+#define SZHLP_TBOOVERRDPPS   "Attiva i miglioramenti della barra del titolo "\
+                             "anche se la barra del titolo "\
+                             "non usa uno sfondo di default"
+#define SZHLP_SWPCOLSHADE    "Scambia i colori usati per la sfumatura"
+#define SZHLP_SHADEDIRECT    "Cambia direzione e tipo della sfumatura"
+#define SZHLP_BTN_COLUP      "Imposta il colore a sinistra/alto/esterno "\
+                             "della sfumatura"
+#define SZHLP_BTN_COLDOWN    "Imposta il colore a destra/basso/interno "\
+                             "della sfumatura"
+#define SZHLP_SHOWBORDER     "Disegna un bordo a due colori intorno alla "\
+                             "barra del titolo"
+#define SZHLP_SWPCOLBRDR     "Scambia i colori del bordo"
+#define SZHLP_BTN_HILITE     "Imposta il colore di rilievo del bordo 3D "\
+                             "della barra del titolo"
+#define SZHLP_BTN_SHADOW     "Imposta il colore dell'ombra per il bordo 3D "\
+                             "della barra del titolo"
+#define SZHLP_CHK_STRETCH    "Adatta l'immagine alla dimensione della barra "\
+                             "del titolo"
+#define SZHLP_BTN_BITMAP     "Imposta l'immagine usata per lo sfondo "\
+                             "della barra del titolo"
+#define SZHLP_CHK_TBCENTER   "Centra il testo nella barra del titolo"
+#define SZHLP_CHK_3DEFFECT   "Imposta l'effetto 3D per il testo della "\
+                             "barra del titolo"
+#define SZHLP_BTN_FONT       "Imposta il carattere della barra del titolo"
+#define SZHLP_SWPCOLTXT      "Scambia i colori del testo della barra del titolo"
+#define SZHLP_BTN_FGNDTXT    "Imposta il colore del testo della barra "\
+                             "del titolo"
+#define SZHLP_BTN_SHADOWTXT  "Imposta il colore dell'ombra del testo "\
+                             "della barra del titolo"
+// messaggi di errore
+#define SZERR_UPDBMPNAME     "Impossibile aggiornare il nome del file "\
+                             "dell'immagine in smartwin.ini!"
+// edita il colore del dialogo -----------------------
+#define SZ_CLRTITLE         "Selezione colore"
+#define SZ_CLROK            "~OK"
+#define SZ_CLRUNDO          "~Regredire"
+#define SZ_CLRCANC          "~Annullare"
+#define SZ_CLRRED           "~Rosso"
+#define SZ_CLRGRN           "~Verde"
+#define SZ_CLRBLU           "~Blu"
+
+
+//==========================================================================\
+// - titlebar_hiding page                                                   |
+//==========================================================================/
+
+// didascalie di controllo
+#define SZ_HIDETBAR            "~Eliminazione della barra del titolo"
+#define SZ_HTBARBY             "Nascondere con:"
+#define SZ_SYSMENU             "Menó di ~sistema"
+#define SZ_HTBARHIDEBTN        "Bottone e~liminazione"
+#define SZ_HTBARUNHIDEBTN      "Bottone ~ripristino"
+#define SZ_HTREDFLDRH          "Ri~duzione dell'altezza delle cartelle"
+#define SZ_HTXCLDLGWIN         "Es~clusione delle finestre di dialogo"
+#define SZ_HTBARPUPDELAY       "Ritardo a~pparizione (1/100 Sec.) :"
+#define SZ_HTBARHIDEDELAY      "Ritardo elimina~zione (1/100 Sec.) :"
+#define SZ_HTBARINCLMENU       "~Inclusione menó"
+// messaggi di aiuto
+#define SZHLP_HTBARENABLE      "Abilita funzionalitÖ eliminazione/ripristino "\
+                               "barra del titolo"
+#define SZHLP_HTBARSYSMENU     "Aggiunge la voce ""nascondere/mostrare barra "\
+                               "del titolo"" al menó di sistema della finestra"
+#define SZHLP_HTBARMOU         "Sceglie l'evento del mouse, sulla barra del "\
+                               "titolo, usato per nascondere/mostrare la "\
+                               "barra del titolo stessa"
+#define SZHLP_HTBARKEYB        "Permette di usare una combinazione di "\
+                               "tastiera per nascondere/mostare la barra "\
+                               "del titolo"
+#define SZHLP_HTBARHIDEBTN     "Permette di aggiungere ai controlli delle "\
+                               "finestre un bottone per nascondere/mostrare "\
+                               "la barra del titolo e di scegliere "\
+                               "l'immagine per l'azione di eliminazione"
+#define SZHLP_HTBARUNHIDEBTN   "Permette di aggiungere ai controlli delle "\
+                               "finestre un bottone per nascondere/mostrare "\
+                               "la barra del titolo e di scegliere "\
+                               "l'immagine per l'azione di ripristino"
+#define SZHLP_HTREDFLDRH       "Elimina il titolo delle cartelle riducendo "\
+                               "l'altezza totale delle finestre"
+#define SZHLP_XCLDLGWIN        "Non permette l'eliminazione della barra "\
+                               "del titolo nelle finestre di dialogo"
+#define SZHLP_HTBARPUPDELAY    "Quanto tempo il puntatore del mouse deve "\
+                               "stare sul bordo superiore della finestra "\
+                               "perchÇ la barra del titolo venga ripristinata"
+#define SZHLP_HTBARHIDEDELAY   "Quanto tempo il puntatore del mouse deve "\
+                               "stare lontano dalla barra del titolo perchÇ "\
+                               "questa venga nuovamente nascosta"
+#define SZHLP_HTBARINCLMENU    "Nasconde sia la barra dei menó che la barra "\
+                               "del titolo"
+
+
+//==========================================================================\
+// - window_rolling general preferences                                     |
+//==========================================================================/
+
+// didascalie di controllo
+#define SZ_RLWINENBL        "~Arrotolamento finestre"
+#define SZ_RLWINBY          "Arrotolare con:"
+#define SZ_RLWINRLBTN       "Bottone ar~rotolamento"
+#define SZ_RLWINUNRLBTN     "Bottone ~srotolamento"
+#define SZ_XCLHTBARWIN      ""
+#define SZ_AUNRLGETFOCUS    "Auto-srotolare all'a~ttivazione"
+#define SZ_ARLLOSEFOCUS     "Auto-arrotolare alla ~disattivazione"
+#define SZ_AUNRLCLOSEWIN    "Auto-srotolare alla ~chiusura"
+#define SZ_ALLOWVRSZ        "Ridimensionamento ~verticale delle finestre arrotolate"
+#define SZ_AUNRLVRSZWIN     "Auto-srotolare le finestre ridi~mensionate verticalmente"
+#define SZ_RLTOBTOTTOM      "Arrotolare verso il ~basso"
+#define SZ_RLSTATESTORE     ""
+// messaggi di aiuto
+#define SZHLP_RLWINENBL     "Abilita la funzione di riduzione alla barra "\
+                            "del titolo delle finestre "\
+                            "(arrotolamento finestre)"
+#define SZHLP_RLWINSYSMENU  "Aggiunge la voce ""arrotolare/srotolare"" al"\
+                            "menó di sistema delle finestre"
+#define SZHLP_MOUSE         "Sceglie l'evento del mouse, sulla barra del "\
+                            "titolo, usato per arrotolare/srotolare la "\
+                            "finestra"
+#define SZHLP_KEYBOARD      "Permette di usare una combinazione di tastiera "\
+                            "per l'arrotolamento/srotolamento delle finestre"
+#define SZHLP_ROLLTBARBTN   "Permette di aggiungere ai controlli delle "\
+                            "finestre un bottone per arrotolare/srotolare "\
+                            "le finestre e di scegliere "\
+                            "l'immagine per l'azione di arrotolamento"
+#define SZHLP_UNROLLTBARBTN "Permette di aggiungere ai controlli delle "\
+                            "finestre un bottone per arrotolare/srotolare "\
+                            "le finestre e di scegliere "\
+                            "l'immagine per l'azione di srotolamento"
+#define SZHLP_XCLHTBARWIN   ""
+#define SZHLP_AUNRLGETFOCUS "Srotola automaticamente una finestra, "\
+                            "precedentemente arrotolata, quando viene attivata"
+#define SZHLP_ARLLOSEFOCUS  "Se una finestra ä in stato di arrotolamento, "\
+                            "viene riarrotolata quando viene disattivata"
+#define SZHLP_AUNRLCLOSEWIN "Srotola automaticamente le finestre "\
+                            "quando vengono chiuse"
+#define SZHLP_ALLOWVRSZ     "Permette il ridimensionamento in verticale "\
+                            "delle finestre arrotolate"
+#define SZHLP_AUNRLVRSZWIN  "Quando una finestra arrotolata viene "\
+                            "ridimensionata, la dimensione originaria "\
+                            "viene automaticamente ripristinata"
+#define SZHLP_RLTOBTOTTOM   "Permette di arrotolare le finestre verso il "\
+                            "basso invece che verso l'alto"
+#define SZHLP_RLSTATESTORE  ""
+
+
+//==========================================================================\
+// - maximized_windows options                                              |
+//==========================================================================/
+
+// didascalie di controllo
+#define SZ_MXOVERSZPOS      "~Ridefinire posizione e dimensioni"
+#define SZ_MXORIGIN         "Origine (pixel):"
+#define SZ_MXX              "~x:"
+#define SZ_MXY              "~y:"
+#define SZ_MXSIZE           "Dimensione (pixel):"
+#define SZ_MXWIDHT          "~larghezza:"
+#define SZ_MXHEIGHT         "~altezza:"
+#define SZ_MXNOMOVE         "Impedire lo ~spostamento"
+#define SZ_MXNOSIZE         "Impedire il ri~dimensionamento"
+//help messages
+#define SZHLP_MXOVERSZPOS   "Forza le finestre massimizzate ad assumere "\
+                            "posizione e dimensioni diverse da quelle "\
+                            "predefinite"
+#define SZHLP_MXX           "Imposta la distanza della finestra massimizzata"\
+                            "dal bordo sinistro dello schermo"
+#define SZHLP_MXY           "Imposta la distanza della finestra massimizzata"\
+                            "dal bordo inferiore dello schermo"
+#define SZHLP_MXWIDHT       "Imposta la larghezza della finestra massimizzata"
+#define SZHLP_MXHEIGHT      "Imposta l'altezza della finestra massimizzata"
+#define SZHLP_MXNOMOVE      "Impedisce lo spostamento delle finestre "\
+                            "massimizzate"
+#define SZHLP_MXNOSIZE      "Impedisce il ridimensionamento delle finestre "\
+                            "massimizzate"
+
+
+//==========================================================================\
+// - window sizing_moving page                                              |
+//==========================================================================/
+
+// didascalie di controllo
+#define SZ_FULLWINDRAG      "Movimento/ridimensionamento dell'~intera "\
+                            "finestra"
+#define SZ_SMOOTHHMOVE      "Movimento orizzontale ~continuo"
+#define SZ_AUTOCASCADE      ""
+#define SZ_BKGNDSZMOVE      "~Allineamento al bordo dello schermo"
+#define SZ_SZMVSZMVBY       "A~llineare con:"
+#define SZ_FRAME_DRAG       "Trascinamento dal ~bordo"
+#define SZ_SZMVDRAGBY       "~Trascinare con:"
+#define SZ_PUSHBOTTOM       "~Spostare sotto tutte le altre finestre"
+#define SZ_PUSHONE          "Spostare sotto di ~una posizione"
+#define SZ_SZMVPUSHBY       "S~postare con:"
+// messaggi di aiuto
+#define SZHLP_FULLWINDRAG   "Tutta la finestra viene ridisegnata nel corso "\
+                            "di uno spostamento o ridimensionamento"
+#define SZHLP_SMOOTHHMOVE   "Permette di muovere le finestre orizzontalmente "\
+                            "in modo continuo anzichÇ a passi di 8 pixel"
+#define SZHLP_BKGNDSZMOVE   "Allinea la finestra al bordo dello "\
+                            "schermo corrispondente a dove, sulla barra del "\
+                            "titolo, viene cliccato il mouse"
+#define SZHLP_BKGNDSZMVME   "Sceglie attraverso quale evento del mouse "\
+                            "eseguire l'allineamento al bordo dello schermo"
+#define SZHLP_FRAMEDRAG     "Permette di muovere le finestre posizionando "\
+                            "il puntatore del mouse sul bordo della "\
+                            "finestra e trascinandolo"
+#define SZHLP_FRAMEDRAGME   "Sceglie attraverso quale evento del mouse "\
+                            "eseguire il trascinamento dal bordo"
+#define SZHLP_PUSHBOTTOM    "Sposta la finestra corrente sotto tutte "\
+                            "le altre finestre"
+#define SZHLP_SZMVZONE      "Sposta la finestra corrente sotto le altre "\
+                            "finestre un passo alla volta"
+#define SZHLP_PUSHBOTTOMME  "Sceglie attraverso quale evento del mouse "\
+                            "eseguire l'operazione di spostamento dietro "\
+                            "le altre finestre"
+
+
+//==========================================================================\
+// - text_controls_options                                                  |
+//==========================================================================/
+
+// didascalie di controllo
+#define SZ_TCGEFAUTOSEL     "Selezione ~automatica nei campi di immissione"
+#define SZ_TCGEFAUTOSELBY   "~Selezionare con:"
+#define SZ_TCGMOUCPYPST     "~Copiare/tagliare/incollare con il mouse"
+#define SZ_TCGMCPYEF        "Campi di immission~e"
+#define SZ_TCGMCPYMLE       "Campi di testo ~multilinea"
+#define SZ_TCGMCPYSTXT      "~Testo statico"
+#define SZ_TCGMCPYLBOX      "~Liste"
+#define SZ_TCGMCPYLBTN      "~Bottoni"
+#define SZ_TCGCPYBY         "Co~piare con:"
+#define SZ_TCGCUTBY         "Ta~gliare con:"
+#define SZ_TCGPSTINSBY      "I~ncollare (ins.) con:"
+#define SZ_TCGOVRWRTBY      "Inc~ollare (sovr.) con:"
+// messaggi di aiuto
+#define SZHLP_TCGEFAUTOSEL    "Seleziona tutto il testo contenuto in "\
+                              "un campo di immissione"
+#define SZHLP_TCGEFAUTOSELBY  "Sceglie l'evento del mouse usato per la "\
+                              "selezione del contenuto di un campo di "\
+                              "immissione"
+#define SZHLP_TCGMOUCPYPST    "Permette di usare il mouse per eseguire le "\
+                              "operazioni di clipboard"
+#define SZHLP_TCGMCPYEF       "Permette di usare il mouse per eseguire le "\
+                              "operazioni di clipboard nei campi di immissione"
+#define SZHLP_TCGMCPYMLE      "Permette di usare il mouse per eseguire le "\
+                              "operazioni di clipboard nei campi di testo "\
+                              "multilinea"
+#define SZHLP_TCGMCPYSTXT     "Permette di usare il mouse per eseguire le "\
+                              "operazioni di clipboard nei controlli di testo "\
+                              "statici"
+#define SZHLP_TCGMCPYLBOX     "Permette di usare il mouse per eseguire le "\
+                              "operazioni di clipboard nelle liste"
+#define SZHLP_TCGMCPYLBTN     "Permette di usare il mouse per eseguire le "\
+                              "operazioni di clipboard nei bottoni, caselle "\
+                              "di selezione ordinaria ed esclusiva"
+#define SZHLP_TCGCPYBY        "Sceglie quale evento del mouse usare per "\
+                              "copiare il testo selezionato nella clipboard"
+#define SZHLP_TCGCUTBY        "Sceglie quale evento del mouse usare per "\
+                              "cancellare il testo selezionato dopo averlo "\
+                              "copiato nella clipboard"
+#define SZHLP_TCGPSTINSBY     "Sceglie quale evento del mouse usare "\
+                              "per inserire il contenuto della clipboard "\
+                              "in un controllo di testo"
+#define SZHLP_TCGOVRWRTBY     "Sceglie quale evento del mouse usare "\
+                              "per inserire il contenuto della clipboard "\
+                              "in un controllo di testo sovrascrivendo "\
+                              "l'eventuale selezione"
+
+
+//==========================================================================\
+// - VIO_windows_options                                                    |
+//==========================================================================/
+
+// didascalie di controllo
+#define SZ_VIONOHSCRL       "~Eliminare le barre di scorrimento orizzontali"
+#define SZ_VIOINS           "ModalitÖ ~inserimento avanzata"
+#define SZ_VIOMOUCPY        "Copiare/incollare con il ~mouse"
+#define SZ_VIOKBDCPY        "Copiare/incollare con la ~tastiera"
+#define SZ_VIOCPYBY         "~Copiare con:"
+#define SZ_VIOCPYALLBY      "Copiare t~utto con:"
+#define SZ_VIOPASTEBY       "Inco~llare con:"
+
+// messaggi di aiuto
+#define SZHLP_VIONOHSCRL    "Elimina le barre di scorrimento che appaiono "\
+                            "quando le finestre vengono ridimensionate "\
+                            "tramite il comando mode"
+#define SZHLP_VIOINS        "Permette di cambiare permanentemente "\
+                            "l'inserimento del testo dalla modalitÖ "\
+                            "sovrascrittura a quella inserimento"
+#define SZHLP_VIOMOUCLPBRD  "Permette di eseguire le operazioni della "\
+                            "clipboard attraverso il mouse"
+#define SZHLP_VIOMCPY       "Sceglie una combinazione di mouse/tastiera "\
+                            "per marcare il testo delle finestre comandi "\
+                            "copiandolo nella clipboard"
+#define SZHLP_VIOMCPYALL    "Sceglie una combinazione di mouse/tastiera "\
+                            "per copiare l'intero contenuto delle finestre "\
+                            "comandi nella clipboard"
+#define SZHLP_VIOMPASTE     "Sceglie una combinazione di mouse/tastiera "\
+                            "per inserire il contenuto della clipboard "\
+                            "nelle finestre comandi"
+#define SZHLP_VIOKBDCLPBRD  "Permette di eseguire le operazioni della "\
+                            "clipboard attraverso combinazioni di tasti"
+#define SZHLP_VIOCPY        "Sceglie una combinazione di tasti per marcare "\
+                            "il testo delle finestre comandi copiandolo "\
+                            "nella clipboard"
+#define SZHLP_VIOCPYALL     "Sceglie una combinazione di tasti per copiare "\
+                            "l'intero contenuto delle finestre comandi "\
+                            "nella clipboard"
+#define SZHLP_VIOPASTE      "Sceglie una combinazione di tasti per inserire "\
+                            "il contenuto della clipboard nelle finestre "\
+                            "comandi"
+
+
+//==========================================================================\
+// - mouse_options                                                          |
+//==========================================================================/
+
+// didascalie di controllo
+#define SZ_CHKMAUTFOCUS     "~Focus automatico"
+#define SZ_MAFDELAY         "~Ritardo (1/100 Sec.):"
+#define SZ_MAFIGNDESK       "~Ignorare la Scrivania"
+#define SZ_MAFNOTOP         "Non ~portare in primo piano"
+#define SZ_MAFIGNNEW        "Ignorare le ~nuove finestre"
+#define SZ_CHKMPTRHIDE      "N~ascondere puntatore"
+#define SZ_MPHDELAY         "Ritar~do (1/10 Sec.):"
+#define SZ_MPHXCLBTN        "Escludere i ~bottoni"
+#define SZ_MPHXCLMENU       "Escudere i ~menó"
+#define SZ_MBTN3MAP         "~Emulazione doppio clic"
+#define SZ_MBTN3TBAR        "Includere barre del ~titolo"
+#define SZ_CHKMMOVETOFOCUS  "M~uovere il puntatore sulla finestra attiva"
+#define SZ_MMTFSTEPS        "Pa~ssi:"
+#define SZ_MMTFWINCREATE    "Nuo~ve finestre"
+#define SZ_MMTFWINDLG       "Dialo~ghi"
+#define SZ_MMTFXCLDLGNOBTN  "Esc~ludere i dialoghi privi di bottoni"
+// messaggi di aiuto
+#define SZHLP_CHKMAUTFOCUS "Attiva automaticamente la finestra situata "\
+                           "sotto il puntatore del mouse"
+#define SZHLP_MAFDELAY     "Per quanto tempo il puntatore del mouse deve "\
+                           "restare sopra una finestra affinch&egrave; "\
+                           "questa venga attivata"
+#define SZHLP_MAFIGNDESK   "Impedisce che la Scrivania venga attivata "\
+                           "quando il puntatore del mouse si muove sulla "\
+                           "sua superficie"
+#define SZHLP_MAFNOTOP     "Impedisce che la finestra attivata venga "\
+                           "portata in primo piano"
+#define SZHLP_MAFIGNNEW    "Alla creazione di una nuova finestra "\
+                           "sospende il ""Focus automatico"" finchÇ il mouse "\
+                           "non viene spostato sulla finestra stessa"
+#define SZHLP_CHKMPTRHIDE  "Nasconde il puntatore del mouse quando "\
+                           "il mouse non viene mosso e nessuno dei suoi "\
+                           "bottoni viene premuto"
+#define SZHLP_MPHDELAY     "Per quanto tempo il mouse deve rimanere fermo "\
+                           "prima che il suo puntatore sullo schermo venga "\
+                           "nascosto"
+#define SZHLP_MPHXCLBTN    "Sospende la funzione ""Nascondere puntatore "\
+                           "mouse"" quando il mouse si trova sopra un bottone"
+#define SZHLP_MPHXCLMENU   "Sospende la funzione ""Nascondere puntatore "\
+                           "mouse"" quando il mouse si trova sopra un menó"
+#define SZHLP_MBTN3MAP     "Permette di emulare il doppio clic del bottone "\
+                           "sinistro del mouse tramite un semplice clic "\
+                           "del bottone centrale"
+#define SZHLP_MBTN3TBAR    "Estende l'emulazione del doppio clic alle "\
+                           "barre del titolo (questo impedisce di usare "\
+                           "il terzo bottone per arrotolare la finestra "\
+                           "o nascondere la barra del titolo)"
+#define SZHLP_CHKMMOVETOFOCUS  "Permette di muovere automaticamente il "\
+                           "puntatore del mouse sulla finestra che viene"\
+                           "attivata"
+#define SZHLP_MMTFWINCREATE    "Muove il puntatore del mouse sulla finestra "\
+                           "attivata solo se essa ä una nuova finestra"
+#define SZHLP_MMTFWINDLG       "Muove il puntatore del mouse sulla finestra "\
+                           "attivata solo se essa ä una finestra di dialogo"
+#define SZHLP_MMTFXCLDLGNOBTN  "Esclude le finestre di dialogo prive di "\
+                           "bottoni"
+#define SZHLP_MMTFSTEPS    "Stabilisce in quanti passi viene effettuato il "\
+                           "movimento del mouse verso la finestra di "\
+                           "destinazione (un passo equivale circa a 1/30 Sec.)"
+
+
+//==========================================================================\
+// - windows_keys                                                           |
+//==========================================================================/
+
+// didascalie di controllo
+#define SZ_WKEYLEFT        "Tasto ~sinistro Windows:"
+#define SZ_WKEYRIGHT       "Tasto ~destro Windows:"
+#define SZ_WKEYMENU        "Tasto ~menó:"
+// messaggi di aiuto
+#define SZHLP_WKEYLEFT     "Seleziona l'azione da eseguire quando il tasto "\
+                           "Windows sinistro viene premuto e rilasciato"
+#define SZHLP_WKEYRIGHT    "Seleziona l'azione da eseguire quando il tasto "\
+                           "Windows destro viene premuto e rilasciato"
+#define SZHLP_WKEYMENU     "Seleziona l'azione da eseguire quando il tasto "\
+                           "menó viene premuto e rilasciato"
+// azioni eseguite dai tasti delle finestre
+#define SZ_WKEYNOACT       "Non eseguire alcuna operazione"
+#define SZ_WKEYHIDESHOW    "Nascondere/mostrare tutte le finestre"
+#define SZ_WKEYROLLUNROLL  "Arrotolare/srotolare tutte le finestre"
+#define SZ_WKEYWINLIST     "Mostrare l'Elenco finestre"
+#define SZ_WKEYCONTEXT     "Mostrare il menó contestuale"
+#define SZ_WKEYWCLOCK      "Bloccare la Scrivania"
+#define SZ_WKEYDRIVEFLDR   "Aprire la cartella UnitÖ"
+#define SZ_WKEYSSETUPFLDR  "Aprire la cartella Impostazione del sistema"
+#define SZ_WKEYOS2CMD      "Aprire una finestra comandi OS/2"
+#define SZ_WKEYWCDESK      "Mostrare il menó Scrivania del WarpCenter"
+#define SZ_WKEYWCWLIST     "Mostrare l'elenco finestre del WarpCenter"
+#define SZ_WKEYWCPLIST     "Mostrare la lista processi del WarpCenter"
+#define SZ_WKEYWCTRAYLIST  "Mostrare la lista dei contenitori del WarpCenter"
+#define SZ_WKEYWCNEXTTRAY  "Passare al contenitore successivo del WarpCenter "
+#define SZ_WKEYWCINFO      "Mostrare il menó Informazioni del WarpCenter"
+
+
+//==========================================================================\
+// - exception_list dialog                                                  |
+//==========================================================================/
+
+// didascalie di controllo
+#define SZ_EXCPTLIST       "Lista eccezioni:"
+#define SZ_FIND            "~Trovare"
+#define SZ_ADD             "~Aggiungere"
+#define SZ_REMOVE          "~Rimuovere"
+// strighe di aiuto
+#define SZHLP_LBOX_EXCEPTION "Lista di programmi per i quali le correnti "\
+                           "opzioni sono disabilitate"
+#define SZHLP_EF_LISTITEM  "Inserire il percorso e nome del file di "\
+                           "programma che si vuole aggiungere alla lista "\
+                           "delle eccezioni"
+#define SZHLP_FIND         "Trova il nome di un file di programma "\
+                           "aggiungendolo alla lista delle eccezioni"
+#define SZHLP_ADD          "Aggiunge il nome del file di programma "\
+                           "alla lista delle eccezioni"
+#define SZHLP_REMOVE       "Rimuove il nome del file di programma "\
+                           "selezionato dalla lista delle eccezioni"
+// messaggi di errore
+#define SZERR_EXCGETLIST   "Impossibile ottenere la lista eccezioni!!!"
+#define SZERR_EXCUPDATEPRO "Impossibile aggiornare la lista eccezioni nel "\
+                           "file OS2.INI"
+#define SZQUERY_EXCFILENOTFOUND "file non trovato! Vuoi aggiungerlo "\
+                            "lo stesso alla lista delle eccezioni?"
+// titolo del dialogo Cerca-file-eseguibile
+#define SZ_ADDTOEXCPTLIST  "Aggiungi alla lista delle eccezioni..."
+
+
+//==========================================================================\
+// - mouse_keyboard_actions_events dialog                                   |
+//==========================================================================/
+
+//didascalie di controllo
+#define SZ_KEYBCTRLDFUNCS "Funzioni controllate dalla tastiera"
+#define SZ_MOUCTRLDFUNCS  "Funzioni controllate dal mouse"
+#define SZ_FEFUNCEVENT    "~Funzioni:"
+#define SZ_ENABLE         "A~bilitare"
+#define SZ_PRIMKEY        "~Tasto primario:"
+#define SZ_MOUBTN         "Bottone del mo~use:"
+#define SZ_CLICK          "C~lic"
+#define SZ_DBLCLK         "~Doppio clic"
+#define SZ_CTRL           "~Ctrl"
+#define SZ_ALT            "~Alt"
+#define SZ_SHIFT          "~Maiusc."
+#define SZ_MKINSERT       "Ins"
+#define SZ_MKBKSPC        "<-"
+#define SZ_MKDEL          "Canc"
+// stringhe per costruire il testo dei bottoni di  "azione del mouse"
+#define SZ_CMPMOUBTN      " bottone del mouse"
+#define SZ_DELKEY         " Canc"
+#define SZ_INSKEY         " Ins"
+#define SZ_BKSPKEY        " <-"
+#define SZ_CMPCLICK       " clic"
+#define SZ_CMPDBLCLK      " doppio clic"
+#define SZ_CMPCTRL        " Ctrl +"
+#define SZ_CMPALT         " Alt +"
+#define SZ_CMPSHIFT       " Maiusc. +"
+
+// lista delle funzioni del mouse/tastiera
+#define SZ_BKSZMOVE       "Finestre: allineare al bordo dello schermo"
+#define SZ_FRAMEDRAG      "Finestre: mouvere trascinando il bordo"
+#define SZ_PUTBEHIND      "Finestre: spostare sotto le altre finestre"
+#define SZ_ROLL           "Finestre: arrotolare"
+#define SZ_HTBAR          "Finestre: eliminare la barra del titolo"
+#define SZ_EFSELALLTXT    "Campi immissione: selezionare tutto il testo"
+#define SZ_TXTCTLSCPY     "Controlli testo: copiare il testo selezionato nella clipboard"
+#define SZ_TXTCTLSAPND    "Controlli testo: appendere il testo selezionato alla clipboard"
+#define SZ_TXTCTLSCUT     "Controlli testo: tagliare il testo selezionato"
+#define SZ_TXTCTLSPASTE   "Controlli testo: inserire il testo dalla clipboard"
+#define SZ_TXTCTLSOVRWRT  "Controlli testo: inserire il testo dalla clipboard "\
+                          "sovrascrivendo la precedente selezione"
+#define SZ_VIOCOPY        "Finestre VIO: marcare-copiare il testo nella clipboard"
+#define SZ_VIOAPND        "Finestre VIO: copiare tutto il contenuto della finestra nella clipboard"
+#define SZ_VIOPASTE       "Finestre VIO: inserire il testo dalla clipboard"
+#define SZ_FLDOPPRPRT     "Cartelle: aprire il blocco impostazioni"
+#define SZ_FLDOPPAR       "Cartelle: aprire il livello superiore"
+#define SZ_FLDFIND        "Cartelle: trovare"
+#define SZ_FLDSRTNAME     "Cartelle: ordinare per nome"
+#define SZ_FLDSRTEXT      "Cartelle: ordinare per estensione"
+#define SZ_FLDSRTTYPE     "Cartelle: ordinare per tipo"
+#define SZ_FLDRSRTRNAME   "Cartelle: ordinare per nome reale"
+#define SZ_FLDRSRTSIZE    "Cartelle: ordinare per dimensione"
+#define SZ_FLDSRTWRT      "Cartelle: ordinare per data ultima scrittura"
+#define SZ_FLDSRTACC      "Cartelle: ordinare per data ultimo accesso"
+#define SZ_FLDSRTCREAT    "Cartelle: ordinare per data creazione"
+#define SZ_FLDARRANGE     "Cartelle: disporre le icone"
+#define SZ_FLDREFRESH     "Cartelle: aggiornare"
+
+// destinazione delle funzioni del mouse/tastiera
+#define SZ_PERFTBAR       "Azione eseguita sulla barra del titolo"
+#define SZ_PERFFOCWIN     "Azione eseguita sulla finestra attiva"
+#define SZ_PERFWINBRD     "Azione eseguita sul bordo della finestra"
+#define SZ_PERFTXTCTLS    "Azione eseguita sui controlli di testo"
+#define SZ_PERFEF         "Azione eseguita sui campi di immissione"
+#define SZ_PERFVIO        "Azione eseguita sulle finestre VIO"
+#define SZ_PERFANYWIN     "Azione eseguita su qualsiasi finestra"
+#define SZ_PERFONFLDR     "Azione eseguita sulle cartelle"
+
+
+//==========================================================================\
+// - bitmap_selection dialog                                                |
+//==========================================================================/
+
+// didascalie di controllo
+#define SZ_EDIT                 "~Editare"
+#define SZ_IMPORT___            "~Importare..."
+#define SZ_DISABLE              "~Disabilitato"
+#define SZ__DEFAULT             "~Predefinito"
+#define SZ_CLOSEBTNPOS          "Nessun bottone\x09lato sinistro\x09posizione "\
+                                "predefinita\x09lato destro\x09"
+#define SZ_OK                   "~OK"
+#define SZ_CANCEL               "~Annullare"
+#define SZ_HELP                 "Guida"
+#define SZ_EDIT_                "Modificare"
+// messaggi di aiuto
+#define SZHLP_LBOX_BMPSEL  "Clic per selezionare un'immagine, doppio clic "\
+                           "per impostarla"
+#define SZHLP_EDITBMP      "Modifica l'immagine selezionata"
+#define SZHLP_FINDBMP      "Copia un file di immagine nel percorso corrente"
+#define SZHLP_BMPDISABLE   "Rimuove il bottone dalla barra del titolo"
+#define SZHLP_DEFAULT      "Usa l'immagine predefinita"
+#define SZHLP_CLOSEPOS     "Seleziona la posizione del bottone di "\
+                           "chiusura delle finestre"
+#define SZHLP_BMPOK        "Accetta l'immagine correntemente selezionata"
+#define SZHLP_BMPCANCEL    "Chiude la finestra lasciando le impostazioni "\
+                           "immutate"
+// dialoghi dei titoli
+#define SZ_BSDTITLE0        "Immagine di sfondo della barra del titolo attiva"
+#define SZ_BSDTITLE1        "Immagine di sfondo della barra del titolo inattiva"
+#define SZ_BSDTITLE2        "Immagine bottone menó di sistema"
+#define SZ_BSDTITLE3        "Immagine bottone chiusura"
+#define SZ_BSDTITLE4        "Immagine bottone nascondere"
+#define SZ_BSDTITLE5        "Immagine bottone minimizzazione"
+#define SZ_BSDTITLE6        "Immagine bottone ripristino"
+#define SZ_BSDTITLE7        "Immagine bottone massimizzazione"
+#define SZ_BSDTITLE8        "Immagine bottone arrotolamento"
+#define SZ_BSDTITLE9        "Immagine bottone srotolamento"
+#define SZ_BSDTITLE10       "Immagine bottone eliminazione barra titolo"
+#define SZ_BSDTITLE11       "Immagine bottone ripristino barra titolo"
+// messaggi di errore/avviso
+#define SZERR_BSDALLOC      "Non ä possibile allocare ulteriore memoria per "\
+                            "i dati dei dialoghi!"
+#define SZ_ASKOVERWRITE     "Il file selezionato ä giÖ presente nel "\
+                            "percorso corrente! Vuoi sovrascriverlo?"
+#define SZ_ASKCONFIRM       "Conferma!"
+#define SZERR_STARTICONEDIT "Non ä possibile avviare l'editor di icone!"
+#define SZERR_COPYBMP       "Non ä possibile importare il file di immagine!"
+#define SZERR_INVALIDPATH   "Percorso non valido: "
+//dialogo per l'importazione delle bitmap
+#define SZ_IMPORTBMP        "Importa un file di immagine"
+#define SZ_IMPORTOK         "~Importare"
+
+
+//==========================================================================\
+// - help_strings (view.exe parameters).                                    |
+// Only univocal portions of the titles of the various pages are needed     |
+// The string portions used here depend on the translation of the INF file  |
+// source (STYLER2.IPF)                                                     |
+//==========================================================================/
+
+//stringhe di aiuto (parametri di view):
+#define SZINF_FILE      "STYLER2"       // nome file (styler2.inf)
+#define SZINF_LOGO      " STYLER"       // (Styler/2 Guida utente)
+#define SZINF_GEN       " GENERALI"     // (Styler/2 Pagina generale)
+#define SZINF_EXCPTN    " ECCEZIONI"    // (Styler/2 Pagina delle eccezioni)
+#define SZINF_DLG       " DIALOGHI"     // (Dialoghi - Pagina delle opzioni generali)
+#define SZINF_TBAR      " ATTIVA"       // (Barra del titolo - Pagina della finestra Attiva/Inattiva)
+#define SZINF_TBHIDE    " ELIMINAZIONE" // (Barra del titolo - Pagina della barra del titolo nascondibile)
+#define SZINF_ROLLING   " ARROTOLAMENTO"// (Arrotolamento finestre - Pagina delle opzioni generali)
+#define SZINF_MAXIMIZ   " MASSIMIZZAZIO"// (Finestre massimizzate - Pagina delle opzioni generali)
+#define SZINF_MOVING    " MOVIMENTO"    // (Movimento delle finestre - Pagina delle opzioni generali)
+#define SZINF_TEXT      " TESTO"        // (Controlli per il testo - Pagina delle opzioni generali)
+#define SZINF_VIO       " VIO"          // (Finestre VIO - Pagina delle opzioni generali)
+#define SZINF_MOUSE     " MOUSE"        // (Mouse - Pagina delle opzioni generali)
+#define SZINF_MOUKEY    " MOUSE/TAST"   // (Dialoghi per le funzioni del mouse/tastiera)
+#define SZINF_BITMAP    " IMMAGINI"     // (Dialogo per la selezione delle bitmap)
+#define SZINF_INSTALL   " INSTALLAZIONE"// (Installazione - disinstallazione)
+#define SZINF_REGISTER  " REGISTRAZIONE"// (Registrazione)
+#define SZINF_WKEYS     " WINDOWS"      // (Tasti per le finestre)
+
+
+//==========================================================================\
+// - installer_unistaller strings                                           |
+//==========================================================================/
+
+// dialogo installazione -didascalie di controllo
+#define SZ_INSTTITLE    "Styler/2 - installazione/disinstallazione"
+#define SZ_INSTSEL      "Selezionare un'azione:"
+#define SZ_INSTINST     "~Installare"
+#define SZ_INSTRECR     "~Ripristinare gli oggetti sulla Scrivania"
+#define SZ_INSTUNIST    "Disi~nstallare"
+#define SZ_INSTDRV      "Selezionare l' ~UnitÖ:"
+#define SZ_INSTPATH     "Percorso di ~installazione:"
+#define SZ_INSTBACK     "<< Indie~tro"
+#define SZ_INSTFWD      "~Avanti >>"
+#define SZ_INSTCANC     "~Annullare"
+#define SZ_INSTHELP     "Guida"
+#define SZ_INSTEXIT     "~Uscire"
+#define SZ_INSTINSTIN   "Selezionare Avanti per iniziare l'installazione in:"
+#define SZ_INSTRFRSHIN  "Selezionare Avanti per ripristinare gli oggetti!"
+#define SZ_INSTUNINSTIN "Selezionare Avanti per iniziare la disinstallazione!"
+#define SZ_INSTLICENSE  "Contratto di licenza:"
+#define SZ_INSTLOGFILE  "Rapporto operazioni eseguite:"
+
+// messaggi di errore
+#define SZ_INSTERRNOLIC "Impossibile aprire il file license.txt."
+#define SZ_IENERDINST   "L'installazione ä stata interrotta! "\
+                        "Si controlli il file di rapporto operazioni eseguite."
+#define SZ_IENERDRFRSH  "La creazione degli oggetti ä stata interotta! "\
+                        "Si controlli il file di rapporto operazioni eseguite."
+#define SZ_IENERDUNINST "La disinstallazione ä stata interotta! "\
+                        "Si controlli il file di rapporto operazioni eseguite."
+
+
+// titoli per le varie finestre di avanzamento
+#define SZ_IPRDRVINFO   "Determinazione della lista delle unitÖ..."
+#define SZ_IPRINSTLING  "Installazione di Styler/2..."
+#define SZ_IPRRFRSHING  "Ripristino degli oggetti di Styler/2..."
+#define SZ_IPRDELETING  "Disinstallazione di Styler/2..."
+
+// altri messaggi
+#define SZ_IQRYMKPATH   "Confermare:\tIl percorso selezionato non esiste! "\
+                        "Si vuole crearlo?"
+#define SZ_INSTREPATH   "Selezionare Indietro per selezionare un nuovo "\
+                        "percorso di installazione!"
+#define SZ_IERRMKPATH   "Impossibile creare il percorso selezionato!"
+#define SZ_IENDINSTOK   "La procedura di installazione ä terminata "\
+                        "correttamente."\
+                        "\x0aRiavviare il sistema per caricare SMARTWIN.DLL."
+#define SZ_IENDRFRSHOK  "Gli oggetti di Styler/2 sono stati correttamente "\
+                        "creati!"
+#define SZ_IENDUNINSTOK "La procedura di disinstallazione ä terminata "\
+                        "correttamente!"
+#define SZ_IENDINSTSTP  "La procedura di installazione ä stata interrotta."
+#define SZ_IENDRFRSHSTP "La procedura della creazione degli oggetti ä stata "\
+                        "interrotta."
+#define SZ_IENDUNINSTSTP "La procedura di disinstallazione ä stata interrotta."
+#define SZ_IENDINSTPRB  "La procedura di installazione ha incontrato "\
+                        "alcuni problemi.\x0a"\
+                        "Si controlli il file di rapporto operazioni "\
+                        "eseguite per ulteriori dettagli."
+#define SZ_IENDRFRSHPRB "La procedura di creazione degli oggetti ha "\
+                        "incontrato alcuni problemi.\x0a"\
+                        "Si controlli il file di rapporto operazioni "\
+                        "eseguite per ulteriori dettagli."
+#define SZ_IENDUNINSTPRB "La procedura di dinstallazione ha incontrato "\
+                        "alcuni problemi.\x0a"\
+                        "Si controlli il file di rapporto operazioni "\
+                        "eseguite per ulteriori dettagli."
+#define SZ_INSTPROCERR  "Errore!"
+#define SZ_INSTCHKPREF  "Controllo esecuzione programma preferenze..."
+#define SZ_INSTSYSDLLS  "Inserimento di SMARTWIN.DLL in "\
+                        "OS2.INI/SYS_DLLS/LoadPerProcess..."
+#define SZ_INSTSYSDLLS2 "Inserimento di STYLER20.DLL in "\
+                        "OS2.INI/SYS_DLLS/LoadPerProcess..."
+#define SZ_INSTADDINI0  "Inserimento: "
+#define SZ_INSTADDINI1  " in OS2.INI..."
+#define SZ_INSTDELINI1  " da OS2.INI..."
+#define SZ_ICHKSMWINI   "Controllo presenza precedente file SMARTWIN.INI..."
+#define SZ_IMKOBJS      "Creazione degli oggetti di Styler/2 sulla "\
+                        "Scrivania..."
+#define SZ_IMKOBJ       "Creazione oggetto: "
+
+#define SZ_IDELSYSDLLS  "Rimozione di SMARTWIN.DLL da "\
+                        "OS2.INI/SYS_DLLS/LoadPerProcess..."
+#define SZ_IDELSYSDLLS2 "Rimozione di STYLER20.DLL da "\
+                        "OS2.INI/SYS_DLLS/LoadPerProcess..."
+
+#define SZ_INSQRYSTRTUP "Confermare\tSi vuole avviare Styler/2 con"\
+                        "le impostazioni predefinite (bottone Si) o con "\
+                        "tutte le opzioni disabilitate (bottone No)?"
+#define SZ_IQRYREMBMPS  "Confermare\tSi vuole rimuovere le cartella delle "\
+                        "immagini e tutti i file in essa contenuti?"
+#define SZ_INSDSTROBJ   "Eliminazione: "
+#define SZ_IQRYREMIPTH  "Confermare\tSi vuole rimuovere il "\
+                        "percorso di installazione: "
+#define SZ_IQRYREMIPTH1 " e tutto il suo contenuto?"
+#define SZ_IPRELAPSED   "\x0a"\
+                        "Tempo trascorso: 11 ore, 22 minuti e 33 secondi."
+#define SZ_ILOGCPY      "Copia in corso :"
+#define SZ_ILOGCPYTO    " -> "
+#define SZ_IOVWRTNEW    "Confermare\t ä un file pió recente e sta per "\
+                        "essere sovrascritto!\x0a"\
+                        "Selezionare ""Si"" per sovrascriverlo ""No"" per "\
+                        "mantenere il file originale."
+#define SZ_IOVWRTCONF   "Confermare\t sta per essere sovrascritto!\x0a"\
+                        "Selezionare ""Si"" per sovrascriverlo ""No"" per "\
+                        "mantenere il file originale."
+#define SZ_ILOGREM      "Rimozione: "
+#define SZ_ILOGMKPATH   "Creazione del percorso: "
+// Titoli per gli oggetti della cartella sulla scrivania di Styler/2
+
+#define SZ_OBJTFOLDER   "Styler/2"
+// altri oggetti
+#define SZ_OBJTPRPRTY   "Preferenze"
+// questo ä il titolo delle proprietÖ degli oggetti nella cartella di setup di sistema:
+#define SZ_OBJTPRPRTY1  "Styler/2 - Preferenze"
+#define SZ_OBJTREADME   "Leggimi"
+#define SZ_OBJTLICENSE  "Licenza"
+#define SZ_OBJTRGSTRNT  "Note per la registrazione"
+#define SZ_OBJTINST_U   "Installazione/disinstallazione"
+#define SZ_OBJTRGSTRPR  "Registrazione"
+#define SZ_OBJTDOC      "Guida dell'utente"
+
+
+//==========================================================================\
+// - registration_dialog strings                                            |
+//==========================================================================/
+
+// didascalie di controllo:
+#define SZ_REGTITLE        "Styler/2 - registrazione"
+#define SZ_REGINSTR        "Come registrarsi:"
+#define SZ_REGNAME         "~Nome:"
+#define SZ_REGADDRESS      "~Indirizzo:"
+#define SZ_REGCITY         "~CittÖ:"
+#define SZ_REGZIP          "CA~P:"
+#define SZ_REGPROV         "Pro~vincia:"
+#define SZ_REGCTRY         "~Nazione:"
+// sostituisci "" copn il nome della tua nazione (per esempio "ITALIA")
+#define SZ_REGCTRYEF       "Italia"
+#define SZ_REGEMAIL        "~email:"
+#define SZ_REGTPWD         "p. ~IVA/cod. fisc.:"
+
+#define SZ_REGCLIENTDATA   "~Dati utente"
+#define SZ_REGCLIENTCODE   "~Codice utente"
+#define SZ_REGREGCODE      "C~hiave di registrazione"
+#define SZ_REGMLNONE       "Non desidero ricevere alcuna notizia riguardo "\
+                           "Styler/2 o altri programmi"
+#define SZ_REGMLSTLR       "Desidero ricevere notizie relative a Styler/2 "\
+                           "via email"
+#define SZ_REGMLALL        "Desidero ricevere notizie relative a Styler/2 "\
+                           "e qualsiasi altro programma di Alessandro "\
+                           "Cantatore via email"
+#define SZ_REGINPUTCSTMR   "Inserire i propri dati:"
+#define SZ_REGSENDCODE     "Inviare il proprio codice utente a "\
+                           "<acantatore@tin.it>!"
+#define SZ_REGINPUTREGCODE "Inserire la propria chiave di registrazione "\
+                           "nel campo sottostante:"
+#define SZ_REGEDIT         "~Modificare"
+#define SZ_REGCPYCLPBRD    "~Salvare"
+#define SZ_REGOK           "~OK"
+// titolo per il file di dialogo
+#define SZ_REGSAVECSTMRFIL "Salvare il codice utente come:"
+// erroriS
+#define SZERR_REGFAILALLOC     "Errore!\tAllocazione fallita."
+#define SZERR_REGLOADREGFILE   "Errore!\tImpossibile aprire il file "\
+                               "REGISTER.TXT."
+#define SZERR_REGREADCSTMDAT   "Errore!\tImpossibile importare i dati "\
+                               "dell'utente."
+#define SZERR_REGFAILOPPRF     "Errore!\tImpossibile aprire SMARTWIN.INI."
+#define SZERR_REGSAVECSTMRCD   "Errore!\tImpossibile salvare il codice utente."
+#define SZERR_REGCONVCSTDATA   "Errore!\tImpossibile generare il codice "\
+                               "utente."
+#define SZERR_REGREADREGCODE   "Errore!\tImpossibile salvare la chiave "\
+                               "di registrazione."
+#define SZERR_REGINVKEY        "Errore!\tChiave di registrazione non valida!"
+
+// stringhe di aiuto contestuali
+#define SZHLP_REGMLEREADME  "Istruzioni per la registrazione"
+#define SZHLP_REGINNAME     "Scrivere il nome della ditta (il "\
+                            "proprio nome se si acquista la licenza per uso "\
+                            "personale)"
+#define SZHLP_REGINADDRESS  "Scrivere l'indirizzo della ditta (il "\
+                            "proprio indirizzo se si acquista la "\
+                            "licenza per uso personale)"
+#define SZHLP_REGINCITY     "Scrivere il nome della cittÖ"
+#define SZHLP_REGINZIP      "Scrivere il codice di avviamento postale."
+#define SZHLP_REGINPROV     "Scrivere il nome della provincia"
+#define SZHLP_REGINNATION   "Scrivere il nome del vostro paese"
+#define SZHLP_REGINEMAIL    "Scrivere il proprio indirizzo di email oppure "\
+                            "scrivere ""-"" se non disponibile"
+#define SZHLP_REGINPIVA     "Scrivere il numero di partita IVA o "\
+                            "codice fiscale"
+#define SZHLP_REGBTNEDIT    "Selezionare il bottone ""Modifica"" se ä "\
+                            "necessario modificare i propri dati"
+#define SZHLP_REGMLECSTMRCODE  "Inviare il proprio codice utente a "\
+                            "<acantatore@tin.it>"
+#define SZHLP_REGMLEREGCODE "Inserire la chiave di registrazione nel "\
+                            "campo di editazione e selezionare il bottone OK."
+#define SZHLP_REGREGREG     "Selezionare il bottone ""OK"" per salvare e "\
+                            "attivare la chiave di registrazione"
+#define SZHLP_REGSBAR       "Muovere il puntatore del mouse sui vari "\
+                            "controlli per leggere brevi cenni sull'uso"\
+                            "degli stessi"
+
+// messaggi
+
+#define SZMSG_REGCANCNEWREG "Le modifiche della chiave di registrazione "\
+                            "sono state annullate!"
+#define SZMSG_REGREGOK         "La chiave di registrazione ä stata salvata!"
+#define SZMSG_REGREGCODEPRES   "E' stata rilevata una precedente chiave "\
+                               "di registrazione."
+
+// stringhe che potrebbero essere pió lunghe di 256 caratteri:
+// aiuto contestuale
+#define SZHLP_REGML "Selezionare la voce appropriata per ricevere un messaggio "\
+                    "via email {A} quando ä disponibile un aggiornamento di "\
+                    "di Styler/2, quando ä disponibile un aggiornamento o "\
+                    "un qualsiasi nuvo programma di Alessandro Cantatore, "\
+                    "o {C} mai."
+
+#define SZHLP_REGCSTMRDATA "Selezionare il bottone ""Dati utente"" per "\
+                    "inserire il prorio nome e cognome, l'indirizzo e "\
+                    "l'e-mail.\x0aI dati saranno usati "\
+                    "per generare il codice utente.\x0"
+
+#define SZHLP_REGCSTMRCODE "Selezionare il bottone ""Codice utente"" per "\
+                    "generare il proprio codice utente. Inviare il proprio "\
+                    "codice utente ad <acantatore@tin.it> per ricevere "\
+                    "la chiave di registrazione.\x0"
+
+#define SZHLP_REGREGCODE "Se ä giÖ disponibile la chiave di registrazione, "\
+                    "selezionare il bottone ""Chiave di registrazione"" " \
+                    "per inserire la propria chiave e registrare Styler/2.\x0"
+
+#define SZHLP_REGBTNCOPY "Selezionare il bottone ""Salvare"" per salvare " \
+                    "il proprio codice utente in un file, "\
+                    "da inviare, in seguito, ad <acantatore@tin.it> per "\
+                    "ricevere la chiave di registrazione.\x0"
+
+// messaggi
+#define SZMSG_REGEDCSTDATA0 "Attenzione\t"\
+                            "Cambiando ora i propri dati personali, "\
+                            "si renderÖ necessaria una nuova "\
+                            "chiave di registrazione!\x0"
+
+#define SZMSG_REGEDCSTDATA1 "Attenzione\t"\
+                            "Modificando i propri dati dopo avere inviato "\
+                            "il proprio codice utente ad <acantatore@tin.it>, "\
+                            "si renderÖ non valida la chiave di "\
+                            "registrazione che si riceverÖ!"
+
+#define SZMSG_REGCSTMRCODESVD "Il codice utente ä stato correttamente " \
+                "salvato.\x0a‘ necessario inviare il file CUSTOMER.DAT a "\
+                "<acantatore@tin.it> per completare la registrazione!\x0"
+
+#define SZMSG_REGNEWCSTCODE0  "Attenzione\t" \
+                    "Si sta per generare un nuovo codice utente.\x0a"\
+                    "La propria chiave di registrazione "\
+                    "non sarÖ pió valida!!!\x0a"\
+                    "Selezionare ""Sç"" per confermare la generazione del "\
+                    "nuovo codice oppure ""No"" per annullare l'operazione.\x0"
+
+#define SZMSG_REGNEWCSTCODE1 "Attenzione\tSi sta per generare un nuovo "\
+                    "codice utente.\x0a"\
+                    "Se si ä giÖ inviato il precedente codice a "\
+                    "<acantatore@tin.it>, la chiave che si riceverÖ "\
+                    "non sarÖ utilizzabile!\x0a"\
+                    "Selezionare ""Sç"" per confermare la generazione del "\
+                    "nuovo codice oppure ""No"" per annullare l'operazione.\x0"
+
+#define SZMSG_REGNEWREGCODE "Attenzione\tSi sta per modificare la chiave "\
+                    "di registrazione!\x0a"\
+                    "Se la nuova chiave non ä corretta, il programma puï "\
+                    "smettere di funzionare.\x0aSelezionare ""Sç"" per "\
+                    "salvare la nuova chiave oppure ""No"" per annullare "\
+                    "l'operazione.\x0"
+
+// voci del menu di sistema
+#define SZ_SYSMNTBHIDE   "Nascondere/mostrare ~barra del titolo\x09"
+#define SZ_SYSMNRLUNRL   "Arroto~lare/srotolare\x09"
+#define SZ_SYSMNALT      "Alt+"
+#define SZ_SYSMNCTL      "Ctl+"
+#define SZ_SYSMNSHFT     "Maiusc+"
+#define SZ_SYSMNINS      "Ins"
+#define SZ_SYSMNBKSPC    "<-"
+#define SZ_SYSMNDEL      "Canc"
+#define SZ_SYSMNF1       "F1"
+#define SZ_SYSMNF2       "F2"
+#define SZ_SYSMNF3       "F3"
+#define SZ_SYSMNF4       "F4"
+#define SZ_SYSMNF5       "F5"
+#define SZ_SYSMNF6       "F6"
+#define SZ_SYSMNF7       "F7"
+#define SZ_SYSMNF8       "F8"
+#define SZ_SYSMNF9       "F9"
+#define SZ_SYSMNF10      "F10"
+#define SZ_SYSMNF11      "F11"
+#define SZ_SYSMNF12      "F12"
+
+//fine file ---------------------------------------------------------------
+
+#endif

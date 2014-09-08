@@ -1,0 +1,69 @@
+// register.dlg
+
+DLGTEMPLATE DLG_REGMAIN LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  SZ_REGTITLE, DLG_REGMAIN, 0, 0, 321, 159,
+            NOT WS_VISIBLE, FCF_SYSMENU | FCF_TITLEBAR | FCF_TASKLIST
+            PRESPARAMS PP_FONTNAMESIZE SZ_FONTDLG
+    BEGIN
+        LTEXT           SZ_REGINSTR, TXT_REGCAPT, 1, 146, 316, 10, DT_VCENTER
+        MLE             SZ_NULL, MLE_REGMAIN, 1, 38, 319, 106, MLS_WORDWRAP |
+                        WS_GROUP | MLS_READONLY | MLS_VSCROLL |
+                        MLS_IGNORETAB | MLS_LIMITVSCROLL
+                        CTLDATA 28,MLFIE_CFTEXT,  0xffff,0,  0,0,  0,0,  0,0,  0,0, 0,0
+                        PRESPARAMS PP_FONTNAMESIZE, "8.Courier"
+// controlli visualizzati in alternativa alla MLE
+        RTEXT           SZ_REGNAME, TXT_REGNAME, 1, 128, 72, 10,
+                        DT_MNEMONIC | NOT WS_VISIBLE
+        ENTRYFIELD      SZ_NULL, EF_REGNAME, 77, 130, 238, 8,
+                        ES_MARGIN  | NOT WS_VISIBLE
+                        CTLDATA 8, 40, 0, 0
+        RTEXT           SZ_REGADDRESS, TXT_REGADDRESS, 1, 114, 72, 10,
+                        DT_MNEMONIC | NOT WS_VISIBLE
+        ENTRYFIELD      SZ_NULL, EF_REGADDRESS, 77, 116, 238, 8,
+                        ES_MARGIN | NOT WS_VISIBLE
+                        CTLDATA 8, 40, 0, 0
+        RTEXT           SZ_REGCITY, TXT_REGCITY, 1, 100, 72, 10,
+                        DT_MNEMONIC | NOT WS_VISIBLE
+        ENTRYFIELD      SZ_NULL, EF_REGCITY, 77, 102, 90, 8,
+                        ES_MARGIN | NOT WS_VISIBLE
+        RTEXT           SZ_REGZIP, TXT_REGZIP, 169, 100, 52, 10,
+                        DT_MNEMONIC | NOT WS_VISIBLE
+        ENTRYFIELD      SZ_NULL, EF_REGZIP, 225, 102, 90, 8,
+                        ES_MARGIN | NOT WS_VISIBLE
+                        CTLDATA 8, 8, 0, 0
+        RTEXT           SZ_REGPROV, TXT_REGPROV, 1, 86, 72, 10,
+                        DT_MNEMONIC | NOT WS_VISIBLE
+        ENTRYFIELD      SZ_NULL, EF_REGPROV, 77, 88, 90, 8,
+                        ES_MARGIN | NOT WS_VISIBLE
+                        CTLDATA 8, 30, 0, 0
+        RTEXT           SZ_REGCTRY, TXT_REGNATION, 169, 86, 52, 10,
+                        DT_MNEMONIC | NOT WS_VISIBLE
+        ENTRYFIELD      SZ_REGCTRYEF, EF_REGNATION, 225, 88, 90, 8,
+                        ES_MARGIN | NOT WS_VISIBLE
+                        CTLDATA 8, 30, 0, 0
+        RTEXT           SZ_REGEMAIL, TXT_REGEMAIL, 1, 72, 72, 10,
+                        DT_MNEMONIC | NOT WS_VISIBLE
+        ENTRYFIELD      SZ_NULL, EF_REGEMAIL, 77, 74, 238, 8,
+                        ES_MARGIN | NOT WS_VISIBLE
+                        CTLDATA 8, 40, 0, 0
+        RTEXT           SZ_REGTPWD, TXT_REGPWD, 1, 58, 72, 10,
+                        DT_MNEMONIC | NOT WS_VISIBLE
+        ENTRYFIELD      SZ_NULL, EF_REGPWD, 77, 60, 238, 8,
+                        ES_MARGIN | NOT WS_VISIBLE
+                        CTLDATA 8, 28, 0, 0
+        SPINBUTTON      SPIN_REGML, 2, 42, 315, 12,
+                        SPBS_READONLY | SPBS_MASTER | WS_GROUP | NOT WS_VISIBLE
+// gruppo bottoni
+        PUSHBUTTON      SZ_REGCLIENTDATA, BTN_REG0, 1, 23, 90, 13,
+                        BS_NOPOINTERFOCUS
+        PUSHBUTTON      SZ_REGCLIENTCODE, BTN_REG1, 92, 23, 90, 13,
+                        BS_NOPOINTERFOCUS
+        PUSHBUTTON      SZ_REGREGCODE, BTN_REG2, 183, 23, 90, 13,
+                        BS_NOPOINTERFOCUS
+        PUSHBUTTON      SZ_INSTHELP, BTN_REGHLP, 274, 23, 45, 13,
+                        BS_NOPOINTERFOCUS | BS_HELP
+        CONTROL         SZ_NULL, SBAR_REGMAIN, 1, 1, 318, 20, WC_STATUSBAR,
+                        WS_GROUP | WS_VISIBLE | DT_WORDBREAK | CCTL_BORDER1
+    END
+END

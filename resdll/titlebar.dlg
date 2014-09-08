@@ -1,0 +1,180 @@
+// titlebar.dlg
+
+// pagina 1 configurazione colori barra titolo ----------------------------
+
+DLGTEMPLATE DLG_TITLEBKGND LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", DLG_TITLEBKGND, 0, 0, CX_PAGEDLG, CY_PAGEDLG, NOT FS_DLGBORDER |
+            WS_VISIBLE
+            PRESPARAMS PP_FONTNAMESIZE SZ_FONTDLG
+    BEGIN
+        // checkbox "Enable titlebar enhancements"
+        CONTROL         SZ_ENTBARENH, CHK_ENTBARENH, 2, 140, 132, 10,
+                        WC_BUTTON,
+                        BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        // checkbox "Context menu"
+        CONTROL         SZ_TBOCNTXTMENU, CHK_TBOCNTXTMENU, 134, 140, 84, 10,
+                        WC_BUTTON,
+                        BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        CONTROL         "", FRAMESAMPLE, 2, 124, 216, 12, CC_FRAMESAMPLE,
+                        WS_GROUP | WS_TABSTOP | WS_VISIBLE |
+                        FS_NOBYTEALIGN | FS_SIZEBORDER
+        CONTROL         "", TITLEBARSAMPLE, 0, 0, 0, 0, CC_SHADETITLE,
+                        NOT WS_GROUP | NOT WS_TABSTOP | WS_VISIBLE
+        // bottoni controlli titlebar
+        CONTROL         "", BTN_TBMNSYS, 0, 0, 0, 0, WC_BUTTON,
+                        NOT WS_GROUP | NOT WS_TABSTOP | WS_VISIBLE |
+                        BS_PUSHBUTTON | BS_USERBUTTON
+        CONTROL         "", BTN_TBMNCLOSE, 0, 0, 0, 0, WC_BUTTON,
+                        NOT WS_GROUP | NOT WS_TABSTOP | WS_VISIBLE |
+                        BS_PUSHBUTTON | BS_USERBUTTON
+        CONTROL         "", BTN_TBMNHIDE, 0, 0, 0, 0, WC_BUTTON,
+                        NOT WS_GROUP | NOT WS_TABSTOP | WS_VISIBLE |
+                        BS_PUSHBUTTON | BS_USERBUTTON
+        CONTROL         "", BTN_TBMNMIN, 0, 0, 0, 0, WC_BUTTON,
+                        NOT WS_GROUP | NOT WS_TABSTOP | WS_VISIBLE |
+                        BS_PUSHBUTTON | BS_USERBUTTON
+        CONTROL         "", BTN_TBMNRES, 0, 0, 0, 0, WC_BUTTON,
+                        NOT WS_GROUP | NOT WS_TABSTOP | WS_VISIBLE |
+                        BS_PUSHBUTTON | BS_USERBUTTON
+        CONTROL         "", BTN_TBMNMAX, 0, 0, 0, 0, WC_BUTTON,
+                        NOT WS_GROUP | NOT WS_TABSTOP | WS_VISIBLE |
+                        BS_PUSHBUTTON | BS_USERBUTTON
+        // gruppo stili sfondo
+        CONTROL         SZ_BKGND, GRP, 2, 80, 216, 42,
+                        WC_3DGROUPBOX, CCTL_FRAME0 | WS_GROUP | WS_VISIBLE
+        CONTROL         SZ_SOLIDCOLOR, RDBTN_SOLID, 5, 102, 65, 10, WC_BUTTON,
+                        BS_AUTORADIOBUTTON | WS_TABSTOP | WS_VISIBLE
+        CONTROL         SZ_SHADE, RDBTN_SHADE, 5, 92, 65, 10,
+                        WC_BUTTON, BS_AUTORADIOBUTTON | WS_VISIBLE
+        CONTROL         SZ_BMP, RDBTN_BITMAP, 5, 82, 65, 10,
+                        WC_BUTTON, BS_AUTORADIOBUTTON | WS_VISIBLE
+        // checkbox "Override presentation parameters"
+        CONTROL         SZ_MWOVERRDPPS, CHK_TBOOVERRDPPS, 74, 110, 140, 10,
+                        WC_BUTTON,
+                        BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        // bottone scambio colori sfumatura
+        CONTROL         SZ_SWAPCOLOR, BTN_SWPCOLSHADE, 74, 96, 68, 13, WC_BUTTON,
+                        BS_PUSHBUTTON | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        // bottone direzione sfumatura
+        CONTROL         SZ_HORZ, BTN_SHADEDIRECT, 74, 82, 68, 13, WC_BUTTON,
+                        BS_PUSHBUTTON | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        // bottoni colore sinistra-sopra / destra-sotto
+        CONTROL         SZ_LEFT, BTN_COLUP, 146, 96, 68, 13,
+                        WC_BUTTON, WS_GROUP | WS_TABSTOP | BS_PUSHBUTTON | WS_VISIBLE
+        CONTROL         SZ_RIGHT, BTN_COLDOWN, 146, 82, 68, 13,
+                        WC_BUTTON, NOT WS_TABSTOP | BS_PUSHBUTTON | WS_VISIBLE
+        // checkbox stretch bitmap
+        CONTROL         SZ_STRETCH, CHK_STRETCH, 74, 100, 140, 10, WC_BUTTON,
+                        BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        // bottone bitmap
+        CONTROL         SZ_NULL, BTN_BITMAP, 74, 82, 140, 13, WC_BUTTON,
+                        WS_GROUP | WS_TABSTOP | BS_PUSHBUTTON | NOT WS_VISIBLE
+        // gruppo stile 3D barra titolo
+        CONTROL         SZ_3DBORDER, GRP/*_BKGND3D*/, 2, 46, 216, 31,
+                        WC_3DGROUPBOX, CCTL_FRAME0 | WS_GROUP | WS_VISIBLE
+        CONTROL         SZ_SHOW, CHK_SHOWBORDER, 5, 52, 68, 10, WC_BUTTON,
+                        BS_AUTOCHECKBOX | WS_TABSTOP | WS_VISIBLE
+        // bottone scambio colori bordo titlebar
+        CONTROL         SZ_SWAPCOLOR, BTN_SWPCOLBRDR, 74, 62, 68, 13, WC_BUTTON,
+                        BS_PUSHBUTTON | WS_GROUP | WS_TABSTOP | NOT WS_VISIBLE
+        // bottoni colore illuminazione/ombra 3D barra titolo
+        CONTROL         SZ_TOP, BTN_HILITE, 146, 62, 68, 13,
+                        WC_BUTTON, WS_GROUP | WS_TABSTOP | BS_PUSHBUTTON | NOT WS_VISIBLE
+        CONTROL         SZ_BOTTOM, BTN_SHADOW, 146, 48, 68, 13,
+                        WC_BUTTON, NOT WS_TABSTOP | BS_PUSHBUTTON | NOT WS_VISIBLE
+        // gruppo stili testo barra titolo
+        CONTROL         SZ_TXTSTYLE, GRP/*_TXTSTYLE*/, 2, 2, 216, 42,
+                        WC_3DGROUPBOX, CCTL_FRAME0 | WS_GROUP | WS_VISIBLE
+        // controllo centratura testo titlebar
+        CONTROL         SZ_TBCENTER, CHK_TBCENTER, 74, 32, 140, 10,
+                        WC_BUTTON,
+                        BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        CONTROL         SZ_3DEFFECT, CHK_3DEFFECT, 5, 20, 68, 10, WC_BUTTON,
+                        BS_AUTOCHECKBOX | WS_TABSTOP | WS_VISIBLE
+        CONTROL         SZ_FONT, BTN_FONT, 4, 4, 138, 13, WC_BUTTON,
+                        WS_GROUP | WS_TABSTOP | BS_PUSHBUTTON | WS_VISIBLE
+        // bottone scambio colori testo titlebar
+        CONTROL         SZ_SWAPCOLOR, BTN_SWPCOLTXT, 74, 18, 68, 13, WC_BUTTON,
+                        BS_PUSHBUTTON | WS_GROUP | WS_TABSTOP | NOT WS_VISIBLE
+        // bottoni colori testo titlebar
+        CONTROL         SZ_FGNDTXT, BTN_FGNDTXT, 146, 18, 68, 13,
+                        WC_BUTTON, WS_GROUP | WS_TABSTOP | BS_PUSHBUTTON | WS_VISIBLE
+        CONTROL         SZ_BOTTOM, BTN_SHADOWTXT, 146, 4, 68, 13,
+                        WC_BUTTON, NOT WS_TABSTOP | BS_PUSHBUTTON | NOT WS_VISIBLE
+    END
+END
+
+// dialogo titlebar hiding
+
+DLGTEMPLATE DLG_HIDETBAR LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", DLG_HIDETBAR, 0, 0, CX_PAGEDLG, CY_PAGEDLG, NOT FS_DLGBORDER |
+            WS_VISIBLE
+            PRESPARAMS PP_FONTNAMESIZE SZ_FONTDLG
+    BEGIN
+        // checkbox "Enable window wrapping" e "Exclude hiddentitle windows"
+        CONTROL         SZ_HIDETBAR, CHK_HTBARENABLE, 2, 140, 200, 10,
+                        WC_BUTTON,
+                        BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        // gruppo "hide by:"
+        CONTROL         SZ_HTBARBY, GRP/*_HTBARBY*/, 2, 95, 216, 43,
+                        WC_3DGROUPBOX, CCTL_FRAME0 | WS_GROUP | WS_VISIBLE
+        // checkbox system menu
+        CONTROL         SZ_SYSMENU, CHK_HTBARSYSMENU, 95, 125, 100, 10,
+                        WC_BUTTON, BS_AUTOCHECKBOX | WS_TABSTOP |
+                        WS_VISIBLE | NOT WS_GROUP
+        // bottone mouse
+        CONTROL         SZ_MOUSE, BTN_HTBARMOU, 4, 111, 89, 13, WC_BUTTON,
+                        BS_PUSHBUTTON | WS_VISIBLE | NOT WS_TABSTOP |
+                        NOT WS_GROUP
+        // bottone keyboard
+        CONTROL         SZ_KEYBOARD, BTN_HTBARKEYB, 4, 97, 89, 13, WC_BUTTON,
+                        BS_PUSHBUTTON | WS_VISIBLE | NOT WS_TABSTOP |
+                        NOT WS_GROUP
+        // bottone hide
+        CONTROL         SZ_HTBARHIDEBTN, BTN_HTBARHIDEBTN, 93, 111, 89, 13,
+                        WC_BUTTON, NOT WS_TABSTOP | NOT WS_GROUP |
+                        BS_PUSHBUTTON | WS_VISIBLE
+        CONTROL         SZ_NULLBMP, WSBMP_HIDE, 185, 112, 100, 100, WC_STATIC,
+                        WS_VISIBLE | SS_BITMAP | SS_AUTOSIZE | NOT WS_GROUP
+        // bottone unhide
+        CONTROL         SZ_HTBARUNHIDEBTN, BTN_HTBARUNHIDEBTN, 93, 97, 89, 13,
+                        WC_BUTTON, NOT WS_TABSTOP | NOT WS_GROUP |
+                        BS_PUSHBUTTON | WS_VISIBLE
+        CONTROL         SZ_NULLBMP, WSBMP_UNHIDE, 185, 98, 100, 100, WC_STATIC,
+                        WS_VISIBLE | SS_BITMAP | SS_AUTOSIZE | NOT WS_GROUP
+        // gruppo opzioni
+        CONTROL         SZ_NULL, GRP/*_HTBAROPTNS*/, 2, 59, 216, 34,
+                        WC_3DGROUPBOX, WS_GROUP | WS_VISIBLE | CCTL_FRAME0
+        // checkbox "reduce folders height"
+        CONTROL         SZ_HTREDFLDRH, CHK_HTREDFLDH, 5, 81, 200, 10,
+                        WC_BUTTON,  BS_AUTOCHECKBOX | WS_TABSTOP | WS_VISIBLE
+        // checkbox "exclude dialog windows"
+        CONTROL         SZ_HTXCLDLGWIN, CHK_HTXCLDLGWIN, 5, 71, 200, 10,
+                        WC_BUTTON,  BS_AUTOCHECKBOX | WS_TABSTOP | WS_VISIBLE
+        // checkbox Include menu
+        CONTROL         SZ_HTBARINCLMENU, CHK_HTBARINCLMENU, 5, 61, 200, 10,
+                        WC_BUTTON, BS_AUTOCHECKBOX | NOT WS_GROUP |
+                        NOT WS_TABSTOP | WS_VISIBLE
+        // gruppo timings
+        CONTROL         SZ_NULL, GRP/*_HTBAROPTNS*/, 2, 27, 216, 30,
+                        WC_3DGROUPBOX, CCTL_FRAME0 | WS_GROUP | WS_VISIBLE
+        // spin popup delay
+        CONTROL         SZ_HTBARPUPDELAY, TXT_HTBARPUPDELAY, 5, 43, 125, 10,
+                        WC_STATIC, SS_TEXT | DT_VCENTER | NOT WS_GROUP |
+                        WS_VISIBLE | DT_MNEMONIC
+        CONTROL         SZ_NULL, SPIN_HTBARPUPDELAY, 130, 43, 38, 12, WC_SPINBUTTON,
+                        SPBS_NUMERICONLY | SPBS_MASTER | SPBS_JUSTRIGHT |
+                        SPBS_FASTSPIN | WS_VISIBLE | WS_TABSTOP
+                        CTLDATA 24,0,  0,0,  0,0,  200,0,  0,0,  0,0
+        // spin hide delay
+        CONTROL         SZ_HTBARHIDEDELAY, TXT_HTBARHIDEDELAY, 5, 31, 125, 10,
+                        WC_STATIC, SS_TEXT | DT_VCENTER | NOT WS_GROUP |
+                        WS_VISIBLE | DT_MNEMONIC
+        CONTROL         SZ_NULL, SPIN_HTBARHIDEDELAY, 130, 31, 38, 12, WC_SPINBUTTON,
+                        SPBS_NUMERICONLY | SPBS_MASTER | SPBS_JUSTRIGHT |
+                        SPBS_FASTSPIN | WS_VISIBLE | WS_TABSTOP
+                        CTLDATA 24,0,  0,0,  0,0,  200,0,  0,0,  0,0
+    END
+END

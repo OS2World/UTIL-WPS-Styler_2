@@ -1,0 +1,36 @@
+// sizemove.dlg
+
+// pagina 1 configurazione opzioni window roll ----------------------------
+
+
+DLGTEMPLATE DLG_SIZEMOVE LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  SZ_NULL, DLG_SIZEMOVE, 0, 0, CX_PAGEDLG, CY_PAGEDLG, NOT FS_DLGBORDER |
+            WS_VISIBLE
+            PRESPARAMS PP_FONTNAMESIZE, SZ_FONTDLG
+    BEGIN
+        // gruppo opzioni generiche
+        CONTROL         SZ_NULL, GRP/*_SZMVGEN*/, 2, 124, 216, 24,
+                        WC_3DGROUPBOX, WS_GROUP | WS_VISIBLE | CCTL_FRAME0
+        AUTOCHECKBOX    SZ_FULLWINDRAG, CHK_FULLWINDRAG, 5, 136, 200, 10
+        AUTOCHECKBOX    SZ_SMOOTHHMOVE, CHK_SMOOTHHMOVE, 5, 126, 200, 10,
+                        NOT WS_TABSTOP
+        // gruppo background size/move
+        CONTROL         SZ_NULL, GRP/*_BKGNDSZMOVE*/, 2, 93, 216, 29,
+                        WC_3DGROUPBOX, WS_GROUP | WS_VISIBLE | CCTL_FRAME0
+        AUTOCHECKBOX    SZ_BKGNDSZMOVE, CHK_BKGNDSZMOVE, 5, 110, 200, 10
+        PUSHBUTTON      SZ_SZMVSZMVBY, BTN_BKGNDSZMOVE, 15, 95, 190, 13
+        // gruppo frame drag
+        CONTROL         SZ_NULL, GRP/*_FRAMEDRAG*/, 2, 62, 216, 29,
+                        WC_3DGROUPBOX, WS_GROUP | WS_VISIBLE | CCTL_FRAME0
+        AUTOCHECKBOX    SZ_FRAME_DRAG, CHK_FRAMEDRAG, 5, 79, 200, 10
+        PUSHBUTTON      SZ_SZMVDRAGBY, BTN_FRAMEDRAG, 15, 64, 190, 13
+        // gruppo push to the bottom
+        CONTROL         SZ_NULL, GRP/*_PUSHBOTTOM*/, 2, 21, 216, 39,
+                        WC_3DGROUPBOX, WS_GROUP | WS_VISIBLE | CCTL_FRAME0
+        AUTOCHECKBOX    SZ_PUSHBOTTOM, CHK_PUSHBOTTOM, 5, 48, 200, 10
+        AUTOCHECKBOX    SZ_PUSHONE, CHK_SZMVZONE, 15, 38, 190, 10,
+                        NOT WS_TABSTOP
+        PUSHBUTTON      SZ_SZMVPUSHBY, BTN_PUSHBOTTOM, 15, 23, 190, 13
+    END
+END

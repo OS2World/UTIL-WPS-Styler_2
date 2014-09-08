@@ -1,0 +1,64 @@
+// mouseopt.dlg
+                                                                        
+// pagina 1 configurazione opzioni:
+// sliding focus, pointer hiding, button 3 click, move pointer to window
+
+DLGTEMPLATE DLG_MOUSEOPT LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", DLG_MOUSEOPT, 0, 0, CX_PAGEDLG, CY_PAGEDLG, NOT FS_DLGBORDER |
+            WS_VISIBLE
+            PRESPARAMS PP_FONTNAMESIZE, "9.WarpSans"
+    BEGIN
+        // gruppo sliding focus
+        CONTROL         SZ_NULL, GRP/*_MAUTFOCUS*/, 2, 103, 216, 45,
+                        WC_3DGROUPBOX, WS_GROUP | WS_VISIBLE | CCTL_FRAME0
+        AUTOCHECKBOX    SZ_CHKMAUTFOCUS, CHK_MAUTFOCUS, 5, 135, 86, 10,
+                        WS_TABSTOP
+        RTEXT           SZ_MAFDELAY, TXT_MAUTFOCUS, 93, 135, 80, 10,
+                        DT_VCENTER | DT_MNEMONIC
+        SPINBUTTON      SPIN_MAUTFOCUS, 175, 135, 38, 12, SPBS_NUMERICONLY |
+                        SPBS_MASTER | SPBS_FASTSPIN | SPBS_JUSTRIGHT
+                        CTLDATA 24,0,  0,0,  0,0,  999,0,  0,0,  0,0
+        AUTOCHECKBOX    SZ_MAFIGNDESK, CHK_MAFIGNDESK, 15, 125, 200, 10,
+                        WS_TABSTOP
+        AUTOCHECKBOX    SZ_MAFNOTOP, CHK_MAFNOTOP, 15, 115, 200, 10,
+                        NOT WS_TABSTOP
+        AUTOCHECKBOX    SZ_MAFIGNNEW, CHK_MAFIGNNEW, 15, 105, 200, 10,
+                        NOT WS_TABSTOP
+        // gruppo mouse pointer hiding
+        CONTROL         SZ_NULL, GRP/*_MPTRHIDE*/, 2, 66, 216, 35,
+                        WC_3DGROUPBOX, WS_GROUP | WS_VISIBLE | CCTL_FRAME0
+        AUTOCHECKBOX    SZ_CHKMPTRHIDE, CHK_MPTRHIDE, 5, 88, 86, 10,
+                        WS_TABSTOP
+        RTEXT           SZ_MPHDELAY, TXT_MPTRHIDE, 93, 88, 80, 10, 
+                        DT_VCENTER | DT_MNEMONIC
+        SPINBUTTON      SPIN_MPTRHIDE, 175, 88, 38, 12, SPBS_NUMERICONLY |
+                        SPBS_MASTER | SPBS_FASTSPIN | SPBS_JUSTRIGHT
+                        CTLDATA 24,0,  0,0,  1,0,  99,0,  0,0,  0,0
+        AUTOCHECKBOX    SZ_MPHXCLBTN, CHK_MPHXCLBTN, 15, 78, 200, 10,
+                        WS_TABSTOP
+        AUTOCHECKBOX    SZ_MPHXCLMENU, CHK_MPHXCLMENU, 15, 68, 200, 10,
+                        NOT WS_TABSTOP
+        // gruppo button 3 mapping
+        CONTROL         SZ_NULL, GRP/*_MBTN3MAP*/, 2, 50, 216, 14,
+                        WC_3DGROUPBOX, WS_GROUP | WS_VISIBLE | CCTL_FRAME0
+        AUTOCHECKBOX    SZ_MBTN3MAP, CHK_MBTN3MAP, 5, 52, 100, 10, WS_TABSTOP
+        AUTOCHECKBOX    SZ_MBTN3TBAR, CHK_MBTN3TBAR, 115, 52, 100, 10, WS_TABSTOP
+        // gruppo move mouse to focus window
+        CONTROL         SZ_NULL, GRP/*_MMOVETOFOCUS*/, 2, 4, 216, 44,
+                        WC_3DGROUPBOX, WS_GROUP | WS_VISIBLE | CCTL_FRAME0
+        AUTOCHECKBOX    SZ_CHKMMOVETOFOCUS, CHK_MMOVETOFOCUS, 5, 36, 168, 10,
+                        WS_TABSTOP
+        RTEXT           SZ_MMTFSTEPS, TXT_MMTFSTEPS, 93, 27, 80, 8,
+                        DT_VCENTER | DT_MNEMONIC
+        SPINBUTTON      SPIN_MMTFSTEPS, 175, 27, 38, 12, SPBS_NUMERICONLY |
+                        SPBS_MASTER | SPBS_FASTSPIN | SPBS_JUSTRIGHT
+                        CTLDATA 24,0,  0,0,  1,0,  999,0,  0,0,  0,0
+        AUTOCHECKBOX    SZ_MMTFWINCREATE, CHK_MMTFWINCREATE, 15, 26, 76, 10, 
+                        NOT WS_TABSTOP
+        AUTOCHECKBOX    SZ_MMTFWINDLG, CHK_MMTFWINDLG, 15, 16, 113, 10, 
+                        NOT WS_TABSTOP
+        AUTOCHECKBOX    SZ_MMTFXCLDLGNOBTN, CHK_MMTFXCLDLGNOBTN, 25, 6, 144, 10, 
+                        NOT WS_TABSTOP
+    END
+END

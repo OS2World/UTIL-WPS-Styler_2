@@ -1,0 +1,14 @@
+// SMARTWIN.RC : permette di includere l'icona all'interno di SMARTWIN.EXE
+
+// icona applicazione
+ICON 1 "../../images/pref.ico"
+
+BITMAP 100 "../../images/on.bmp"
+BITMAP 101 "../../images/off.bmp"
+BITMAP 102 "../../images/apply.bmp"
+BITMAP 103 "../../images/undo.bmp"
+BITMAP 104 "../../images/def.bmp"
+BITMAP 105 "../../images/help.bmp"
+// bitmap bottoni comuni impostazioni
+BITMAP 150 "../../images/null.bmp"       // bitmap nulla (no bitmap)
+BITMAP 151 "../../images/null1.bmp"

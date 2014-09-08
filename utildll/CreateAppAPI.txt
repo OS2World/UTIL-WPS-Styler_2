@@ -1,0 +1,60 @@
+Application creation API
+
+It is possible to create an application based on a standard window or
+on a dialog window.
+
+First it is necessary to initialize the members of the CREATEAPP structure:
+
+   BOOL (*pfinit)(PAPPDATA pad, int, char **);
+   is the address of an optional function (it may be NULL) which is called
+   during program initialization, before PM is initialized.
+   Its purpose is to parse the input parameters, read initialization
+   files and other files.
+   parameters: 
+   - addres of the APPDATA structure
+   - int (number of parameters)
+   - char** (parameters list)
+   return value:
+   - BOOL (TRUE = success, FALSE = error)
+
+   INT (*pfinitUI)(PAPPDATA pad);
+   is called after the creation of the main window to perform UI related
+   initialization. 
+   parameters: 
+   - addres of the APPDATA structure
+   return value:
+   - INT:   -    0 = error
+            -  > 0 = success, then execute default UI initialization
+            -  < 0 = success, skip default UI initialization
+
+   BOOL (*pfsave)(PAPPDATA pad);
+   is called while processing the WM_CLOSE message to let the users save
+   application data.
+
+   BOOL (*pfterm)(PAPPDATA pad);
+   is called before freeing the default resource, to let the user free
+   user allocated resources.
+
+   PFNWP pfnwpobj;
+   is the procedure of the optional object window running in its own thread
+
+   PFNWP pfnwp;
+   is the procedure of the main window of the application
+
+   PSZ pszres;
+   is the name of the DLL containing all the resources
+
+   PSZ pszerr;
+   is the default error message displayed during initialization (when strings
+   defined in the resource DLL are not yet accessible)
+
+   PSZ pszfont;
+   is the font to be used in the application window
+
+   ULONG fl;
+   defines the application style:
+
+   PAPPDATA pad;
+   is the address of the application data initialized at run time
+} CREATEAPP, * PCREATEAPP;
+

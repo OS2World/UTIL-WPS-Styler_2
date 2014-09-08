@@ -1,0 +1,14 @@
+LIBRARY STYLER20 INITGLOBAL
+
+DESCRIPTION '@#AlessandroCantatore:1.070500#@Styler/2 V.1.7.5.0 MLE extension - (c) 1998-2006 Alessandro Cantatore'
+
+PROTMODE
+
+DATA SINGLE SHARED
+
+SEGMENTS
+   STLRINSTANCE_DATA    CLASS 'DATA' LOADONCALL NOIOPL NONSHARED READWRITE
+
+EXPORTS
+   stlrProcessInit                     @1
+

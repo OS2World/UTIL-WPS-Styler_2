@@ -1,0 +1,167 @@
+LIBRARY   AFCUTL05    INITINSTANCE TERMINSTANCE
+
+DESCRIPTION	'@#Alessandro Cantatore:0.15#@Utility functions V.0.15.0 * (c) 1997-2003 Alessandro Cantatore'
+
+PROTMODE
+CODE	        MOVEABLE
+DATA	        MULTIPLE NONSHARED MOVEABLE
+
+EXPORTS
+; api utilit… varie
+   lockincr                      @1
+   lockdecr                      @2
+   lockxchng                     @3
+   getPrfData                    @4
+   tsmalloc                      @5
+   tsfree                        @6
+   tsheapmin                     @7
+   uExeFullName                  @8
+   uEditExeExt                   @9
+   uDateTime                     @10
+   uGetSval                      @11
+   ucrc                          @12
+   upb2an                        @13
+   uan2pb                        @14
+
+; I/O - file utils
+   ioBackup                      @15
+   ioCountTree                   @16
+   ioEditExt                     @17
+   ioF2psz                       @18
+   ioFExists                     @19
+   ioFilOlder                    @20
+   ioFlushBuf                    @21
+   ioMakePath                    @22
+   ioProcessTree                 @23
+   ioPsz2f                       @24
+   ioUniqFName                   @25
+
+; string utils
+   catuch2str                    @26
+   linedel                       @27
+   lin1str                       @28
+   memdel                        @29
+   memfind                       @30
+   pszlastchr                    @31
+   pszwldcmp                     @32
+   pszcpy                        @33
+   pszncpy                       @34
+   pszcpycat                     @35
+   pszicmp                       @36
+   psznicmp                      @37
+   strdel                        @38
+   stristr                       @39
+   strrepl                       @40
+   strins                        @41
+
+; enhanced PM controls API
+   InitControls                  @42
+   WeditColorDlg                 @43
+   WprogressBar                  @44
+   EDMoreReg                     @45
+   EDClbReg                      @46
+   EDElbReg                      @47
+   EDBarReg                      @48
+   EDGrpReg                      @49
+   EDImgReg                      @50
+   EDStbReg                      @51
+
+; PM API
+   WcenterInWindow               @52
+   WcenterWindow                 @53
+   WdrawArrowBox                 @54
+   WdrawBtnBkgnd                 @55
+   WdrawChkBox                   @56
+   WdrawDisabledRect             @57
+   WdrawDisabledText             @58
+   WfillListBox                  @59
+   Wincrease                     @60
+   WloadBitmap                   @61
+   WmoveRect                     @62
+   WopenObject                   @63
+   Wprint                        @64
+   WqueryBitmapSize              @65
+   WqueryHwndFrame               @66
+   WsetButtonBmp                 @67
+   WsetDlgFonts                  @68
+   WsetDlgIcon                   @69
+   WsetRelativePos               @70
+   WsetSysMouPtr                 @71
+   WgetCtlClr                    @72
+   WprocSpin                     @73
+   WfontDlg                      @74
+   WdlgMinMax                    @75
+   WsetDefBtn                    @76
+   WsetDlgCtlPos                 @77
+   Wfil2mle                      @78
+   Wmle2fil                      @79
+   Wmle2str                      @80
+   Wstr2mle                      @81
+
+; PM APP API
+   WaddToWinList                 @82
+   WcheckMinSize                 @83
+   Wcpycat                       @84
+   WcreateApp                    @85
+   WdefDlgInit                   @86
+   WdefDlgProc                   @87
+   WdefModProc                   @88
+   WdefObjWinProc                @89
+   WdestrObj                     @90
+   WdlgBox                       @91
+   Wfdlg                         @92
+   WgetCreationData              @93
+   WgetChlpStr                   @94
+   WgetStr                       @95
+   WgetTxt                       @96
+   WinitErr                      @97
+   WmsgBox                       @98
+   WmsglBox                      @99
+   WrunApp                       @100
+   WsetMinSize                   @101
+   WsetWcompTxt                  @102
+   WsetWinTxt                    @103
+   WsetWinTxtl                   @104
+   WshowInf                      @105
+   WshowMsg                      @106
+   WstartApp                     @107
+   WupdBrdSize                   @108
+
+; notebook API
+   WnbkFill                      @109
+   WnbkInitPg                    @110
+   WnbkInsertPg                  @111
+   WnbkDelPg                     @112
+   WnbkPgn                       @113
+   WnbkMinSize                   @114
+   WpageXofY                     @115
+
+; logfile API
+   logAdd                        @116
+   logCat                        @117
+   logEnd                        @118
+   logInit                       @119
+
+; installer API
+   insfilecpy                    @120
+   insfiledel                    @121
+   insmakeobj                    @122
+   instreecpy                    @123
+   instreedel                    @124
+   prfChkObj                     @125
+   prfdelstr                     @126
+   prfinsstr                     @127
+
+; context help API
+   WsetChlp                      @128
+   WsetChlpClbox                 @129
+   WsetChlpCombo                 @130
+   WsetChlpElbox                 @131
+   WsetChlpMorebox               @132
+   WsetChlpMulti                 @133
+   WsetChlpSpin                  @134
+
+   WAppInitHelp                  @135
+
+
+

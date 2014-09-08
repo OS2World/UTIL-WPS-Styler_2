@@ -1,0 +1,30 @@
+LIBRARY SMARTWIN INITGLOBAL
+
+DESCRIPTION '@#AlessandroCantatore:1.070500#@Styler/2 V.1.7.5.0 - (c) 1998-2006 Alessandro Cantatore'
+
+PROTMODE
+
+DATA SINGLE SHARED
+
+SEGMENTS
+   STLRINSTANCE_DATA    CLASS 'DATA' LOADONCALL NOIOPL NONSHARED READWRITE
+
+EXPORTS
+   stlrProcessInit                     @1
+   stlrProcessData                     @2
+   stlrVersion                         @3
+   stlrGlobals                         @4
+   stlrOptions                         @5
+   stlrObjectWindow                    @6
+   stlrPrefWindow                      @7
+   stlrOpenProfile                     @8
+   stlrKbdSkipLoading                  @9
+   stlrSuperclass                      @10
+   stlrlog                             @11
+   stlrHBmpFromBmpData                 @12
+   stlrHBmpFromModule                  @13
+   stlrBmpData                         @14
+   stlrShadeHBmp                       @15
+   stlrHBmp                            @16
+   stlrMouEventToSkip                  @17
+

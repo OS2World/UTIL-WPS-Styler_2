@@ -1,0 +1,76 @@
+#include <os2.h>
+#include <afcuti00.h>
+#include "stlrDefs.h"
+#include "stlrWinID.h"
+#include "msgs.h"
+CODEPAGE 850
+
+#define SZ_FONTDLG     "8.Helv"
+#define SZ_FONTTITLE   "10.System Proportional"
+
+// bitmap logo
+BITMAP 1  "../images/logo.bmp"
+
+// icona dialogo selezione bitmap
+ICON 2 "../images/bmpseldlg.ico"
+// icona dialogo impostazioni mouse/tastiera
+ICON 3 "../images/moukeyb.ico"
+// bitmap default barra titolo
+BITMAP 12 "../images/WARPa.bmp"       // finestra attiva
+BITMAP 13 "../images/WARPi.bmp"       // finestra inattiva
+BITMAP 14 "../images/progress.bmp"
+// bitmap controllo finestra disabilitato
+BITMAP IDBMP_NULL18 "../images/null18.bmp"
+BITMAP IDBMP_NULL22 "../images/null22.bmp"
+// bitmap default controlli finestra
+BITMAP IDBMP_CLOSE18 "../images/close18.bmp"
+BITMAP IDBMP_CLOSE22 "../images/close22.bmp"
+// bitmap default titlehide - vga/xga - warp3/warp4
+BITMAP IDBMP_HT18 "../images/ht18-3.bmp"
+BITMAP IDBMP_HT22 "../images/ht22-3.bmp"
+// bitmap default titleunhide - vga/xga - warp3/warp4
+BITMAP IDBMP_UHT18 "../images/uht18-3.bmp"
+BITMAP IDBMP_UHT22 "../images/uht22-3.bmp"
+// bitmap default window roll - vga/xga - warp3/warp4
+BITMAP IDBMP_RL18 "../images/rl18-3.bmp"
+BITMAP IDBMP_RL22 "../images/rl22-3.bmp"
+// bitmap default window unroll - vga/xga - warp3/warp4
+BITMAP IDBMP_URL18 "../images/url18-3.bmp"
+BITMAP IDBMP_URL22 "../images/url22-3.bmp"
+
+HELPTABLE HLP_MAIN {
+   HELPITEM DLG_MAIN_3, HLPS_MAIN, HLPID_MAIN
+   HELPITEM DLG_BMPSEL, HLPS_BMPSEL, HLPID_BMPSEL
+   HELPITEM DLG_MOUSEOPT, HLPS_MOUOPT, HLPID_MOUOPT
+   HELPITEM DLG_INSTMAIN, HLPS_INSTALL, HLPID_INSTALL
+   HELPITEM DLG_REGMAIN, HLPS_REGISTER, HLPID_REGISTER
+}
+
+HELPSUBTABLE HLPS_MAIN {
+}
+HELPSUBTABLE HLPS_BMPSEL {
+}
+HELPSUBTABLE HLPS_MOUOPT {
+}
+HELPSUBTABLE HLPS_INSTALL {
+}
+HELPSUBTABLE HLPS_REGISTER {
+}
+
+
+RCINCLUDE "mainw3.dlg"
+RCINCLUDE "general.dlg"
+RCINCLUDE "mainwins.dlg"
+RCINCLUDE "titlebar.dlg"
+RCINCLUDE "wroll.dlg"
+RCINCLUDE "maxwin.dlg"
+RCINCLUDE "sizemove.dlg"
+RCINCLUDE "vio.dlg"
+RCINCLUDE "txtctl.dlg"
+RCINCLUDE "mouseopt.dlg"
+RCINCLUDE "common.dlg"
+RCINCLUDE "strings.rc"
+RCINCLUDE "install.dlg"
+RCINCLUDE "register.dlg"
+RCINCLUDE "winkey.dlg"
+RCINCLUDE "longstring.rc"

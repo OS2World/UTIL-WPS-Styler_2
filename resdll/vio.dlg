@@ -1,0 +1,37 @@
+// vio.dlg
+
+// pagina 1 configurazione opzioni window roll ----------------------------
+
+DLGTEMPLATE DLG_VIOWIN LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  SZ_NULL, DLG_VIOWIN, 0, 0, 220, 156, NOT FS_DLGBORDER | WS_VISIBLE
+            PRESPARAMS PP_FONTNAMESIZE, SZ_FONTDLG
+    BEGIN
+        // gruppo generico
+        CONTROL         SZ_NULL, GRP, 2, 124, 216, 24, WC_3DGROUPBOX,
+                        CCTL_FRAME0 | WS_GROUP | WS_VISIBLE
+        AUTOCHECKBOX    SZ_VIONOHSCRL, CHK_VIONOHSCRL, 5, 136, 200, 10
+        AUTOCHECKBOX    SZ_VIOINS, CHK_VIOINS, 5, 126, 200, 10,
+                        NOT WS_TABSTOP
+        // gruppo copia/incolla tramite mouse
+        CONTROL         SZ_NULL, GRP, 2, 64, 216, 58, WC_3DGROUPBOX,
+                        CCTL_FRAME0 | WS_GROUP | WS_VISIBLE
+        AUTOCHECKBOX    SZ_VIOMOUCPY, CHK_VIOMOUCPY, 5, 110, 200, 10
+        PUSHBUTTON      SZ_VIOCPYBY, BTN_VIOCPYMOU, 15, 95, 190, 13,
+                        NOT WS_TABSTOP
+        PUSHBUTTON      SZ_VIOCPYALLBY, BTN_VIOAPNDMOU, 15, 81, 190, 13,
+                        NOT WS_TABSTOP
+        PUSHBUTTON      SZ_VIOPASTEBY, BTN_VIOPASTEMOU, 15, 67, 190, 13,
+                        NOT WS_TABSTOP
+        // gruppo copia/incolla tramite tastiera
+        CONTROL         SZ_NULL, GRP, 2, 4, 216, 58, WC_3DGROUPBOX,
+                        CCTL_FRAME0 | WS_GROUP | WS_VISIBLE
+        AUTOCHECKBOX    SZ_VIOKBDCPY, CHK_VIOKBDCPY, 5, 50, 200, 10
+        PUSHBUTTON      SZ_VIOCPYBY, BTN_VIOCPYKBD, 15, 35, 190, 13,
+                        NOT WS_TABSTOP
+        PUSHBUTTON      SZ_VIOCPYALLBY, BTN_VIOAPNDKBD, 15, 21, 190, 13,
+                        NOT WS_TABSTOP
+        PUSHBUTTON      SZ_VIOPASTEBY, BTN_VIOPASTEKBD, 15, 7, 190, 13,
+                        NOT WS_TABSTOP
+    END
+END

@@ -1,0 +1,49 @@
+// maxwin.dlg
+
+// pagina 1 configurazione opzioni window roll ----------------------------
+
+DLGTEMPLATE DLG_MAXWIN LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  SZ_NULL, DLG_MAXWIN, 0, 0, CX_PAGEDLG, CY_PAGEDLG, NOT FS_DLGBORDER |
+            WS_VISIBLE
+            PRESPARAMS PP_FONTNAMESIZE, SZ_FONTDLG
+    BEGIN
+        // gruppo Override default size and position
+        CONTROL         SZ_NULL, GRP/*_MXOVERSZPOS*/, 2, 92, 216, 56,
+                        WC_3DGROUPBOX, WS_GROUP | WS_VISIBLE
+        AUTOCHECKBOX    SZ_MXOVERSZPOS, CHK_MXOVERSZPOS, 5, 136, 200, 10
+        // gruppo Origin (pixel):
+        CONTROL         SZ_MXORIGIN, GRP/*_MXORIGIN*/, 5, 95, 104, 39,
+                        WC_3DGROUPBOX, WS_GROUP | WS_VISIBLE | CCTL_FRAME0
+        RTEXT           SZ_MXX, TXT_MXX, 26, 112, 40, 10, DT_VCENTER |
+                        DT_MNEMONIC | NOT WS_GROUP
+        SPINBUTTON      SPIN_MXX, 68, 112, 38, 12, SPBS_NUMERICONLY |
+                        SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN
+                        CTLDATA 24,0,  0,0,  0xd8f1,0xffff,  9999,0,  0,0  0,0
+                        3092, 67, 1258, -32768
+        RTEXT           SZ_MXY, TXT_MXY, 26, 98, 40, 10, DT_VCENTER |
+                        DT_MNEMONIC | NOT WS_GROUP
+        SPINBUTTON      SPIN_MXY, 68, 98, 38, 12, SPBS_NUMERICONLY |
+                        SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN
+                        CTLDATA 24,0,  0,0,  0xd8f1,0xffff,  9999,0,  0,0  0,0
+        // gruppo Size (pixel):
+        CONTROL         SZ_MXSIZE, GRP/*_MXSIZE*/, 111, 95, 104, 39,
+                        WC_3DGROUPBOX, WS_GROUP | WS_VISIBLE | CCTL_FRAME0
+        RTEXT           SZ_MXWIDHT, TXT_MXWIDHT, 132, 112, 40, 10, DT_VCENTER |
+                        DT_MNEMONIC | NOT WS_GROUP
+        SPINBUTTON      SPIN_MXWIDHT, 174, 112, 38, 12, SPBS_NUMERICONLY |
+                        SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN
+                        CTLDATA 24,0,  0,0,  0,0,  9999,0,  0,0  0,0
+        RTEXT           SZ_MXHEIGHT, TXT_MXHEIGHT, 132, 98, 40, 10, DT_VCENTER |
+                        DT_MNEMONIC | NOT WS_GROUP
+        SPINBUTTON      SPIN_MXHEIGHT, 174, 98, 38, 12, SPBS_NUMERICONLY |
+                        SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN
+                        CTLDATA 24,0,  0,0,  0,0,  9999,0,  0,0  0,0
+        // gruppo don't allow moving/sizing
+        CONTROL         SZ_NULL, GRP/*_MXNOALLOW*/, 2, 65, 216, 24,
+                        WC_3DGROUPBOX, WS_GROUP | WS_VISIBLE
+        AUTOCHECKBOX    SZ_MXNOMOVE, CHK_MXNOMOVE, 5, 77, 200, 10, WS_TABSTOP
+        AUTOCHECKBOX    SZ_MXNOSIZE, CHK_MXNOSIZE, 5, 67, 200, 10,
+                        NOT WS_TABSTOP
+    END
+END

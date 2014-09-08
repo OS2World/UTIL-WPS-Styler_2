@@ -1,0 +1,1049 @@
+//==========================================================================\
+// 001.h - international version strings                                    |
+// TOC                                                                      |
+// - init_errors:                                                           |
+// - preferences notebook major_and_minor_tabs                              |
+// - main_window_strings                                                    |
+// - General_page                                                           |
+// - main_windows_settings                                                  |
+// - active_inactive_titlebar settings                                      |
+// - titlebar_hiding page                                                   |
+// - window_rolling general preferences                                     |
+// - maximized_windows options                                              |
+// - window sizing_moving page                                              |
+// - text_controls_options                                                  |
+// - VIO_windows_options                                                    |
+// - mouse_options                                                          |
+// - windows_keys                                                           |
+// - exception_list dialog                                                  |
+// - mouse_keyboard_actions_events dialog                                   |
+// - bitmap_selection dialog                                                |
+// - help_strings (view.exe parameters).                                    |
+// - installer_unistaller strings                                           |
+// - registration_dialog strings                                            |
+//==========================================================================/
+
+#ifndef RES001_H_
+   #define RES001_H_
+
+
+//==========================================================================\
+// init_errors: error displayed in case of program initialization failure   |
+//==========================================================================/
+
+#define SZERR_LOADMOD            "Misslyckad start: SMARTWIN.DLL Ñr inte laddad!"
+#define SZERR_REGCTLS            "Misslyckades med att registrera kontrollen!"
+#define SZERR_LOADDLG            "Misslyckades med att skapa Huvudfînstret!"
+#define SZERR_OPENPROFILE        "Styler/2 profil: îppningsfel!"
+#define SZERR_FILLNOTEBOOK       "Notbok med instÑllningar: misslyckad infogning " \
+                                 "av sida!"
+
+
+//==========================================================================\
+// - preferences notebook major_and_minor_tabs                              |
+//==========================================================================/
+
+#define SZ_PAGEXOFY              "sidan 1 av 2"
+
+#define SZ_SMARTWINDOWS          "Styler/2"
+#define SZ_PRODINFO              "Produktinformation"
+#define SZ_GENERAL               "AllmÑnt"
+#define SZ_EXCEPTIONS            "Undantag"
+#define SZ_MAINWIN               "~Dialoger"
+#define SZ_GENOPTS               "AllmÑnna optioner"
+#define SZ_TITLEBAR              "~Rubrikrad"
+#define SZ_TBARACTIVEWIN         "Aktivt fînster"
+#define SZ_TBARINACTWIN          "Inaktivt fînster"
+#define SZ_TBARHIDING            "Dîlja rubrikrad"
+#define SZ_WINDOWROLLING         "~Rulla fînster"
+#define SZ_MAXWIN                "Ma~ximera fînster"
+#define SZ_SIZEMOVE              "~StorleksÑndra/flytta"
+#define SZ_TXTCTLS               "T~ext kontroller"
+#define SZ_VIOWIN                "~VIO fînster"
+#define SZ_MOUSE                 "~Mus"
+#define SZ_MAPPINGS              "Mappningar"
+#define SZ_KEYBOARD              "~Tangentbord"
+#define SZ_WINDOWSKEYS           "Windowstangenter"
+
+
+//==========================================================================\
+// -  main_window_strings                                                   |
+//==========================================================================/
+
+#define SZ_SMWDISABLED           "Styler/2 Ñr fîr nÑrvarande avaktiverad!!!"
+#define SZ_SMWPREFDSBLD          "Styler/2 - (avaktiverad)"
+#define SZ_SMARTWINPREF          "Styler/2 - InstÑllningar (oregistrerad)"
+#define SZ_SMARTWINPREFREG       "Styler/2 - InstÑllningar"
+#define SZ_EXPIRED               "Styler/2's provningstid har upphîrt"
+
+// toolbar context help messages
+#define SZHLP_BTNONOFF           "Aktivera/avaktivera Styler/2"
+#define SZHLP_BTNAPPLY           "TillÑmpa nya rubriksradsinstÑllningar"
+#define SZHLP_BTNUNDO            "èterstÑll tidigare instÑllningar"
+#define SZHLP_BTNDEF             "SÑtt instÑllningar till standardvÑrden"
+#define SZHLP_BTNHLP             "Visa on-line hjÑlp"
+// statusbar context help
+#define SZHLP_STATUSBAR          "Du kan gîra fînstret bredare om hjÑlp " \
+                                 "meddelanden in passar in med statuslistens bredd!!"
+
+// generic error messages
+#define SZERR_ALLOC              "Misslyckades med att allokera det begÑrda minnet."
+
+
+//==========================================================================\
+// - General_page                                                           |
+//==========================================================================/
+
+// control captions
+#define SZ_APPLONEXIT            "~TillÑmpa vid avslutning"
+#define SZ_SAVONEXIT             "~Spara vid avslutning"
+#define SZ_LASTVIEWED            "~Kom ihÜg senast visade sida"
+#define SZ_APPLYALL              "~TillÑmpa allt"
+#define SZ_UNDOALL               "~èngra allt"
+#define SZ_DEFALL                "~Standard allt"
+// progress dialog
+#define SZ_DEFALLING             "èterstÑller till standard..."
+#define SZ_GENPROGRESS           "Progress"
+#define SZ_GENTIMEELAPS          "Upplupen tid"
+#define SZ_GENSTOP               "~Stopp"
+
+// help strings
+#define SZHLP_APPLONEXIT         "Modifierade instÑllningar som erfordrar " \
+                                 """TillÑmpa"" knappen blir automatiskt applicerade " \
+                                 "nÑr applikationen InstÑllningar stÑngs"
+#define SZHLP_SAVONEXIT          "Om boxen inte Ñr fîrkryssad, kommer Ñndringar som " \
+                                 "som appliceras pÜ den aktuella sessionen inte att " \
+                                 "sparas i SMARTWIN.INI, och en ombootning kommer " \
+                                 "att ÜterstÑlla dina tidigare instÑllningar."
+#define SZHLP_LASTVIEWED         "Senast visade sida kommer att vara îverst " \
+                                 "nÑr applikationen InstÑllningar " \
+                                 "startas om"
+#define SZHLP_APPLYALL           "TillÑmpa alla modifierade instÑllningar pÜ varje sida " \
+                                 "som behîver det"
+#define SZHLP_UNDOALL            "èngra alla modifierade instÑllningar pÜ varje sida"
+#define SZHLP_DEFALL             "èterstÑll alla optioner till standardvÑrden" \
+
+
+//==========================================================================\
+// - main_windows_settings                                                  |
+//==========================================================================/
+
+// control captions
+#define SZ_MWUSESMWFONT          "~AnvÑnd Styler/2's font"
+#define SZ_MWOVERRDPPS           "~èsidosÑtt Presentation Parametrar"
+#define SZ_MWIGNOREPP            "~Ignorera Presentation Parametrar"
+#define SZ_MWDLGONLY             "~Dialoger enbart"
+// help strings
+#define SZHLP_MWUSESMWFONT       "Tvinga alla dialogfînster att anvÑnda " \
+                                 "vald font"
+#define SZHLP_MWOVERRDPPS        "Byt ut Ñven icke-standardfonter"
+#define SZHLP_MWFONT             "VÑlj font"
+#define SZ_FONTSAMPLE            "Styler/2 - Exempel font"
+#define SZ_DLGFONT               "Dialog font"
+
+
+//==========================================================================\
+// - active_inactive_titlebar settings                                      |
+//==========================================================================/
+
+// captions (titlebar sample)
+#define SZ_TBARACTWINSMPL        "Aktivt fînster - exempel"
+#define SZ_TBARINACTWINSMPL      "Inaktivt fînster - exempel"
+// font dialog title:
+#define SZ_TBARFONT              "Rubrikrad font"
+// control captions
+#define SZ_ENTBARENH             "~AnvÑnd fîrbÑttrade rubrikrader"
+#define SZ_TBOCNTXTMENU          "~Kontextmeny"
+#define SZ_BKGND                 "Bakgrund:"
+#define SZ_SOLIDCOLOR            "~Solid fÑrg"
+#define SZ_SHADE                 "~Gradient"
+#define SZ_BMP                   "~Bitmap"
+#define SZ_SWAPCOLOR             "V~Ñxla fÑrger"
+#define SZ_HORZ                  "H~orisontell"
+#define SZ_VERTICAL              "~Vertikal"
+#define SZ_HORZ3                 "H~orisontell - center"
+#define SZ_VERTICAL3             "~Vertikal - center"
+#define SZ_OUTER                 "~Yttre"
+#define SZ_INNER                 "~Inre"
+#define SZ_B_KGND                "Ba~kgrund"
+#define SZ_LEFT                  "~VÑnster"
+#define SZ_RIGHT                 "~Hîger"
+#define SZ_TOP                   "~Topp"
+#define SZ_BOTTOM                "Botte~n"
+#define SZ_STRETCH               "StrÑ~ck ut"
+#define SZ_BMPNOBMP              "B~MP:"
+#define SZ_3DBORDER              "3D kant:"
+#define SZ_SHOW                  "Visa kan~t"
+#define SZ_TXTSTYLE              "Text stil:"
+#define SZ_TBCENTER              "~Center"
+#define SZ_3DEFFECT              "~3D text"
+#define SZ_FONT                  "~Font:"
+#define SZ_FGNDTXT               "Fîrgr~und"
+// help messages
+#define SZHLP_ENTBARENH          "Aktivera/avaktivera estetiska " \
+                                 "utîkningar"
+#define SZHLP_TBOCNTXTMENU       "Visa kontextmenyn nÑr musknappen " \
+                                 "klickas pÜ rubrikraden"
+#define SZHLP_TITLEBARSAMPLE     "Klicka pÜ rubrikraden fîr att Ñndra dess " \
+                                 "bakgrundsfÑrg, gradientriktning eller " \
+                                 "bitmap i enlighet med den aktuella " \
+                                 "bakgrundens typ"
+#define SZHLP_TBMNSYS            "StÑll in bitmap fîr fînstersystemets menyknapp"
+#define SZHLP_TBMNCLOSE          "StÑll in bitmap fîr knappen stÑnga fînster"
+#define SZHLP_TBMNHIDE           "StÑll in bitmap fîr knappen dîlja fînster"
+#define SZHLP_TBMNMIN            "StÑll in bitmap fîr knappen minimera fînster"
+#define SZHLP_TBMNRES            "StÑll in bitmap fîr knappen ÜterstÑll fînster"
+#define SZHLP_TBMNMAX            "StÑll in bitmap fîr knappen maximera fînster"
+#define SZHLP_RDBTN_SOLID        "AnvÑnd en solid fÑrg som bakgrund fîr rubrikrad"
+#define SZHLP_RDBTN_SHADE        "AnvÑnd en gradient som bakgrund fîr rubrikrad"
+#define SZHLP_RDBTN_BITMAP       "AnvÑnd en bitmap som bakgrund fîr rubrikrad"
+#define SZHLP_TBOOVERRDPPS       "AnvÑnd utîkningar fîr rubrikrader Ñven om " \
+                                 "rubrikraden inte anvÑnder standard bakgrund"
+#define SZHLP_SWPCOLSHADE        "VÑxla gradientfÑrger"
+#define SZHLP_SHADEDIRECT        "éndra gradientriktning och typ"
+#define SZHLP_BTN_COLUP          "StÑll in vÑnster/topp/yttre fÑrg fîr gradient " \
+                                 "bakgrund"
+#define SZHLP_BTN_COLDOWN        "StÑll in hîger/botten/inre fÑrg fîr " \
+                                 "gradient bakgrund"
+#define SZHLP_SHOWBORDER         "Rita en 2-fÑrgers kant runt rubrikraden"
+#define SZHLP_SWPCOLBRDR         "VÑxla kantfÑrger"
+#define SZHLP_BTN_HILITE         "StÑll in belyst fÑrg fîr rubrikradens " \
+                                 "3D kant"
+#define SZHLP_BTN_SHADOW         "StÑll in skuggfÑrg fîr rubrikradens 3D " \
+                                 "kant"
+#define SZHLP_CHK_STRETCH        "StrÑck ut bitmap sÜ att den passar till rubrikradens" \
+                                 "storlek"
+#define SZHLP_BTN_BITMAP         "StÑll in bakgrundsbitmap fîr rubrikrader"
+#define SZHLP_CHK_TBCENTER       "Centrera rubrikradens text"
+#define SZHLP_CHK_3DEFFECT       "StÑll in 3D effekt fîr rubrikradens text"
+#define SZHLP_BTN_FONT           "StÑll in rubrikradens font"
+#define SZHLP_SWPCOLTXT          "VÑxla fontfÑrger"
+#define SZHLP_BTN_FGNDTXT        "StÑll in fÑrg pÜ rubrikradens text"
+#define SZHLP_BTN_SHADOWTXT      "StÑll in fÑrg pÜ rubrikradens skugga"
+// error messages
+#define SZERR_UPDBMPNAME         "Kunde inte uppdatera namnet pÜ bitmap " \
+                                 "filen i smartwin.ini!"
+// edit color dialog -----------------------
+#define SZ_CLRTITLE              "VÑlj fÑrg"
+#define SZ_CLROK                 "~OK"
+#define SZ_CLRUNDO               "~Ta tillbaka"
+#define SZ_CLRCANC               "~èngra"
+#define SZ_CLRRED                "~Rîd"
+#define SZ_CLRGRN                "~Grîn"
+#define SZ_CLRBLU                "~BlÜ"
+
+
+//==========================================================================\
+// - titlebar_hiding page                                                   |
+//==========================================================================/
+
+// control captions
+#define SZ_HIDETBAR              "~Aktivera dîlja rubrikrad"
+#define SZ_HTBARBY               "Dîlja med:"
+#define SZ_SYSMENU               "~Systemmeny"
+#define SZ_HTBARHIDEBTN          "Rubrikrad-~dîlja knapp"
+#define SZ_HTBARUNHIDEBTN        "Rubrikrad-~ta fram knapp"
+#define SZ_HTREDFLDRH            "~Reducera mappens hîjd"
+#define SZ_HTXCLDLGWIN           "E~xkludera dialogfînster"
+#define SZ_HTBARPUPDELAY         "~Pop upp fîrdrîjning (1/100 Sek) :"
+#define SZ_HTBARHIDEDELAY        "Dîl~ja fîrdrîjning (1/100 Sek) :"
+#define SZ_HTBARINCLMENU         "~Inkludera meny"
+// help msgs
+#define SZHLP_HTBARENABLE        "Aktivera rubrikradens dîlja/ta fram funktion"
+#define SZHLP_HTBARSYSMENU       "LÑgga till en ""dîlja/ta fram rubrikrad"" post till " \
+                                 "fînstrets system meny"
+#define SZHLP_HTBARMOU           "VÑlj vilken mushÑndelse pÜ rubrikraden " \
+                                 "som dîljer/tar fram sjÑlva rubrikraden"
+#define SZHLP_HTBARKEYB          "VÑlj en tangentbordsaccelerator fîr att " \
+                                 "dîlja/ta fram rubrikraden"
+#define SZHLP_HTBARHIDEBTN       "LÑgg till en ""dîlja/ta fram knapp"" fîr rubrikraden " \
+                                 "till fînsterkontrollerna och vÑlj " \
+                                 """dîlj"" bitmap"
+#define SZHLP_HTBARUNHIDEBTN     "LÑgg till en ""dîlja/ta fram knapp"" fîr rubrikraden " \
+                                 "till fînsterkontrollerna och vÑlj " \
+                                 """ta fram"" bitmap"
+#define SZHLP_HTREDFLDRH         "NÑr titeln pÜ en mapp Ñr dold, kommer " \
+                                 "den totala hîjden pÜ fînstret att reduceras med " \
+                                 "rubrikradens hîjd."
+#define SZHLP_XCLDLGWIN          "Avaktivera dîlja rubrikrader i dialog " \
+                                 "fînster"
+#define SZHLP_HTBARPUPDELAY      "Hur lÑnge muspekaren mÜste stanna îver " \
+                                 "den îvre fînsterkanten fîr att ta fram " \
+                                 "rubrikraden"
+#define SZHLP_HTBARHIDEDELAY     "Hur lÑnge muspekaren mÜste vara borta " \
+                                 "frÜn rubrikraden fîr att sjÑlva rubrikraden " \
+                                 "skall bli dold"
+#define SZHLP_HTBARINCLMENU      "Dîlja bÜde menyraden och rubrikraden"
+
+
+//==========================================================================\
+// - window_rolling general preferences                                     |
+//==========================================================================/
+
+// control captions
+#define SZ_RLWINENBL             "~Aktivera rulla fînster"
+#define SZ_RLWINBY               "Rulla med:"
+#define SZ_RLWINRLBTN            "Rubrikrad-~rulla upp knapp"
+#define SZ_RLWINUNRLBTN          "Rubrikrad-~rulla ner knapp"
+#define SZ_XCLHTBARWIN           "E~xkludera dold-titel fînster"
+#define SZ_AUNRLGETFOCUS         "Auto-rulla upp nÑr ~komma i fokus"
+#define SZ_ARLLOSEFOCUS          "Auto-rulla ner nÑr ~komma ur fokus"
+#define SZ_AUNRLCLOSEWIN         "Auto-rulla upp nÑr ~stÑnga fînster"
+#define SZ_ALLOWVRSZ             "TillÜta ~vertikal storleksÑndring av upprullat fînster"
+#define SZ_AUNRLVRSZWIN          "Auto-upprullade fînster vertikalt storleks~Ñndrade"
+#define SZ_RLTOBTOTTOM           "Rulla till ~botten"
+#define SZ_RLSTATESTORE          "~Lagra rullat lÑge"
+// help messages
+#define SZHLP_RLWINENBL          "Aktivera ""rulla fînster"" funktionen"
+#define SZHLP_RLWINSYSMENU       "LÑgg till en ""rulla upp/rulla ner"" post pÜ fînstrets " \
+                                 "systemmeny"
+#define SZHLP_MOUSE              "VÑlj vilken mushÑndelse pÜ rubrikraden " \
+                                 "som rullar upp/rullar ner fînster"
+#define SZHLP_KEYBOARD           "VÑlj en tangentbordsaccelerator fîr att " \
+                                 "rulla upp/rulla ner rubrikrad"
+#define SZHLP_ROLLTBARBTN        "LÑgg till en ""rulla upp/rulla ner"" knapp till " \
+                                 "fînsterkontrollerna och vÑlj ""rulla upp"" bitmap"
+#define SZHLP_UNROLLTBARBTN      "LÑgg till en ""rulla upp/rull ner"" knapp till " \
+                                 "fînsterkontrollerna och vÑlj ""rulla ner"" bitmap"
+#define SZHLP_XCLHTBARWIN        "Exkludera fînsterrullning fîr fînster vars " \
+                                 "titel har dolts"
+#define SZHLP_AUNRLGETFOCUS      "Automatisk nerrullning av ett tidigare upprullat " \
+                                 "fînster som kommmer i fokus"
+#define SZHLP_ARLLOSEFOCUS       "Om status fîr rullning satts tidigare, " \
+                                 "rulla automatiskt upp fînster som tappat fokus"
+#define SZHLP_AUNRLCLOSEWIN      "Rulla automatiskt ner fînster som " \
+                                 "har stÑngts"
+#define SZHLP_ALLOWVRSZ          "TillÜt upprullade fînster att bli vertikalt " \
+                                 "storleksÑndrade"
+#define SZHLP_AUNRLVRSZWIN       "Rulla automatiskt ner vertikalt storleksÑndrade " \
+                                 "fînster till sin tidigare storlek"
+#define SZHLP_RLTOBTOTTOM        "Fînster rullas mot sin bottensida"
+#define SZHLP_RLSTATESTORE       "Status pÜ rullning av fînster lagras i " \
+                                 "initialiseringsfilen"
+
+
+//==========================================================================\
+// - maximized_windows options                                              |
+//==========================================================================/
+
+// control captions
+#define SZ_MXOVERSZPOS           "~èsidosÑtt standard storlek och position"
+#define SZ_MXORIGIN              "Ursprung (pixels):"
+#define SZ_MXX                   "~x:"
+#define SZ_MXY                   "~y:"
+#define SZ_MXSIZE                "Storlek (pixels):"
+#define SZ_MXWIDHT               "~bredd:"
+#define SZ_MXHEIGHT              "~hîjd:"
+#define SZ_MXNOMOVE              "TillÜt inte ~flyttning"
+#define SZ_MXNOSIZE              "TillÜt inte ~storleksÑndring"
+//help messages
+#define SZHLP_MXOVERSZPOS        "TillÜter dig att sÑtta storlek och position pÜ " \
+                                 "maximerade fînster"
+#define SZHLP_MXX                "StÑll in horisontell distans i pixels frÜn " \
+                                 "det nedre vÑnstra hîrnet pÜ skÑrmen"
+#define SZHLP_MXY                "StÑll in vertikal distans i pixels frÜn " \
+                                 "det nedre vÑnstra hîrnet pÜ skÑrmen"
+#define SZHLP_MXWIDHT            "StÑll in bredd pÜ maximerat fînster"
+#define SZHLP_MXHEIGHT           "StÑll in hîjd pÜ maximerat fînster"
+#define SZHLP_MXNOMOVE           "TillÜt inte flyttning av maximerat fînster"
+#define SZHLP_MXNOSIZE           "TillÜt inte storleksfîrÑndring av maximerat fînster"
+
+
+//==========================================================================\
+// - window sizing_moving page                                              |
+//==========================================================================/
+
+// control captions
+#define SZ_FULLWINDRAG           "~Full fînsterflytt och storleksÑndring"
+#define SZ_SMOOTHHMOVE           "~Smidig horisontell rîrelse"
+#define SZ_AUTOCASCADE           "Automatisk ~kaskad av fînster"
+#define SZ_BKGNDSZMOVE           "B~ind fînster till skÑrmens kanter"
+#define SZ_SZMVSZMVBY            "Bi~nd med:"
+#define SZ_FRAME_DRAG            "Dra ~ram"
+#define SZ_SZMVDRAGBY            "Dra ~med:"
+#define SZ_PUSHBOTTOM            "~Flytta bakom alla andra fînster"
+#define SZ_PUSHONE               "Flytta ~ett steg bakom"
+#define SZ_SZMVPUSHBY            "F~lytta med:"
+// help messages
+#define SZHLP_FULLWINDRAG        "Hela fînstret blir synkront " \
+                                 "omritat nÑr det storleksÑndras eller flyttas"
+#define SZHLP_SMOOTHHMOVE        "Flytta fînstret horisontellt med steg om 1-pixel " \
+                                 "snarare Ñn med standard 8-pixels steg"
+#define SZHLP_BKGNDSZMOVE        "Binda fînstret till skÑrmens kanter " \
+                                 "îverenstÑmmande med stÑllet pÜ rubrikraden " \
+                                 "dÑr du klickade"
+#define SZHLP_BKGNDSZMVME        "StÑll in mushÑndelse pÜ rubrikraden fîr att " \
+                                 "binda fînstret till skÑrmens kanter"
+#define SZHLP_FRAMEDRAG          "Flytta fînstret genom att placera muspekaren " \
+                                 "pÜ fînstrets kan och dra det"
+#define SZHLP_FRAMEDRAGME        "StÑll in mushÑndelse som kommer att utfîra " \
+                                 """Dra ram"" operationen"
+#define SZHLP_PUSHBOTTOM         "Flytta det aktuella fînstret till bakgrunden " \
+                                 "bakom alla andra fînster"
+#define SZHLP_SZMVZONE           "Flytta det aktuella fînstret ett steg bakom " \
+                                 "snarare Ñn bakom alla andra fînster"
+#define SZHLP_PUSHBOTTOMME       "StÑll in mushÑndelse fîr att utfîra funktionen ""Flytta " \
+                                 "bakom alla andra fînster"""
+
+//==========================================================================\
+// - text_controls_options                                                  |
+//==========================================================================/
+
+// control captions
+#define SZ_TCGEFAUTOSEL          "InmatningsfÑlt ~automatiskt val av text"
+#define SZ_TCGEFAUTOSELBY        "~VÑlj med:"
+#define SZ_TCGMOUCPYPST          "~Mus kopiera/klipp/klistra in"
+#define SZ_TCGMCPYEF             "~InmatningsfÑlt"
+#define SZ_TCGMCPYMLE            "M~ultipla editeringsfÑlt"
+#define SZ_TCGMCPYSTXT           "Statisk te~xt"
+#define SZ_TCGMCPYLBOX           "~Listboxar"
+#define SZ_TCGMCPYLBTN           "~Knappar"
+#define SZ_TCGCPYBY              "~Kopiera med:"
+#define SZ_TCGCUTBY              "Kli~pp med:"
+#define SZ_TCGPSTINSBY           "Klistra in (~infoga) med:"
+#define SZ_TCGOVRWRTBY           "Klistra in (~skriv îver) med:"
+// help messages
+#define SZHLP_TCGEFAUTOSEL       "VÑlj hela innehÜllet i ett inmatningsfÑlt"
+#define SZHLP_TCGEFAUTOSELBY     "StÑll in mushÑndelse som kommer att vÑlja " \
+                                 "hela innehÜllet i ett inmatningsfÑlt"
+#define SZHLP_TCGMOUCPYPST       "Utfîr klippbordsoperationer med " \
+                                 "musen"
+#define SZHLP_TCGMCPYEF          "Aktivera musklippbord fîr skuggor av " \
+                                 "inmatningsfÑlt"
+#define SZHLP_TCGMCPYMLE         "Aktivera musklippbord fîr skuggor av " \
+                                 "flerradiga inmatningsfÑlt"
+#define SZHLP_TCGMCPYSTXT        "Aktivera musklippbord fîr skuggor av " \
+                                 "statiska textkontroller"
+#define SZHLP_TCGMCPYLBOX        "Aktivera musklippbord fîr skuggor av listboxar"
+#define SZHLP_TCGMCPYLBTN        "Aktivera musklippbord fîr skuggor av " \
+                                 "knappar, checkboxar och radioknappar"
+#define SZHLP_TCGCPYBY           "VÑlj vilken mushÑndelse som kopierar den " \
+                                 "valda texten till klippbordet"
+#define SZHLP_TCGCUTBY           "VÑlj vilken mushÑndelse som klipper ur den valda " \
+                                 "texten till klippbordet"
+#define SZHLP_TCGPSTINSBY        "VÑlj vilken mushÑndelse som klistrar in " \
+                                 "klippbordets innehÜll till textkontrollen"
+#define SZHLP_TCGOVRWRTBY        "VÑlj vilken mushÑndelse som anvÑnder " \
+                                 "klippbordets innehÜll fîr att skriva îver " \
+                                 "textkontrollen"
+
+
+//==========================================================================\
+// - VIO_windows_options                                                    |
+//==========================================================================/
+
+// control captions
+#define SZ_VIONOHSCRL            "Eliminera ~horisontella scrollningslister"
+#define SZ_VIOINS                "Gîr ~insertlÑge standard"
+#define SZ_VIOMOUCPY             "Aktivera ~mus kopiera/klistra in"
+#define SZ_VIOKBDCPY             "Aktivera ~tangentbord kopiera/klistra in"
+#define SZ_VIOCPYBY              "~Kopiera med:"
+#define SZ_VIOCPYALLBY           "Kopiera ~alla med:"
+#define SZ_VIOPASTEBY            "~Klistra in med:"
+
+// help messages
+#define SZHLP_VIONOHSCRL         "Fîrstora fînster som Ñr storleksÑndrade med MODE " \
+                                 "kommandot fîr att ta bort en horisontell " \
+                                 "scrollningslist"
+#define SZHLP_VIOINS             "VÑxla av/pÜ fîr permanent insertlÑge genom " \
+                                 "att trycka Alt+Ins"
+#define SZHLP_VIOMOUCLPBRD       "Exekvera klippbordsoperationer med musen"
+#define SZHLP_VIOMCPY            "VÑlj vilken mus/tangentbordskombination " \
+                                 "som markerar och kopierar VIO text till klippbordet"
+#define SZHLP_VIOMCPYALL         "VÑlj vilken mus/tangentbordskombination som " \
+                                 "kopierar allt VIO innehÜll till klippbordet"
+#define SZHLP_VIOMPASTE          "VÑlj vilken mus/tangentbordskombination " \
+                                 "som klistrar in klippbordets innehÜll i ett VIO " \
+                                 "fînster"
+#define SZHLP_VIOKBDCLPBRD       "Exekvera klippbordsoperationen med " \
+                                 "tangentbordet"
+#define SZHLP_VIOCPY             "VÑlj vilken tangentbordskombination som markerar " \
+                                 "och kopierar VIO text till klippbordet"
+#define SZHLP_VIOCPYALL          "VÑlj vilken tangentbordskombination som kopierar " \
+                                 "allt VIO innehÜll till klippbordet"
+#define SZHLP_VIOPASTE           "VÑlj vilken tangentborsdskombination som klistrar in " \
+                                 "klippbordets innehÜll i ett VIO fînster"
+
+
+//==========================================================================\
+// - mouse_options                                                          |
+//==========================================================================/
+
+// control captions
+#define SZ_CHKMAUTFOCUS          "~Automatisk fokus"
+#define SZ_MAFDELAY              "~Fîrdrîjning (1/100 Sek):"
+#define SZ_MAFIGNDESK            "~Ignorera skrivbordet"
+#define SZ_MAFNOTOP              "Flytta till ~îverst"
+#define SZ_MAFIGNNEW             "Ignorera ~nya fînster"
+#define SZ_CHKMPTRHIDE           "Dîlj ~pekare"
+#define SZ_MPHDELAY              "~Fîrdrîjning (1/10 Sek):"
+#define SZ_MPHXCLBTN             "Exkludera ~knappar"
+#define SZ_MPHXCLMENU            "Exkludera ~meny"
+#define SZ_MBTN3MAP              "Dubbelklick ~emulering"
+#define SZ_MBTN3TBAR             "Inkludera rubrikrad"
+#define SZ_CHKMMOVETOFOCUS       "~Flytta muspekaren till det fînster som Ñr i fokus"
+#define SZ_MMTFSTEPS             "~Steg:"
+#define SZ_MMTFWINCREATE         "~Nytt fînster"
+#define SZ_MMTFWINDLG            "Dialo~ger"
+#define SZ_MMTFXCLDLGNOBTN       "E~xkludera knapplîsa dialoger"
+// help messages
+#define SZHLP_CHKMAUTFOCUS       "Automatisk Ñndring av fînster fokus genom " \
+                                 "att fîlja muspekaren till ett annat " \
+                                 "fînster"
+#define SZHLP_MAFDELAY           "Hur lÜng tid muspekaren mÜste stanna îver " \
+                                 "ett fînster fîr att ge det fokus"
+#define SZHLP_MAFIGNDESK         "Ge inte fokus till skrivbordet nÑr " \
+                                 "musen flyttas îver det"
+#define SZHLP_MAFNOTOP           "Ta inte fram till îverst det fînster som " \
+                                 "givits fokus genom musens rîrelser"
+#define SZHLP_MAFIGNNEW          "Under skapande av nytt fînster, suspendera " \
+                                 "funktionen ""automatisk fokus"" tills musen " \
+                                 "rîr sig îver ett fînster"
+#define SZHLP_CHKMPTRHIDE        "Dîlj muspekaren nÑr musen inte " \
+                                 "rîrs eller klickas"
+#define SZHLP_MPHDELAY           "Hur lÑnge musen mÜste vara stilla innan " \
+                                 "pekaren Ñr dold"
+#define SZHLP_MPHXCLBTN          "Suspendera funktionen ""dîlja muspekare"" " \
+                                 "nÑr musen Ñr îver en knappkontroll"
+#define SZHLP_MPHXCLMENU         "Suspendera funktionen ""dîlja muspekare"" " \
+                                 "nÑr musen Ñr îver en menykontroll"
+#define SZHLP_MBTN3MAP           "Ett klick pÜ den mittersta musknappen " \
+                                 "simulerar ett dubbelklick med vÑnster " \
+                                 "musknapp"
+#define SZHLP_MBTN3TBAR          "Aktivera emulering av dubbelklick pÜ " \
+                                 "rubrikrader (detta kommer att fîrhindra anvÑndning av " \
+                                 "knapp 3 fîr rullning av fînster eller dîlja rubrikrad)"
+#define SZHLP_CHKMMOVETOFOCUS    "Automatisk flyttning av muspekaren till " \
+                                 "det fînster som kommer i fokus"
+#define SZHLP_MMTFWINCREATE      "Flytta muspekaren till fînstret i fokus " \
+                                 "endast om det Ñr ett nytt fînster"
+#define SZHLP_MMTFWINDLG         "Flytta muspekaren till fînstret i fokus " \
+                                 "endast om det Ñr ett dialogfînster"
+#define SZHLP_MMTFXCLDLGNOBTN    "Exkludera dialogfînster som inte har " \
+                                 "nÜgon knappkontroll"
+#define SZHLP_MMTFSTEPS          "Antal steg (1 steg lika med approx. " \
+                                 "1/100 sek.) i taget innan musen flyttas " \
+                                 "till mÜlfînstret"
+
+
+//==========================================================================\
+// - windows_keys                                                           |
+//==========================================================================/
+
+// control captions
+#define SZ_WKEYLEFT              "~VÑnster Windowstangent:"
+#define SZ_WKEYRIGHT             "~Hîger Windowstangent:"
+#define SZ_WKEYMENU              "Windows ~menytangent:"
+// help messages
+#define SZHLP_WKEYLEFT           "StÑll in vilken hÑndelse som skall utfîras nÑr " \
+                                 "vÑnster Windowstangent Ñr tryckt"
+#define SZHLP_WKEYRIGHT          "StÑll in vilken hÑndelse som skall utfîras nÑr " \
+                                 "hîger Windowstangent Ñr tryckt"
+#define SZHLP_WKEYMENU           "StÑll in vilken hÑndelse som skall utfîras nÑr " \
+                                 "Windows menytangent trycks ner"
+// actions performed by the windows keys
+#define SZ_WKEYNOACT             "Utfîr inga aktioner"
+#define SZ_WKEYHIDESHOW          "Dîlj/ta fram alla fînster"
+#define SZ_WKEYROLLUNROLL        "Rulla upp/rulla ner alla fînster"
+#define SZ_WKEYWINLIST           "Visa fînsterlista"
+#define SZ_WKEYCONTEXT           "Visa kontextmeny"
+#define SZ_WKEYWCLOCK            "LÜs skrivbordet"
+#define SZ_WKEYDRIVEFLDR         "ôppna mappen med Enheter"
+#define SZ_WKEYSSETUPFLDR        "ôppna mappen med Systemkonfiguration"
+#define SZ_WKEYOS2CMD            "ôppna en OS/2 kommandosession"
+#define SZ_WKEYWCDESK            "Visa WarpCenter's skrivbordsmeny"
+#define SZ_WKEYWCWLIST           "Visa WarpCenter's skrivbordslista"
+#define SZ_WKEYWCPLIST           "Visa WarpCenter's processlista"
+#define SZ_WKEYWCTRAYLIST        "Visa WarpCenter's lista med fack"
+#define SZ_WKEYWCNEXTTRAY        "VÑxla till nÑsta WarpCenter fack"
+#define SZ_WKEYWCINFO            "Visa WarpCenter's informationsmeny"
+
+
+//==========================================================================\
+// - exception_list dialog                                                  |
+//==========================================================================/
+
+// captions of the controls
+#define SZ_EXCPTLIST             "Undantagslista:"
+#define SZ_FIND                  "~Finn"
+#define SZ_ADD                   "~LÑgg till"
+#define SZ_REMOVE                "~Ta bort"
+// help strings
+#define SZHLP_LBOX_EXCEPTION     "Lista îver exekverbara filer fîr vilka de " \
+                                 "aktuella optionerna Ñr avaktiverade"
+#define SZHLP_EF_LISTITEM        "Ange sîkvÑgen och namnet pÜ en exekverbar fil " \
+                                 "som du vill lÑgga till pÜ undantagslistan"
+#define SZHLP_FIND               "Finn ett exekverbart filnamn och lÑgg till det " \
+                                 "pÜ undantagslistan"
+#define SZHLP_ADD                "LÑgg till ett namn pÜ en exekverbar fil till " \
+                                 "undantagslistan"
+#define SZHLP_REMOVE             "Ta bort det valda exekverbara filnamnet frÜn " \
+                                 "undantagslistan"
+// error messages
+#define SZERR_EXCGETLIST         "Kan inte fÜ tag i undantagslistan!!!"
+#define SZERR_EXCUPDATEPRO       "Kan inte uppdatera undantagslistan i " \
+                                 "OS2.INI"
+#define SZQUERY_EXCFILENOTFOUND  "Filen hittades inte! Vill du lÑgga till den pÜ " \
+                                 "undantagslistan?"
+// title of Find-executable-file dialog
+#define SZ_ADDTOEXCPTLIST        "LÑgg till pÜ undantagslistan..."
+
+
+//==========================================================================\
+// - mouse_keyboard_actions_events dialog                                   |
+//==========================================================================/
+
+// control captions
+#define SZ_KEYBCTRLDFUNCS        "Funktioner kontrollerade av tangentbordet"
+#define SZ_MOUCTRLDFUNCS         "Funktioner kontrollerade av musen"
+#define SZ_FEFUNCEVENT           "~Funktion:"
+#define SZ_ENABLE                "~Aktivera"
+#define SZ_PRIMKEY               "~PrimÑr tangent:"
+#define SZ_MOUBTN                "~Musknapp:"
+#define SZ_CLICK                 "K~lick"
+#define SZ_DBLCLK                "~Dubbelklick"
+#define SZ_CTRL                  "~Ctrl"
+#define SZ_ALT                   "~Alt"
+#define SZ_SHIFT                 "~Shift"
+#define SZ_MKINSERT              "Ins"
+#define SZ_MKBKSPC               "Bkspc"
+#define SZ_MKDEL                 "Del"
+// strings to build the text of the "mouse action" buttons
+#define SZ_CMPMOUBTN             " musknapp"
+#define SZ_DELKEY                " Del"
+#define SZ_INSKEY                " Ins"
+#define SZ_BKSPKEY               " Backspace"
+#define SZ_CMPCLICK              " klick"
+#define SZ_CMPDBLCLK             " dubbelklick"
+#define SZ_CMPCTRL               " Ctrl +"
+#define SZ_CMPALT                " Alt +"
+#define SZ_CMPSHIFT              " Shift +"
+
+// mouse/keyboard functions list
+#define SZ_BKSZMOVE              "Fînster: bind till skÑrmens kanter"
+#define SZ_FRAMEDRAG             "Fînster: flytta genom att dra fînstrets " \
+                                 "kanter"
+#define SZ_PUTBEHIND             "Fînster: flytta bakom andra fînster"
+#define SZ_ROLL                  "Fînster: rulla"
+#define SZ_HTBAR                 "Fînster: dîlj rubrikrad"
+#define SZ_EFSELALLTXT           "InmatningsfÑlt: vÑlj all text"
+#define SZ_TXTCTLSCPY            "Textkontroller: kopiera vald text till " \
+                                 "klippbordet"
+#define SZ_TXTCTLSAPND           "Textkontroller: lÑgg vald text till " \
+                                 "klippbordet"
+#define SZ_TXTCTLSCUT            "Textkontroller: klipp ur vald text"
+#define SZ_TXTCTLSPASTE          "Textkontroller: infoga text frÜn " \
+                                 "klippbordet"
+#define SZ_TXTCTLSOVRWRT         "Textkontroller: infoga text frÜn " \
+                                 "klippbordet, îverskrivande tidigare vald " \
+                                 "text"
+#define SZ_VIOCOPY               "VIO fînster: markera & kopiera text till " \
+                                 "klippbordet"
+#define SZ_VIOAPND               "VIO fînster: kopiera hela fînstrets innehÜll " \
+                                 "till klippbordet"
+#define SZ_VIOPASTE              "VIO fînster: infoga text frÜn " \
+                                 "klippbordet"
+#define SZ_FLDOPPRPRT            "Mappar: îppna notboken med instÑllningar"
+#define SZ_FLDOPPAR              "Mappar: îppna fîrÑlder"
+#define SZ_FLDFIND               "Mappar: finn"
+#define SZ_FLDSRTNAME            "Mappar: sortera pÜ namn"
+#define SZ_FLDSRTEXT             "Mappar: sortera pÜ Ñndelse"
+#define SZ_FLDSRTTYPE            "Mappar: sortera pÜ typ"
+#define SZ_FLDRSRTRNAME          "Mappar: sortera pÜ riktigt namn"
+#define SZ_FLDRSRTSIZE           "Mappar: sortera pÜ storlek"
+#define SZ_FLDSRTWRT             "Mappar: sortera pÜ senaste skrivdatum"
+#define SZ_FLDSRTACC             "Mappar: sortera pÜ senaste accessdatum"
+#define SZ_FLDSRTCREAT           "Mappar: sortera pÜ skapad datum"
+#define SZ_FLDARRANGE            "Mappar: arrangera"
+#define SZ_FLDREFRESH            "Mappar: fîrnya"
+
+// mouse/keyboard functions target
+#define SZ_PERFTBAR              "HÑndelse utfîrd pÜ rubrikrad"
+#define SZ_PERFFOCWIN            "HÑndelse utfîrd pÜ fînster i fokus"
+#define SZ_PERFWINBRD            "HÑndelse utfîrd pÜ fînsterkanter"
+#define SZ_PERFTXTCTLS           "HÑndelse utfîrd pÜ textkontroller"
+#define SZ_PERFEF                "HÑndelse utfîrd pÜ inmatningsfÑlt"
+#define SZ_PERFVIO               "HÑndelse utfîrd pÜ VIO fînster"
+#define SZ_PERFANYWIN            "HÑndelse utfîrd pÜ nÜgot fînster"
+#define SZ_PERFONFLDR            "HÑndelse utfîrd pÜ mappar"
+
+
+//==========================================================================\
+// - bitmap_selection dialog                                                |
+//==========================================================================/
+
+// control captions
+#define SZ_EDIT                  "~Editera"
+#define SZ_IMPORT___             "~Importera..."
+#define SZ_DISABLE               "~Avaktivera"
+#define SZ__DEFAULT              "~Standard"
+#define SZ_CLOSEBTNPOS           "Ingen knapp\x09VÑnster sida\x09Standard " \
+                                 "position\x09Hîger sida\x09"
+#define SZ_OK                    "~OK"
+#define SZ_CANCEL                "~èngra"
+#define SZ_HELP                  "HjÑlp"
+#define SZ_EDIT_                 "Editera "
+// help messages
+#define SZHLP_LBOX_BMPSEL        "Klicka fîr att vÑlja en bitmap, dubbelklicka fîr " \
+                                 "att vÑlja den"
+#define SZHLP_EDITBMP            "Editera vald bitmap"
+#define SZHLP_FINDBMP            "Kopiera en bitmapsfil till den aktuella sîkvÑgen"
+#define SZHLP_BMPDISABLE         "Ta bort knappen frÜn rubrikraden"
+#define SZHLP_DEFAULT            "AnvÑnd standard bitmap"
+#define SZHLP_CLOSEPOS           "VÑlj position pÜ fînstrets stÑnga " \
+                                 "knapp"
+#define SZHLP_BMPOK              "Acceptera den nuvarande valda bitmappen"
+#define SZHLP_BMPCANCEL          "LÑmna dialogen, och lÜt instÑllningarna vara " \
+                                 "ofîrÑndrade"
+// dialog titles
+#define SZ_BSDTITLE0             "Aktivera rubrikradens bakgrundsbitmap"
+#define SZ_BSDTITLE1             "Avaktivera rubrikradens bakgrundsbitmap"
+#define SZ_BSDTITLE2             "Bitmap fîr systemmenyns knapp"
+#define SZ_BSDTITLE3             "StÑnga knappens bitmap"
+#define SZ_BSDTITLE4             "Dîlja knappens bitmap"
+#define SZ_BSDTITLE5             "Minimera knappens bitmap"
+#define SZ_BSDTITLE6             "èterstÑlla knappens bitmap"
+#define SZ_BSDTITLE7             "Maximera knappens bitmap"
+#define SZ_BSDTITLE8             "Rulla upp knappens bitmap"
+#define SZ_BSDTITLE9             "Rulla ner knappens bitmap"
+#define SZ_BSDTITLE10            "Dîlja rubrikradens bitmap"
+#define SZ_BSDTITLE11            "Ta fram rubrikradens bitmap"
+// warning/error messages
+#define SZERR_BSDALLOC           "Kan inte allokera minne fîr dialog " \
+                                 "data!"
+#define SZ_ASKOVERWRITE          "Den valda filen finns redan i " \
+                                 "den aktuella katalogen! Vill du " \
+                                 "skriva îver den?"
+#define SZ_ASKCONFIRM            "Var vÑnlig bekrÑfta!"
+#define SZERR_STARTICONEDIT      "Kan inte starta Ikoneditor!"
+#define SZERR_COPYBMP            "Kan inte importera bitmappsfilen!"
+#define SZERR_INVALIDPATH        "Ogiltig sîkvÑg: "
+// import bitmap dialog
+#define SZ_IMPORTBMP             "Importera bitmappsfil"
+#define SZ_IMPORTOK              "~Importera"
+
+
+//==========================================================================\
+// - help_strings (view.exe parameters).                                    |
+// Only univocal portions of the titles of the various pages are needed     |
+// The string portions used here depend on the translation of the INF file  |
+// source (STYLER2.IPF)                                                     |
+//==========================================================================/
+
+// help strings (view parameters):
+#define SZINF_FILE               " STYLER2"
+#define SZINF_LOGO               " STYLER"
+#define SZINF_GEN                " ALLMéNT"
+#define SZINF_EXCPTN             " UNDANTAG"
+#define SZINF_DLG                " DIALOG"
+#define SZINF_TBAR               " RUBRIKRAD"
+#define SZINF_TBHIDE             " DôLJA"
+#define SZINF_ROLLING            " RULLA"
+#define SZINF_MAXIMIZ            " MAXIMERA"
+#define SZINF_MOVING             " FLYTTA"
+#define SZINF_TEXT               " TEXT"
+#define SZINF_VIO                " VIO"
+#define SZINF_MOUSE              " MUS"
+#define SZINF_MOUKEY             " MUS/TANGENTBORD"
+#define SZINF_BITMAP             " BITMAP"
+#define SZINF_INSTALL            " INSTALL"
+#define SZINF_REGISTER           " REGISTRERING"
+#define SZINF_WKEYS              " WINDOWSTANGENTER"
+
+
+//==========================================================================\
+// - installer_unistaller strings                                           |
+//==========================================================================/
+
+// installation dialog - control captions
+#define SZ_INSTTITLE             "Styler/2 installation/avinstallation"
+#define SZ_INSTSEL               "VÑlj en hÑndelse:"
+#define SZ_INSTINST              "~Installera"
+#define SZ_INSTRECR              "~èterskapa skrivbordsobjekt"
+#define SZ_INSTUNIST             "~Avinstallera"
+#define SZ_INSTDRV               "~Val av enhet:"
+#define SZ_INSTPATH              "~InstallationssîkvÑg:"
+#define SZ_INSTBACK              "<< ~BakÜt"
+#define SZ_INSTFWD               "~FramÜt >>"
+#define SZ_INSTCANC              "~èngra"
+#define SZ_INSTHELP              "~HjÑlp"
+#define SZ_INSTEXIT              "~Avsluta"
+#define SZ_INSTINSTIN            "Klicka pÜ FramÜt fîr att starta installationen till:"
+#define SZ_INSTRFRSHIN           "Klicka pÜ FramÜt fîr att Üterskapa objekt!"
+#define SZ_INSTUNINSTIN          "Klicka pÜ FramÜt fîr att starta avinstallation!"
+#define SZ_INSTLICENSE           "Licensîverenskommelse:"
+#define SZ_INSTLOGFILE           "Loggfil:"
+
+// error messages
+#define SZ_INSTERRNOLIC          "Misslyckades med att ladda filen license.txt."
+#define SZ_IENERDINST            "Installationen har avbrutits! Var vÑnlig " \
+                                 "kontrollera loggfilen."
+#define SZ_IENERDRFRSH           "Skapandet av objekt har avbrutits! " \
+                                 "Var vÑnlig kontrollera loggfilen."
+#define SZ_IENERDUNINST          "Avinstallationen har avbrutits! " \
+                                 "Var vÑnlig kontrollera loggfilen."
+
+// title of the various progress windows
+#define SZ_IPRDRVINFO            "Bygger listan pÜ enheter..."
+#define SZ_IPRINSTLING           "Installerar Styler/2..."
+#define SZ_IPRRFRSHING           "èterskapar Styler/2 objekt..."
+#define SZ_IPRDELETING           "Avinstallerar Styler/2..."
+
+// other messages
+#define SZ_IQRYMKPATH            "Var vÑnlig bekrÑfta:\tDen valda sîkvÑgen existerar " \
+                                 "inte! Vill du skapa den nu?"
+#define SZ_INSTREPATH            "Klicka pÜ BakÜt fîr att vÑlja en ny sîkvÑg " \
+                                 "fîr installationen!"
+#define SZ_IERRMKPATH            "Misslyckades med att skapa den valda sîkvÑgen!"
+#define SZ_IENDINSTOK            "Installationsproceduren avslutades " \
+                                 "utan problem.\x0aVar vÑnlig boota om maskinen fîr att " \
+                                 "ladda den nya SMARTWIN.DLL."
+#define SZ_IENDRFRSHOK           "Styler/2's objekt har skapats " \
+                                 "utan problem."
+#define SZ_IENDUNINSTOK          "Avinstallationsproceduren avslutades " \
+                                 "utan problem."
+#define SZ_IENDINSTSTP           "Installationsproceduren har " \
+                                 "avbrutits."
+#define SZ_IENDRFRSHSTP          "Skapandet av objekt har " \
+                                 "avbrutits."
+#define SZ_IENDUNINSTSTP         "Avinstallationsproceduren har " \
+                                 "avbrutits."
+#define SZ_IENDINSTPRB           "Vissa problem uppstod under " \
+                                 "installationen.\x0aVar vÑnlig kontrollera loggfilen "\
+                                 "fîr fler detaljer."
+#define SZ_IENDRFRSHPRB          "Proceduren fîr skapandet av objekt hade vissa " \
+                                 "problem.\x0aVar vÑnlig kontrollera loggfilen fîr " \
+                                 "fler detaljer."
+#define SZ_IENDUNINSTPRB         "Vissa problem uppstod under " \
+                                 "avinstallationen.\x0aVar vÑnlig kontrollera loggfilen " \
+                                 "fîr fler detaljer."
+#define SZ_INSTPROCERR           "Fel!"
+#define SZ_INSTCHKPREF           "Kontrollera om applikationen instÑllningar " \
+                                 "Ñr igÜng..."
+#define SZ_INSTSYSDLLS           "LÑgger till SMARTWIN.DLL till " \
+                                 "OS2.INI/SYS_DLLS/LoadPerProcess..."
+#define SZ_INSTSYSDLLS2          "LÑgger till STYLER20.DLL till " \
+                                 "OS2.INI/SYS_DLLS/LoadPerProcess..."
+#define SZ_INSTADDINI0           "LÑgger till: "
+#define SZ_INSTADDINI1           " i OS2.INI..."
+#define SZ_INSTDELINI1           " frÜn OS2.INI..."
+#define SZ_ICHKSMWINI            "Kontrollerar fîrekomsten av en tidigare " \
+                                 "SMARTWIN.INI fil..."
+#define SZ_IMKOBJS               "Skapar Styler/2 skrivbordsobjekt..."
+#define SZ_IMKOBJ                "Skapar objekten: "
+
+#define SZ_IDELSYSDLLS           "Tar bort SMARTWIN.DLL frÜn " \
+                                 "OS2.INI/SYS_DLLS/LoadPerProcess..."
+#define SZ_IDELSYSDLLS2          "Tar bort STYLER20.DLL frÜn " \
+                                 "OS2.INI/SYS_DLLS/LoadPerProcess..."
+
+#define SZ_INSQRYSTRTUP          "Var vÑnlig kontrollera\tVill du att Styler/2 " \
+                                 "skall startas med standard instÑllningar (Ja knappen) " \
+                                 "eller med alla optioner avaktiverade (Nej knappen)?"
+#define SZ_IQRYREMBMPS           "Var vÑnlig bekrÑfta\tVill du ta bort " \
+                                 "underkatalogen bitmaps med allt sitt " \
+                                 "innehÜll?"
+#define SZ_INSDSTROBJ            "Fîrstîr: "
+#define SZ_IQRYREMIPTH           "Var vÑnlig bekrÑfta\tVill du ta bort " \
+                                 "installationssîkvÑgen: "
+#define SZ_IQRYREMIPTH1          " med allt sitt innnehÜll?"
+#define SZ_IPRELAPSED            "\x0aUpplupen tid: 11 timmar, 22 minuter och " \
+                                 "33 sekunder."
+#define SZ_ILOGCPY               "Kopierar :"
+#define SZ_ILOGCPYTO             " till : "
+#define SZ_IOVWRTNEW             "Var vÑnlig bekrÑfta\t Ñr en nyare fil och " \
+                                 "kommer att skrivas îver!\x0aCKlicka pÜ " \
+                                 """Ja"" fîr att skriva îver den eller ""Nej"" fîr att " \
+                                 "bevara den."
+#define SZ_IOVWRTCONF            "Var vÑnlig bekrÑfta\t kommer att " \
+                                 "skrivas îver!\x0aKlicka pÜ ""Ja"" fîr att " \
+                                 "skriva îver den eller ""Nej"" fîr att bevara den."
+#define SZ_ILOGREM               "Tar bort: "
+#define SZ_ILOGMKPATH            "Kontrollera sîkvÑgen: "
+// Styler/2 Desktop objects titles
+// folder
+#define SZ_OBJTFOLDER            "Styler/2"
+// other objects
+#define SZ_OBJTPRPRTY            "InstÑllningar"
+// this is the title of the properties object in the system setup folder:
+#define SZ_OBJTPRPRTY1           "Styler/2 InstÑllningar"
+#define SZ_OBJTREADME            "Read me"
+#define SZ_OBJTLICENSE           "Licensîverenskommelse"
+#define SZ_OBJTRGSTRNT           "Registrering noteringar"
+#define SZ_OBJTINST_U            "Installation/avinstallation"
+#define SZ_OBJTRGSTRPR           "Registrering"
+#define SZ_OBJTDOC               "AnvÑndar Guide"
+
+
+//==========================================================================\
+// - registration_dialog strings                                            |
+//==========================================================================/
+
+// control captions:
+#define SZ_REGTITLE              "Styler/2 registrering"
+#define SZ_REGINSTR              "Hur registrera:"
+#define SZ_REGNAME               "~Namn:"
+#define SZ_REGADDRESS            "~Adress:"
+#define SZ_REGCITY               "~Stad:"
+#define SZ_REGZIP                "Postnummer:"
+#define SZ_REGPROV               "Pro~vins/Stat:"
+#define SZ_REGCTRY               "~Land:"
+// replace "" with the name of your country (for instance "ITALY")
+#define SZ_REGCTRYEF             "Sweden"
+#define SZ_REGEMAIL              "e-~mail:"
+#define SZ_REGTPWD               "MOMS reg:"
+
+#define SZ_REGCLIENTDATA         "Kund-~data"
+#define SZ_REGCLIENTCODE         "Kund-~kod"
+#define SZ_REGREGCODE            "~Registreringsnyckel"
+#define SZ_REGMLNONE             "Jag vill inte ha nÜgra nyheter via " \
+                                 "e-mail"
+#define SZ_REGMLSTLR             "Var vÑnlig skicka e-mail till mig med nyheter om Styler/2"
+#define SZ_REGMLALL              "Var vÑnlig skicka e-mail till mig med nyheter om Styler/2 " \
+                                 "och andra program av Alessandro " \
+                                 "Cantatore"
+#define SZ_REGINPUTCSTMR         "Skriv hela ditt namn, ort och " \
+                                 "e-mail adress:"
+#define SZ_REGSENDCODE           "Skicka din kund-kod till " \
+                                 "<acantatore@tin.it>!"
+#define SZ_REGINPUTREGCODE       "Infoga din registreringsnyckel nedanfîr:"
+#define SZ_REGEDIT               "~Editera"
+#define SZ_REGCPYCLPBRD          "~Spara"
+#define SZ_REGOK                 "~OK"
+// file dialog title
+#define SZ_REGSAVECSTMRFIL       "Spara kund-koden som:"
+// errors
+#define SZERR_REGFAILALLOC       "Fel!\tAllokeringsfel."
+#define SZERR_REGLOADREGFILE     "Fel!\tMisslyckades med att ladda filen " \
+                                 "REGISTER.TXT."
+#define SZERR_REGREADCSTMDAT     "Fel!\tMisslyckades med att importera kunddata."
+#define SZERR_REGFAILOPPRF       "Fel!\tMisslyckades med att îppna SMARTWIN.INI."
+#define SZERR_REGSAVECSTMRCD     "Fel!\tMisslyckades med att spara kund-koden."
+#define SZERR_REGCONVCSTDATA     "Fel!\tMisslyckades med att generera kund-koden."
+#define SZERR_REGREADREGCODE     "Fel!\tMisslyckades med att spara registreringsnyckeln."
+#define SZERR_REGINVKEY          "Fel!\tOgiltig registreringsnyckel!"
+
+// contextual help strings
+#define SZHLP_REGMLEREADME       "Registreringsinstruktioner."
+#define SZHLP_REGINNAME          "Skriv ditt fîretagsnamn (eller eget namn " \
+                                 "nÑr du kîper fîr personligt bruk)"
+#define SZHLP_REGINADDRESS       "Skriv ditt fîretags adress (din egen " \
+                                 "adress nÑr du kîper fîr personligt bruk)"
+#define SZHLP_REGINCITY          "Skriv stadens namn"
+#define SZHLP_REGINZIP           "Skriv ZIP/postnumret, eller skriv ""-"" " \
+                                 "om det inte finns tillgÑngligt."
+#define SZHLP_REGINPROV          "Skriv statens/provinsens namn"
+#define SZHLP_REGINNATION        "Skriva ditt lands namn"
+#define SZHLP_REGINEMAIL         "Skriv din e-mail adress, eller skriv ""-"" " \
+                                 "om den inte finns tillgÑnglig."
+#define SZHLP_REGINPIVA          "Skriv ditt MOMS regnummer eller nÜgon annan skattekod " \
+                                 "om du behîver det fîr fakturan, eller skriv " \
+                                 """-"" om det inte finns tillgÑngligt."
+#define SZHLP_REGBTNEDIT         "Klicka pÜ ""Editera"" knappen om du behîver " \
+                                 "modifiera dina kund-data."
+#define SZHLP_REGMLECSTMRCODE    "Skicka din kund-kod till " \
+                                 "<acantatore@tin.it>."
+#define SZHLP_REGMLEREGCODE      "Infoga registreringsnyckeln i editeringsfÑltet " \
+                                 "och klicka pÜ OK knappen."
+#define SZHLP_REGREGREG          "Klicka pÜ ""OK"" knappen fîr att spara och " \
+                                 "tillÑmpa din registreringskod."
+#define SZHLP_REGSBAR            "Flytta muspekaren îver fînsterkontrollerna " \
+                                 "fîr att fÜ kontextkÑnslig hjÑlp."
+
+// messages
+
+#define SZMSG_REGCANCNEWREG      "Modifieringen av registreringsnyckeln " \
+                                 "har Üngrats!"
+#define SZMSG_REGREGOK           "Registreringsnyckeln har sparats!"
+#define SZMSG_REGREGCODEPRES     "Tidigare registreringsnyckel har hittas."
+
+// strings which might be longer than 256 characters:
+// context help
+#define SZHLP_REGML              "VÑlj lÑmplig punkt fîr att fÜ " \
+                                 "e-mail noteringar {A} nÑr en Styler/2 " \
+                                 "uppdatering Ñr slÑppt, eller {B} nÑr det finns " \
+                                 "uppdateringar och nya andra program som jag har " \
+                                 "utvecklat, eller {C} aldrig."
+
+#define SZHLP_REGCSTMRDATA       "Klicka pÜ knappen ""Kund-data"" fîr att " \
+                                 "infoga ditt kompletta namn, adress och " \
+                                 "e-mail.\x0aDet kommer att anvÑndas fîr att skapa " \
+                                 "kund-koden.\x0"
+
+#define SZHLP_REGCSTMRCODE       "Klicka pÜ knappen ""Kund-kod"" fîr att " \
+                                 "skapa din kund-kod och e-maila den " \
+                                 "till <acantatore@tin.it> fîr att fÜ " \
+                                 "registreringsnyckeln.\x0"
+
+#define SZHLP_REGREGCODE         "Om du redan har fÜtt din " \
+                                 "registreringskod, klicka pÜ knappen " \
+                                 """Registreringsnyckel"" och infoga din " \
+                                 "nyckel och registrera Styler/2.\x0"
+
+#define SZHLP_REGBTNCOPY         "Klicka pÜ knappen ""Spara"" fîr att spara din " \
+                                 "kund-kod i en fil, skicka sedan filen " \
+                                 "till <acantatore@tin.it> med e-mail fîr att " \
+                                 "erhÜlla din registreringsnyckel.\x0"
+
+// messages
+#define SZMSG_REGEDCSTDATA0      "Varning\tOm du Ñndrar dina data, dÜ mÜste " \
+                                 "du fÜ och infoga en ny " \
+                                 "registreringsnyckel!\x0"
+
+#define SZMSG_REGEDCSTDATA1      "Varning\tOm du editerar dina data efter att du " \
+                                 "redan skickat din kund-kod till " \
+                                 "<acantatore@tin.it>, kommer registreringsnyckeln " \
+                                 "som du har fÜtt inte lÑngre att vara " \
+                                 "giltig!\x0"
+
+#define SZMSG_REGCSTMRCODESVD    "Kund-koden har sparats utan " \
+                                 "problem.\x0aDu mÜste skicka filen CUSTOMER.DAT " \
+                                 "med e-mail till <acantatore@tin.it> fîr att " \
+                                 "gîra registreringen komplett!\x0"
+
+#define SZMSG_REGNEWCSTCODE0     "Varning\tDu hÜller pÜ att skapa en ny " \
+                                 "kund-kod.\x0aDin registreringsnyckel " \
+                                 "kommer inte lÑngre att vara giltig!!!\x0aKlicka pÜ " \
+                                 """Ja"" fîr att skapa den nya koden eller klicka " \
+                                 "pÜ ""Nej"" fîr att Üngra operationen.\x0"
+
+#define SZMSG_REGNEWCSTCODE1     "Varning\tDu hÜller pÜ att skapa en ny " \
+                                 "kund-kod.\x0aOm du redan har e-mailat " \
+                                 "din tidigare kod till <acantatore@tin.it>, " \
+                                 "kommer den registreringskod som du har fÜtt " \
+                                 "inte att vara giltig!\x0aKlicka pÜ ""Ja"" fîr " \
+                                 "att skapa den nya koden eller klicka pÜ ""Nej"" " \
+                                 "fîr att Üngra operationen.\x0"
+
+#define SZMSG_REGNEWREGCODE      "Varning\tDu hÜller pÜ att Ñndra din " \
+                                 "registreringsnyckel!\x0aOm nyckeln inte Ñr " \
+                                 "korrekt, kan programmet sluta " \
+                                 "fungera.\x0aKlicka pÜ ""Ja"" fîr att spara den " \
+                                 "nya nyckeln eller klicka pÜ ""Nej"" fîr att Üngra " \
+                                 "operationen.\x0"
+
+// system menu items
+#define SZ_SYSMNTBHIDE           "Dîlja/ta fram rubrikrad\x09"
+#define SZ_SYSMNRLUNRL           "Ru~lla upp/rulla ner\x09"
+#define SZ_SYSMNALT              "Alt+"
+#define SZ_SYSMNCTL              "Ctl+"
+#define SZ_SYSMNSHFT             "Shift+"
+#define SZ_SYSMNINS              "Ins"
+#define SZ_SYSMNBKSPC            "Bkspc"
+#define SZ_SYSMNDEL              "Del"
+#define SZ_SYSMNF1               "F1"
+#define SZ_SYSMNF2               "F2"
+#define SZ_SYSMNF3               "F3"
+#define SZ_SYSMNF4               "F4"
+#define SZ_SYSMNF5               "F5"
+#define SZ_SYSMNF6               "F6"
+#define SZ_SYSMNF7               "F7"
+#define SZ_SYSMNF8               "F8"
+#define SZ_SYSMNF9               "F9"
+#define SZ_SYSMNF10              "F10"
+#define SZ_SYSMNF11              "F11"
+#define SZ_SYSMNF12              "F12"
+
+// end file ---------------------------------------------------------------
+
+#endif

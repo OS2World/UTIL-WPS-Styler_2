@@ -1,0 +1,159 @@
+// common.dlg: dialoghi comuni
+#include "commondlg.h"
+
+
+// copertina
+DLGTEMPLATE DLG_COVER LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  SZ_NULL, DLG_COVER, 0, 0, CX_PAGEDLG, CY_PAGEDLG, NOT FS_DLGBORDER |
+            WS_VISIBLE
+    BEGIN
+      CONTROL SZLOGONAME, WSBMP_LOGO, 0, 0, 0, 0, WC_EDLGSIMG,
+              WS_VISIBLE | ESI_BMP
+      CONTROL SZ_NULL, TXT_VERSION, 0, 0, 0, 0, WC_STATUSBAR,
+              WS_VISIBLE | DT_CENTER | DT_VCENTER | CCTL_BORDER2 | CCTL_RAISED
+              PRESPARAMS PP_FONTNAMESIZE SZ_FONTTITLE
+    END
+END
+
+
+// pagina exceptions (comune x le varie opzioni ) -------------------------
+
+DLGTEMPLATE DLG_EXCEPTLIST LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  SZ_NULL, DLG_EXCEPTLIST, 0, 0, CX_PAGEDLG, CY_PAGEDLG, NOT FS_DLGBORDER |
+            WS_VISIBLE
+            PRESPARAMS PP_FONTNAMESIZE SZ_FONTDLG
+    BEGIN
+        LTEXT           SZ_EXCPTLIST, TXT_EXCPLIST, 2, 138, 216, 8,
+                        DT_VCENTER | NOT WS_GROUP
+        LISTBOX         LBOX_EXCEPTION, 2, 30, 216, 108,
+                        LS_NOADJUSTPOS | WS_GROUP | WS_TABSTOP | LS_EXTENDEDSEL
+        ENTRYFIELD      SZ_NULL, EF_LISTITEM, 4, 18, 212, 8, WS_TABSTOP |
+                        ES_LEFT | ES_AUTOSCROLL | ES_MARGIN | WS_GROUP
+                        CTLDATA 8, 255, 0, 0
+        PUSHBUTTON      SZ_FIND, BTN_EXCEPTFIND, 2, 2, 67, 13,
+                        WS_GROUP | WS_TABSTOP
+        PUSHBUTTON      SZ_ADD, BTN_EXCEPTCADD, 70, 2, 67, 13,
+                        NOT WS_TABSTOP | WS_DISABLED
+        PUSHBUTTON      SZ_REMOVE, BTN_EXCECPTREM, 138, 2, 67, 13,
+                        NOT WS_TABSTOP | WS_DISABLED
+    END
+END
+
+
+// dialogo selezione azioni mouse e tastiera (finestra indipendente)
+
+DLGTEMPLATE DLG_MOUKEYBACTSFL LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  SZ_NULL, DLG_MOUKEYBACTSFL, 0, 0, CX_PAGEDLG, CY_PAGEDLG,
+            NOT WS_SYNCPAINT | NOT WS_VISIBLE, FCF_SYSMENU | FCF_TITLEBAR |
+            FCF_MINBUTTON | FCF_MAXBUTTON | FCF_SIZEBORDER
+            PRESPARAMS PP_FONTNAMESIZE SZ_FONTDLG
+    BEGIN
+        LTEXT           SZ_FEFUNCEVENT, TXT_FEFNCTEVNTS, 2, 145, 119, 8,
+                        DT_MNEMONIC
+        LISTBOX         LBOX_FEFNCTEVNTS, 2, 68, 216, 76, LS_NOADJUSTPOS
+        CONTROL         SZ_NULL, SBAR_FEFNCTEVNT, 2, 56, 216, 10, WC_STATUSBAR,
+                        WS_VISIBLE | CCTL_BORDER1
+        AUTOCHECKBOX    SZ_ENABLE, CHK_FEENABLE, 2, 42, 44, 10,
+                        WS_GROUP | WS_DISABLED
+        LTEXT           SZ_PRIMKEY, TXT_FEKEYBTN, 46, 42, 64, 10,
+                        DT_MNEMONIC | DT_VCENTER | WS_DISABLED
+        SPINBUTTON      SPIN_FEFKEYBTN, 110, 42, 46, 12, SPBS_READONLY |
+                        SPBS_MASTER | SPBS_JUSTLEFT | WS_DISABLED
+        AUTORADIOBUTTON SZ_CLICK, RDBTN_FECLICK, 46, 32, 99, 10, WS_GROUP |
+                        WS_TABSTOP | NOT WS_VISIBLE
+        AUTORADIOBUTTON SZ_DBLCLK, RDBTN_FEDBLCLK, 46, 22, 99, 10,
+                        NOT WS_VISIBLE
+        AUTOCHECKBOX    SZ_CTRL, CHK_FECTRL, 169, 42, 49, 10, WS_GROUP |
+                        WS_DISABLED
+        AUTOCHECKBOX    SZ_ALT, CHK_FEALT, 169, 32, 49, 10, NOT WS_TABSTOP |
+                        WS_DISABLED
+        AUTOCHECKBOX    SZ_SHIFT, CHK_FESHIFT, 169, 22, 49, 10,
+                        NOT WS_TABSTOP  | WS_DISABLED
+        CONTROL         SZ_NULL, GRP_FEHBAR, 2, 17, 216, 2, WC_BAR, WS_VISIBLE
+        PUSHBUTTON      SZ_OK, BTN_FEOK, 2, 2, 60, 13, WS_GROUP | WS_TABSTOP |
+                        WS_DISABLED
+        PUSHBUTTON      SZ_CANCEL, BTN_FECANCEL, 64, 2, 60, 13, WS_GROUP
+        PUSHBUTTON      SZ_HELP, BTN_FEHELP, 126, 2, 60, 13, WS_GROUP |
+                        WS_TABSTOP
+    END
+END
+
+
+// dialogo selezione azioni mouse e tastiera (pagina notebook)
+
+DLGTEMPLATE DLG_MOUKEYBACTS LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  SZ_NULL, DLG_MOUKEYBACTS, 0, 0, CX_PAGEDLG, CY_PAGEDLG,
+            NOT FS_DLGBORDER
+            PRESPARAMS PP_FONTNAMESIZE SZ_FONTDLG
+    BEGIN
+        LTEXT           SZ_FEFUNCEVENT, TXT_FEFNCTEVNTS, 2, 145, 119, 8,
+                        DT_MNEMONIC
+        LISTBOX         LBOX_FEFNCTEVNTS, 2, 48, 216, 96, LS_NOADJUSTPOS
+        CONTROL         SZ_NULL, SBAR_FEFNCTEVNT, 2, 36, 216, 10, WC_STATUSBAR,
+                        WS_VISIBLE | CCTL_BORDER1
+        AUTOCHECKBOX    SZ_ENABLE, CHK_FEENABLE, 2, 22, 44, 10,
+                        WS_GROUP | WS_DISABLED
+        LTEXT           SZ_PRIMKEY, TXT_FEKEYBTN, 46, 22, 64, 10,
+                        DT_MNEMONIC | DT_VCENTER | WS_DISABLED
+        SPINBUTTON      SPIN_FEFKEYBTN, 110, 22, 46, 12, SPBS_READONLY |
+                        SPBS_MASTER | SPBS_JUSTLEFT | WS_DISABLED
+        AUTORADIOBUTTON SZ_CLICK, RDBTN_FECLICK, 46, 12, 99, 10, WS_GROUP |
+                        WS_TABSTOP | NOT WS_VISIBLE
+        AUTORADIOBUTTON SZ_DBLCLK, RDBTN_FEDBLCLK, 46, 2, 99, 10,
+                        NOT WS_VISIBLE
+        AUTOCHECKBOX    SZ_CTRL, CHK_FECTRL, 169, 22, 49, 10, WS_GROUP |
+                        WS_DISABLED
+        AUTOCHECKBOX    SZ_ALT, CHK_FEALT, 169, 12, 49, 10, NOT WS_TABSTOP |
+                        WS_DISABLED
+        AUTOCHECKBOX    SZ_SHIFT, CHK_FESHIFT, 169, 2, 49, 10,
+                        NOT WS_TABSTOP  | WS_DISABLED
+        CONTROL         SZ_NULL, GRP_FEHBAR, -2, -2, 0, 0, WC_BAR,
+                        NOT WS_VISIBLE
+        PUSHBUTTON      SZ_OK, BTN_FEOK, -2, -2, 0, 0, WS_GROUP | WS_TABSTOP |
+                        NOT WS_VISIBLE | WS_DISABLED
+        PUSHBUTTON      SZ_CANCEL, BTN_FECANCEL, -2, -2, 0, 0, WS_GROUP |
+                        NOT WS_VISIBLE
+        PUSHBUTTON      SZ_HELP, BTN_FEHELP, -2, -2, 0, 0, WS_GROUP |
+                        WS_TABSTOP | NOT WS_VISIBLE
+    END
+END
+
+
+// dialogo selezione bitmap -----------------------------------------------
+
+DLGTEMPLATE DLG_BMPSEL LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", DLG_BMPSEL, 0, 0, 0, 0, //BMPSELDLG_CX, BMPSELDLG_CY,
+            NOT FS_DLGBORDER |
+            FS_SIZEBORDER | NOT WS_VISIBLE, FCF_SYSMENU | FCF_TITLEBAR |
+            FCF_MINBUTTON | FCF_MAXBUTTON
+            PRESPARAMS PP_FONTNAMESIZE SZ_FONTDLG
+    BEGIN
+        CONTROL         "", LBOX_BMPSEL, 1, 1, 157, 113, WC_LISTBOX,
+                        LS_OWNERDRAW | LS_NOADJUSTPOS | WS_GROUP | WS_TABSTOP
+                        PRESPARAMS PP_BACKGROUNDCOLORINDEX CLR_PALEGRAY
+                        PRESPARAMS PP_DISABLEDBACKGROUNDCOLORINDEX CLR_PALEGRAY
+        CONTROL         SZ_EDIT, BTN_EDITBMP, 159, 101, 76, 13, WC_BUTTON,
+                        BS_PUSHBUTTON | WS_GROUP | WS_VISIBLE
+        CONTROL         SZ_IMPORT___, BTN_FINDBMP, 159, 87, 76, 13,WC_BUTTON,
+                        WS_GROUP | WS_TABSTOP | WS_VISIBLE | BS_PUSHBUTTON
+        CONTROL         SZ_DISABLE, CHK_BMPDISABLE, 159, 70, 76, 10,WC_BUTTON,
+                        WS_GROUP | WS_TABSTOP | NOT WS_VISIBLE | BS_AUTOCHECKBOX
+        CONTROL         SZ__DEFAULT, CHK_BMPDEFAULT, 159, 60, 76, 10,WC_BUTTON,
+                        WS_GROUP | WS_TABSTOP | NOT WS_VISIBLE | BS_AUTOCHECKBOX
+        // combobox scelta posizione bottone chiusura
+        CONTROL         "", COMBO_CLOSEPOS, 159, 13, 76, 38, WC_COMBOBOX,
+                        CBS_DROPDOWNLIST | WS_TABSTOP | NOT WS_VISIBLE
+        CONTROL         SZ_OK, BTN_BMPOK, 159, 29, 76, 13, WC_BUTTON,
+                        WS_GROUP | WS_TABSTOP | WS_VISIBLE | BS_PUSHBUTTON |
+                        BS_DEFAULT
+        CONTROL         SZ_CANCEL, BTN_BMPCANCEL, 159, 15, 76, 13, WC_BUTTON,
+                        WS_VISIBLE | BS_PUSHBUTTON
+        CONTROL         SZ_HELP, BTN_BMPHELP, 159, 1, 76, 13, WC_BUTTON,
+                        WS_VISIBLE | BS_PUSHBUTTON
+    END
+END

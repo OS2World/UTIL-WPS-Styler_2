@@ -1,0 +1,62 @@
+// wroll.dlg
+
+// pagina 1 configurazione opzioni window roll ----------------------------
+
+DLGTEMPLATE DLG_ROLLWIN LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", DLG_ROLLWIN, 0, 0, CX_PAGEDLG, CY_PAGEDLG, NOT FS_DLGBORDER |
+            WS_VISIBLE
+            PRESPARAMS PP_FONTNAMESIZE, SZ_FONTDLG
+    BEGIN
+        // checkbox enable window rolling
+        AUTOCHECKBOX    SZ_RLWINENBL, CHK_RLWINENABLE, 2, 140, 200, 10,
+                        WS_GROUP | WS_TABSTOP
+        // gruppo roll by:
+        CONTROL         SZ_RLWINBY, GRP/*_ROLLBY*/, 2, 95, 216, 43,
+                        WC_3DGROUPBOX, CCTL_FRAME0 | WS_GROUP | WS_VISIBLE
+        // checkbox system menu
+        AUTOCHECKBOX    SZ_SYSMENU, CHK_RLWINSYSMENU, 95, 125, 100, 10,
+                        NOT WS_GROUP | WS_TABSTOP
+        // bottone mouse
+        PUSHBUTTON      SZ_MOUSE, BTN_RLWINMOU, 4, 111, 89, 13, NOT WS_TABSTOP
+        // bottone keyboard
+        PUSHBUTTON      SZ_KEYBOARD, BTN_RLWINKEYB, 4, 97, 89, 13,
+                        NOT WS_TABSTOP
+        // bottone roll
+        PUSHBUTTON      SZ_RLWINRLBTN, BTN_RLWINROLLBTN, 93, 111, 89, 13,
+                        NOT WS_TABSTOP
+        CONTROL         SZ_NULLBMP, WSBMP_ROLL, 185, 112, 100, 100,
+                        WC_STATIC, SS_BITMAP | WS_VISIBLE
+        // bottone unroll
+        PUSHBUTTON      SZ_RLWINUNRLBTN, BTN_RLWINUNROLLBTN, 93, 97, 89, 13,
+                        NOT WS_TABSTOP
+        CONTROL         SZ_NULLBMP, WSBMP_UNROLL, 185, 98, 100, 100,
+                        WC_STATIC, SS_BITMAP | WS_VISIBLE
+        // gruppo opzioni rolling
+        CONTROL         SZ_NULL, GRP/*_RLWINOPTNS*/, 2, 9, 216, 84,
+                        WC_3DGROUPBOX, WS_GROUP | WS_VISIBLE | CCTL_FRAME0
+        // checkbox Exclude hidden title windows
+        //AUTOCHECKBOX    SZ_XCLHTBARWIN, CHK_XCLHTBARWIN, 5, 81, 200, 10
+        // checkbox Auto-unroll when getting focus
+        AUTOCHECKBOX    SZ_AUNRLGETFOCUS, CHK_AUNRLGETFOCUS, 5, 81, 200, 10,
+                        NOT WS_TABSTOP
+        // checkbox Auto-roll when losing focus
+        AUTOCHECKBOX    SZ_ARLLOSEFOCUS, CHK_ARLLOSEFOCUS, 15, 71, 200, 10,
+                        NOT WS_TABSTOP
+        // checkbox Allow vertical resizing of rolled windows
+        AUTOCHECKBOX    SZ_ALLOWVRSZ, CHK_ALLOWVRSZ, 5, 61, 200, 10,
+                        NOT WS_TABSTOP
+        // checkbox Auto-unroll windows vertically resized
+        AUTOCHECKBOX    SZ_AUNRLVRSZWIN, CHK_AUNRLVRSZWIN, 15, 51, 200, 10,
+                        NOT WS_TABSTOP
+        // checkbox Roll to the bottom
+        AUTOCHECKBOX    SZ_RLTOBTOTTOM, CHK_RLTOBTOTTOM, 5, 41, 200, 10,
+                        NOT WS_TABSTOP
+        // checkbox Store rolled state
+        //AUTOCHECKBOX    SZ_RLSTATESTORE, CHK_RLSTATESTORE, 5, 21, 200, 10,
+        //                NOT WS_TABSTOP
+        // checkbox Auto-unroll when closing window
+        AUTOCHECKBOX    SZ_AUNRLCLOSEWIN, CHK_AUNRLCLOSEWIN, 5, 31, 200, 10,
+                        NOT WS_TABSTOP
+    END
+END

@@ -1,0 +1,735 @@
+//==========================================================================\
+// 001.h - international version strings                                    |
+// TOC                                                                      |
+// - init_errors:                                                           |
+// - preferences notebook major_and_minor_tabs                              |
+// - main_window_strings                                                    |
+// - General_page                                                           |
+// - main_windows_settings                                                  |
+// - active_inactive_titlebar settings                                      |
+// - titlebar_hiding page                                                   |
+// - window_rolling general preferences                                     |
+// - maximized_windows options                                              |
+// - window sizing_moving page                                              |
+// - text_controls_options                                                  |
+// - VIO_windows_options                                                    |
+// - mouse_options                                                          |
+// - windows_keys                                                           |
+// - exception_list dialog                                                  |
+// - mouse_keyboard_actions_events dialog                                   |
+// - bitmap_selection dialog                                                |
+// - help_strings (view.exe parameters).                                    |
+// - installer_unistaller strings                                           |
+// - registration_dialog strings                                            |
+//==========================================================================/
+#ifndef RES001_H_
+   #define RES001_H_
+//==========================================================================\
+// init_errors: error displayed in case of program initialization failure   |
+//==========================================================================/
+#define SZERR_LOADMOD            "Ошибка запуска: SMARTWIN.DLL не загружен!"
+#define SZERR_REGCTLS            "Ошибка записи установок!"
+#define SZERR_LOADDLG            "Ошибка создания главного окна!"
+#define SZERR_OPENPROFILE        "Ошибка открытия файла конфигурации Styler/2!"
+#define SZERR_FILLNOTEBOOK       "Ошибка добавления страницы к настройкам!"
+//==========================================================================\
+// - preferences notebook major_and_minor_tabs                              |
+//==========================================================================/
+#define SZ_PAGEXOFY              "страница 1 из 2"
+#define SZ_SMARTWINDOWS          "Styler/2"
+#define SZ_PRODINFO              "Информация о продукте"
+#define SZ_GENERAL               "Общие"
+#define SZ_EXCEPTIONS            "Исключения"
+#define SZ_MAINWIN               "Диалоги"
+#define SZ_GENOPTS               "Общие установки"
+#define SZ_TITLEBAR              "Заголовок"
+#define SZ_TBARACTIVEWIN         "Активное окно"
+#define SZ_TBARINACTWIN          "Неактивное окно"
+#define SZ_TBARHIDING            "Сокрытие заголовка"
+#define SZ_WINDOWROLLING         "Свертывание окна"
+#define SZ_MAXWIN                "Максимизированные окна"
+#define SZ_SIZEMOVE              "Изменение размеров/перемещение"
+#define SZ_TXTCTLS               "Текстовые элементы управления"
+#define SZ_VIOWIN                "VIO окна"
+#define SZ_MOUSE                 "Мышь"
+#define SZ_MAPPINGS              "Назначение"
+#define SZ_KEYBOARD              "Клавиатура"
+#define SZ_WINDOWSKEYS           "Клавиши Windows"
+//==========================================================================\
+// -  main_window_strings                                                   |
+//==========================================================================/
+#define SZ_SMWDISABLED           "Styler/2 в настоящее время заблокирован!!!"
+#define SZ_SMWPREFDSBLD          "Styler/2 - (запрещен)"
+#define SZ_SMARTWINPREF          "Styler/2 - Конфигурация (не регистрирован)"
+#define SZ_SMARTWINPREFREG       "Styler/2 - Конфигурация"
+#define SZ_EXPIRED               "Styler/2 испытательный период завершен!"
+// toolbar context help messages
+#define SZHLP_BTNONOFF           "Разрешить/запретить Styler/2"
+#define SZHLP_BTNAPPLY           "Применить новые установки заголовка"
+#define SZHLP_BTNUNDO            "Восстановить предыдущие установки"
+#define SZHLP_BTNDEF             "Установить настройки по умолчанию"
+#define SZHLP_BTNHLP             "Показать справку"
+// statusbar context help
+#define SZHLP_STATUSBAR          "Вы можете расширить окно, если подсказка не помещается по ширине информационной полоски!!!"
+// generic error messages
+#define SZERR_ALLOC              "Ошибка выделения требуемой памяти."
+//==========================================================================\
+// - General_page                                                           |
+//==========================================================================/
+// control captions
+#define SZ_APPLONEXIT            "~Применять при выходе"
+#define SZ_SAVONEXIT             "~Сохранять при выходе"
+#define SZ_LASTVIEWED            "~Запоминать страницу, просмотренную последней"
+#define SZ_APPLYALL              "Применить ~все"
+#define SZ_UNDOALL               "В~осстановить все"
+#define SZ_DEFALL                "Все по ~умолчанию"
+// progress dialog
+#define SZ_DEFALLING             "Установка значений по умолчанию..."
+#define SZ_GENPROGRESS           "Progress"
+#define SZ_GENTIMEELAPS          "Истекшее время"
+#define SZ_GENSTOP               "~Стоп"
+// help strings
+#define SZHLP_APPLONEXIT         "Измененные значения, требующие нажатия кнопки ""Применить"", будут автоматически применены при выходе из приложения Настройки"
+#define SZHLP_SAVONEXIT          "Если данный переключатель не установлен, текущие опции будут активными, но не сохранятся в файле SMARTWIN.INI и вы получите предыдущие установки после перезагрузки."
+#define SZHLP_LASTVIEWED         "Страница, просмотренная последней, будет самой верхней при перезапуске программы Конфигурации"
+#define SZHLP_APPLYALL           "Применить все измененные установки на каждой странице, если это требуется"
+#define SZHLP_UNDOALL            "Восстановить все измененные установки на всех страницах"
+#define SZHLP_DEFALL             "Установить все установки по умолчанию"
+//==========================================================================\
+// - main_windows_settings                                                  |
+//==========================================================================/
+// control captions
+#define SZ_MWUSESMWFONT          "~Использовать шрифт Styler/2"
+#define SZ_MWOVERRDPPS           "~Отменить параметры представления"
+#define SZ_MWIGNOREPP            "~Игнорировать параметры представления"
+#define SZ_MWDLGONLY             "Только в ~диалогах"
+// help strings
+#define SZHLP_MWUSESMWFONT       "Использовать выбранный шрифт во всех диалоговых окнах"
+#define SZHLP_MWOVERRDPPS        "Заменить сходные шрифты не по умолчанию"
+#define SZHLP_MWFONT             "Выбрать шрифт"
+#define SZ_FONTSAMPLE            "Styler/2 - Пример шрифта"
+#define SZ_DLGFONT               "Диалоговый шрифт"
+//==========================================================================\
+// - active_inactive_titlebar settings                                      |
+//==========================================================================/
+// captions (titlebar sample)
+#define SZ_TBARACTWINSMPL        "Активное окно - пример"
+#define SZ_TBARINACTWINSMPL      "Неактивное окно - пример"
+// font dialog title:
+#define SZ_TBARFONT              "Шрифт заголовка"
+// control captions
+#define SZ_ENTBARENH             "Разрешить расширения ~заголовка"
+#define SZ_TBOCNTXTMENU          "~Контекстное меню"
+#define SZ_BKGND                 "Фон:"
+#define SZ_SOLIDCOLOR            "Однотонный цвет"
+#define SZ_SHADE                 "~Оттенок"
+#define SZ_BMP                   "~Рисунок"
+#define SZ_SWAPCOLOR             "Поменять ~цвета"
+#define SZ_HORZ                  "По горизонтали"
+#define SZ_VERTICAL              "По вертикали"
+#define SZ_HORZ3                 "По гориз. к центру"
+#define SZ_VERTICAL3             "По вертик. к центру"
+#define SZ_OUTER                 "Внешний"
+#define SZ_INNER                 "Внутренний"
+#define SZ_B_KGND                "Фон"
+#define SZ_LEFT                  "С~лева"
+#define SZ_RIGHT                 "С~права"
+#define SZ_TOP                   "~Верх"
+#define SZ_BOTTOM                "Низ"
+#define SZ_STRETCH               "Растянуть"
+#define SZ_BMPNOBMP              "Ри~сунок:"
+#define SZ_3DBORDER              "Объемная рамка:"
+#define SZ_SHOW                  "Показывать рамку"
+#define SZ_TXTSTYLE              "Стиль текста:"
+#define SZ_TBCENTER              "Центрировать"
+#define SZ_3DEFFECT              "Объемный текст"
+#define SZ_FONT                  "Шрифт:"
+#define SZ_FGNDTXT               "Передний план"
+// help messages
+#define SZHLP_ENTBARENH          "Разрешить/запретить эстетические расширения заголовка"
+#define SZHLP_TBOCNTXTMENU       "Показывать системное меню при нажатии контекстной кнопкой мыши на заголовке"
+#define SZHLP_TITLEBARSAMPLE     "Нажмите на заголовок для смены цвета фона, направления оттенка или рисунка в зависимости от режима фона"
+#define SZHLP_TBMNSYS            "Установить пиктограмму для кнопки системного меню"
+#define SZHLP_TBMNCLOSE          "Установить пиктограмму для закрывающей кнопки"
+#define SZHLP_TBMNHIDE           "Установить пиктограмму для кнопки сокрытия"
+#define SZHLP_TBMNMIN            "Установить пиктограмму для кнопки минимизации"
+#define SZHLP_TBMNRES            "Установить пиктограмму для кнопки восстановления"
+#define SZHLP_TBMNMAX            "Установить пиктограмму для кнопки максимизации"
+#define SZHLP_RDBTN_SOLID        "Использовать однотонный цвет в качестве фона заголовка"
+#define SZHLP_RDBTN_SHADE        "Использовать оттенки в качестве фона заголовка"
+#define SZHLP_RDBTN_BITMAP       "Использовать рисунок в качестве фона заголовка"
+#define SZHLP_TBOOVERRDPPS       "Использовать расширения заголовка, даже если заголовок не использует фон по умолчанию"
+#define SZHLP_SWPCOLSHADE        "Поменять оттенки"
+#define SZHLP_SHADEDIRECT        "Изменить направление и тип оттенков"
+#define SZHLP_BTN_COLUP          "Установить левый/верхний/внешний цвет оттенков"
+#define SZHLP_BTN_COLDOWN        "Установить правый/нижний/внутренний цвет оттенков"
+#define SZHLP_SHOWBORDER         "Рисовать двухцветную рамку вокруг заголовка"
+#define SZHLP_SWPCOLBRDR         "Поменять цвета рамки"
+#define SZHLP_BTN_HILITE         "Установить цвет подсветки объемной рамки заголовка"
+#define SZHLP_BTN_SHADOW         "Установить цвет тени объемной рамки заголовка"
+#define SZHLP_CHK_STRETCH        "Растянуть рисунок на ширину заголовка"
+#define SZHLP_BTN_BITMAP         "Установить рисунок фона заголовка"
+#define SZHLP_CHK_TBCENTER       "Центрировать текст заголовка"
+#define SZHLP_CHK_3DEFFECT       "Сделать текст заголовка объемным"
+#define SZHLP_BTN_FONT           "Установить шрифт заголовка"
+#define SZHLP_SWPCOLTXT          "Изменить цвет шрифта"
+#define SZHLP_BTN_FGNDTXT        "Установить цвет текста заголовка"
+#define SZHLP_BTN_SHADOWTXT      "Установить цвет тени текста заголовка"
+// error messages
+#define SZERR_UPDBMPNAME         "Невозможно обновить имя файла рисунка в smartwin.ini!"
+// edit color dialog -----------------------
+#define SZ_CLRTITLE              "Выберите цвет"
+#define SZ_CLROK                 "~OK"
+#define SZ_CLRUNDO               "~Отказ"
+#define SZ_CLRCANC               "Отмена"
+#define SZ_CLRRED                "~Красный"
+#define SZ_CLRGRN                "~Зеленый"
+#define SZ_CLRBLU                "~Синий"
+//==========================================================================\
+// - titlebar_hiding page                                                   |
+//==========================================================================/
+// control captions
+#define SZ_HIDETBAR              "~Разрешить сокрытие заголовка"
+#define SZ_HTBARBY               "Скрывать с помощью:"
+#define SZ_SYSMENU               "Системное ~меню"
+#define SZ_HTBARHIDEBTN          "Кнопка ~сокрытия"
+#define SZ_HTBARUNHIDEBTN        "Кнопка ~восстановления"
+#define SZ_HTREDFLDRH            "~Уменьшить высоту папки"
+#define SZ_HTXCLDLGWIN           "~Исключить диалоговые окна"
+#define SZ_HTBARPUPDELAY         "~Задержка всплытия (1/100 Sec) :"
+#define SZ_HTBARHIDEDELAY        "З~адержка сокрытия (1/100 Sec) :"
+#define SZ_HTBARINCLMENU         "В~ключить меню"
+// help msgs
+#define SZHLP_HTBARENABLE        "Разрешить возможность сокрытия/восстановления заголовка"
+#define SZHLP_HTBARSYSMENU       "Добавить пункт ""Скрыть/восстановить заголовок"" в системное меню окна"
+#define SZHLP_HTBARMOU           "Выбрать действие мыши на заголовке для сокрытия/восстановления заголовка"
+#define SZHLP_HTBARKEYB          "Выбрать ""горячие клавиши"" для сокрытия/восстановления заголовка"
+#define SZHLP_HTBARHIDEBTN       "Добавить кнопку ""сокрытие/восстановление заголовка"" к управлению окном и выбрать пиктограмму  ""сокрытие"""
+#define SZHLP_HTBARUNHIDEBTN     "Добавить кнопку ""сокрытие/восстановление заголовка"" к управлению окном и выбрать пиктограмму  ""восстановление"""
+#define SZHLP_HTREDFLDRH         "При сокрытии заголовка окна, общая высота окна уменьшается на высоту заголовка."
+#define SZHLP_XCLDLGWIN          "Запретить сокрытие заголовка в диалоговых окнах"
+#define SZHLP_HTBARPUPDELAY      "Как долго должен оставаться указатель мыши над верхней границей окна для восстановления заголовка"
+#define SZHLP_HTBARHIDEDELAY     "Как долго должен оставаться указатель мыши вне заголовка для его сокрытия"
+#define SZHLP_HTBARINCLMENU      "Скрывать как меню, так и заголовок"
+//==========================================================================\
+// - window_rolling general preferences                                     |
+//==========================================================================/
+// control captions
+#define SZ_RLWINENBL             "~Разрешить свертывание окон"
+#define SZ_RLWINBY               "Свернуть c помощью:"
+#define SZ_RLWINRLBTN            "Кнопка ~свертывания"
+#define SZ_RLWINUNRLBTN          "Кнопка ра~звертывания"
+#define SZ_XCLHTBARWIN           "~Исключить окна окна без заголовка"
+#define SZ_AUNRLGETFOCUS         "~Авторазвертывание при получении фокуса"
+#define SZ_ARLLOSEFOCUS          "Автосвертывание при ~покидании фокуса"
+#define SZ_AUNRLCLOSEWIN         "Авторазвертывание при за~крытии окна"
+#define SZ_ALLOWVRSZ             "Разрешить изменение ~высоты свернутых окон"
+#define SZ_AUNRLVRSZWIN          "Авторазвертывание окна при из~менении его высоты"
+#define SZ_RLTOBTOTTOM           "Свертывать вниз"
+#define SZ_RLSTATESTORE          "Сохранять состояние свертывания"
+// help messages
+#define SZHLP_RLWINENBL          "Разрешить возможность ""свертывания окна"""
+#define SZHLP_RLWINSYSMENU       "Добавить пункт ""свернуть/развернуть"" в системное меню окна"
+#define SZHLP_MOUSE              "Выбрать действие мыши на заголовке для свертывания/развертывания окна"
+#define SZHLP_KEYBOARD           "Выбрать ""горячие клавиши"" для свертывания/развертывания окна"
+#define SZHLP_ROLLTBARBTN        "Добавить кнопку ""свертывание/развертывание"" к управлению окном и выбрать пиктограмму  ""свертывание"""
+#define SZHLP_UNROLLTBARBTN      "Добавить кнопку ""свертывание/развертывание"" к управлению окном и выбрать пиктограмму  ""развертывание"""
+#define SZHLP_XCLHTBARWIN        "Исключить возможность свертывания для окон без заголовка"
+#define SZHLP_AUNRLGETFOCUS      "Автоматическое развертывание предварительно свернутого окна при получении фокуса"
+#define SZHLP_ARLLOSEFOCUS       "Автоматическое свертывание неактивного окна при установленном свернутом состоянии"
+#define SZHLP_AUNRLCLOSEWIN      "Автоматическое развертывание окна при его закрытии"
+#define SZHLP_ALLOWVRSZ          "Разрешить изменение высоты свернутых окон"
+#define SZHLP_AUNRLVRSZWIN       "Автоматическое развертывание окно до предыдущего размера при изменении его высоты"
+#define SZHLP_RLTOBTOTTOM        "Окна будут свертываться вниз"
+#define SZHLP_RLSTATESTORE       "Состояние свертывания окон будет сохранятся в файле настроек"
+//==========================================================================\
+// - maximized_windows options                                              |
+//==========================================================================/
+// control captions
+#define SZ_MXOVERSZPOS           "~Отвергать расположение и размеры по умолчанию"
+#define SZ_MXORIGIN              "~Начало (пикселы):"
+#define SZ_MXX                   "~x:"
+#define SZ_MXY                   "~y:"
+#define SZ_MXSIZE                "~Размер (пикселов):"
+#define SZ_MXWIDHT               "~ширина:"
+#define SZ_MXHEIGHT              "~высота:"
+#define SZ_MXNOMOVE              "Не позволять ~перемещение"
+#define SZ_MXNOSIZE              "Не позволять ~изменение размеров"
+//help messages
+#define SZHLP_MXOVERSZPOS        "Разрешить установку размеров и позиции максимизированных окон"
+#define SZHLP_MXX                "Установить расстояние в пикселях по горизонтали от нижнего левого угла экрана"
+#define SZHLP_MXY                "Установить расстояние в пикселях по вертикали от нижнего левого угла экрана"
+#define SZHLP_MXWIDHT            "Установить ширину максимизированных окон"
+#define SZHLP_MXHEIGHT           "Установить высоту максимизированных окон"
+#define SZHLP_MXNOMOVE           "Не позволять перемещение максимизированных окон"
+#define SZHLP_MXNOSIZE           "Не позволять изменение размеров максимизированных окон"
+//==========================================================================\
+// - window sizing_moving page                                              |
+//==========================================================================/
+// control captions
+#define SZ_FULLWINDRAG           "~Перетягивание полных окон"
+#define SZ_SMOOTHHMOVE           "П~лавное горизонтальное перемещение"
+#define SZ_AUTOCASCADE           "~Автокаскад окон"
+#define SZ_BKGNDSZMOVE           "П~ритягивание окон к краям экрана"
+#define SZ_SZMVSZMVBY            "Притягивать с помощью:"
+#define SZ_FRAME_DRAG            "Перетягивание ~за рамку"
+#define SZ_SZMVDRAGBY            "Перетягивать с помощью:"
+#define SZ_PUSHBOTTOM            "Поместить позади ~остальных окон"
+#define SZ_PUSHONE               "Поместить вниз на один ~шаг"
+#define SZ_SZMVPUSHBY            "Помещать с помощью:"
+// help messages
+#define SZHLP_FULLWINDRAG        "Окно целиком синхронизируется с перетягиванием или изменением размеров"
+#define SZHLP_SMOOTHHMOVE        "Позволять перемещение окон по горизонтали на 1 пиксель вместо 8 по умолчанию"
+#define SZHLP_BKGNDSZMOVE        "Выравнивание окон с краями экрана в соответствии с местом клика мышью по заголовку"
+#define SZHLP_BKGNDSZMVME        "Установить действие мыши для выравнивания окон к краям экрана"
+#define SZHLP_FRAMEDRAG          "Позволить перемещение окна перетягиванием рамки"
+#define SZHLP_FRAMEDRAGME        "Выбрать действие мыши для операции ""Перетягивание за рамку"""
+#define SZHLP_PUSHBOTTOM         "Поместить текущее окно в фон позади всех остальных окон"
+#define SZHLP_SZMVZONE           "Поместить текущее окно на один шаг назад вместо помещения позади всех остальных окон"
+#define SZHLP_PUSHBOTTOMME       "Выбрать действие мыши для операции ""Поместить позади остальных окон"""
+//==========================================================================\
+// - text_controls_options                                                  |
+//==========================================================================/
+// control captions
+#define SZ_TCGEFAUTOSEL          "~Автоматическое выделение текста в полех ввода"
+#define SZ_TCGEFAUTOSELBY        "Выделить с помощью:"
+#define SZ_TCGMOUCPYPST          "Копироваие/удаление/вставка ~мышью"
+#define SZ_TCGMCPYEF             "~Поля ввода"
+#define SZ_TCGMCPYMLE            "Поля ~редактирования"
+#define SZ_TCGMCPYSTXT           "Статический ~текст"
+#define SZ_TCGMCPYLBOX           "~Списки"
+#define SZ_TCGMCPYLBTN           "~Кнопки"
+#define SZ_TCGCPYBY              "К~опировать с помощью:"
+#define SZ_TCGCUTBY              "~Удалить с помощью:"
+#define SZ_TCGPSTINSBY           "~Вставить с помощью:"
+#define SZ_TCGOVRWRTBY           "П~ереписать с помощью:"
+// help messages
+#define SZHLP_TCGEFAUTOSEL       "Позволяет выделить все содержимое поля ввода"
+#define SZHLP_TCGEFAUTOSELBY     "Выбрать действие мыши для выделения всего содержимого поля ввода"
+#define SZHLP_TCGMOUCPYPST       "Выполнять операции с буфером обмена мышью"
+#define SZHLP_TCGMCPYEF          "Разрешить сокращенные команды для полей ввода"
+#define SZHLP_TCGMCPYMLE         "Разрешить сокращенные команды для многострочных полей редактирования"
+#define SZHLP_TCGMCPYSTXT        "Разрешить сокращенные команды для статического текста"
+#define SZHLP_TCGMCPYLBOX        "Разрешить сокращенные команды для списков"
+#define SZHLP_TCGMCPYLBTN        "Разрешить сокращенные команды для кнопок, переключателей и радиокнопок"
+#define SZHLP_TCGCPYBY           "Выбрать действие мыши для копирования выделенного текста в буфер обмена"
+#define SZHLP_TCGCUTBY           "Выбрать действие мыши для вырезания выделенного текста в буфер обмена"
+#define SZHLP_TCGPSTINSBY        "Выбрать действие мыши для вставки текста из буфера обмена"
+#define SZHLP_TCGOVRWRTBY        "Выбрать действие мыши для вставки текста из буфера обмена в режиме переписывания"
+//==========================================================================\
+// - VIO_windows_options                                                    |
+//==========================================================================/
+// control captions
+#define SZ_VIONOHSCRL            "Выбросить ~горизонтальную полосу прокрутки"
+#define SZ_VIOINS                "Установить режим ~вставки по умолчанию"
+#define SZ_VIOMOUCPY             "Разрешить копирование/вставку ~мышью"
+#define SZ_VIOKBDCPY             "Разрешить копирование/вставку ~клавиатурой"
+#define SZ_VIOCPYBY              "К~опировать с помощью:"
+#define SZ_VIOCPYALLBY           "Копировать все с помощью:"
+#define SZ_VIOPASTEBY            "Вставить с помощью"
+// help messages
+#define SZHLP_VIONOHSCRL         "Расширить окна, чей размер изменен командойa MODE, до удаления горизонтальной полосы прокрутки"
+#define SZHLP_VIOINS             "Переключение режима вставки осуществляется нажатием на Alt+Ins"
+#define SZHLP_VIOMOUCLPBRD       "Позволить выполнять операции с буфером обмена мышью"
+#define SZHLP_VIOMCPY            "Выбрать комбинацию мышь/клавиатура для выделения и копирования VIO текста в буфер обмена"
+#define SZHLP_VIOMCPYALL         "Выбрать комбинацию мышь/клавиатура для выделения и копирования всего VIO в буфер обмена"
+#define SZHLP_VIOMPASTE          "Выбрать комбинацию мышь/клавиатура для вставки содержимого буфера обмена в VIO окно"
+#define SZHLP_VIOKBDCLPBRD       "Позволить выполнять операции с буфером обмена клавиатурой"
+#define SZHLP_VIOCPY             "Выбрать комбинацию клавиш для выделения и копирования всего VIO в буфер обмена"
+#define SZHLP_VIOCPYALL          "Выбрать комбинацию клавиш для выделения и копирования всего VIO в буфер обмена"
+#define SZHLP_VIOPASTE           "Выбрать комбинацию клавиш для вставки содержимого буфера обмена в VIO окно"
+//==========================================================================\
+// - mouse_options                                                          |
+//==========================================================================/
+// control captions
+#define SZ_CHKMAUTFOCUS          "Авто~фокус"
+#define SZ_MAFDELAY              "~Задержка (1/100 Сек.):"
+#define SZ_MAFIGNDESK            "Игнорировать ~рабочий стол"
+#define SZ_MAFNOTOP              "Не ~поднимать вверх"
+#define SZ_MAFIGNNEW             "Игнорировать ~новые окна"
+#define SZ_CHKMPTRHIDE           "Скрывать ~указатель"
+#define SZ_MPHDELAY              "Задержка (1/10 Сек.):"
+#define SZ_MPHXCLBTN             "Исключить ~кнопки"
+#define SZ_MPHXCLMENU            "Исключить ~меню"
+#define SZ_MBTN3MAP              "Эмуляция ~двойного клика"
+#define SZ_MBTN3TBAR             "Включить заголовок"
+#define SZ_CHKMMOVETOFOCUS       "Переме~щать указатель в фокус окна"
+#define SZ_MMTFSTEPS             "~Шаги:"
+#define SZ_MMTFWINCREATE         "Новые окна"
+#define SZ_MMTFWINDLG            "Диалоги"
+#define SZ_MMTFXCLDLGNOBTN       "Исключить диалоги без кнопок"
+// help messages
+#define SZHLP_CHKMAUTFOCUS       "Активизировать новое окно перемещением указателя мыши на него"
+#define SZHLP_MAFDELAY           "Как долго должен оставаться указатель на окне для его активизации"
+#define SZHLP_MAFIGNDESK         "Не активизировать рабочий стол перемещая указатель на него"
+#define SZHLP_MAFNOTOP           "Не поднимать вверх окно, активизированное перемещением мыши"
+#define SZHLP_MAFIGNNEW          "Приостановить ""автофокус"" на время создания нового окна до перемещения мыши на него"
+#define SZHLP_CHKMPTRHIDE        "Скрывать указатель мыши если она не перемещается и кнопки мыши отпущены"
+#define SZHLP_MPHDELAY           "Как долго мышь должна оставаться неподвижной до сокрытия указателя"
+#define SZHLP_MPHXCLBTN          "Приостановить функцию ""сокрытие указателя"" когда мышь находится на кнопках"
+#define SZHLP_MPHXCLMENU         "Приостановить функцию ""сокрытие указателя"" когда мышь находится на меню"
+#define SZHLP_MBTN3MAP           "Клик по средней кнопке заменяет двойной клик левой кнопки мыши"
+#define SZHLP_MBTN3TBAR          "Разрешить эмуляцию двойного клика на заголовке (это может препятствовать использованию 3-ей кнопки для скатывания окна или сокрытия заголовка)"
+#define SZHLP_CHKMMOVETOFOCUS    "Автоматически перемещать указатель мыши на  активизирующиеся окна"
+#define SZHLP_MMTFWINCREATE      "Перемещать указатель мыши в фокус окна только если это новое окно"
+#define SZHLP_MMTFWINDLG         "Перемещать указатель мыши в фокус окна только если это диалоговое окно"
+#define SZHLP_MMTFXCLDLGNOBTN    "Исключить диалоговые окна без кнопок"
+#define SZHLP_MMTFSTEPS          "Сколько делать шагов для перемещения мыши к окну назначения (1 шаг около 1/100 Сек.)"
+//==========================================================================\
+// - windows_keys                                                           |
+//==========================================================================/
+// control captions
+#define SZ_WKEYLEFT              "~Левая клавиша Windows:"
+#define SZ_WKEYRIGHT             "~Правая клавиша Windows:"
+#define SZ_WKEYMENU              "Windows клавиша ~меню:"
+// help messages
+#define SZHLP_WKEYLEFT           "Установить событие на нажатие левой клавиши Windows"
+#define SZHLP_WKEYRIGHT          "Установить событие на нажатие правой клавиши Windows"
+#define SZHLP_WKEYMENU           "Установить событие на нажатие клавиши Windows меню"
+// actions performed by the windows keys
+#define SZ_WKEYNOACT             "Не выполнять никакого действия"
+#define SZ_WKEYHIDESHOW          "Скрыть/показать все окна"
+#define SZ_WKEYROLLUNROLL        "Свернуть/развернуть все окна"
+#define SZ_WKEYWINLIST           "Показать список окон"
+#define SZ_WKEYCONTEXT           "Показать контекстное меню"
+#define SZ_WKEYWCLOCK            "Блокировать рабочий стол"
+#define SZ_WKEYDRIVEFLDR         "Открыть папку дисков"
+#define SZ_WKEYSSETUPFLDR        "Открыть папку настройки системы"
+#define SZ_WKEYOS2CMD            "Открыть командное окно OS/2"
+#define SZ_WKEYWCDESK            "Показать меню рабочего стола на WarpCenter"
+#define SZ_WKEYWCWLIST           "Показать список окон задач на WarpCenter"
+#define SZ_WKEYWCPLIST           "Показать список процессов на WarpCenter"
+#define SZ_WKEYWCTRAYLIST        "Показать список лотков на WarpCenter"
+#define SZ_WKEYWCNEXTTRAY        "Переключиться на следующий лоток WarpCenter"
+#define SZ_WKEYWCINFO            "Показать справочное меню на WarpCenter"
+//==========================================================================\
+// - exception_list dialog                                                  |
+//==========================================================================/
+// captions of the controls
+#define SZ_EXCPTLIST             "Список исключений:"
+#define SZ_FIND                  "~Найти"
+#define SZ_ADD                   "~Добавить"
+#define SZ_REMOVE                "~Удалить"
+// help strings
+#define SZHLP_LBOX_EXCEPTION     "Список программ для которых данная опция запрещена"
+#define SZHLP_EF_LISTITEM        "Введите путь и имя программы, которую Вы собираетесь добавить в список исключений"
+#define SZHLP_FIND               "Найти программу и добавить ее в список исключений"
+#define SZHLP_ADD                "Добавить имя программы в список исключений"
+#define SZHLP_REMOVE             "Удалить выбранную программу из списка исключений"
+// error messages
+#define SZERR_EXCGETLIST         "Невозможно получить список исключений!!!"
+#define SZERR_EXCUPDATEPRO       "Невозможно обновить список исключений в  OS2.INI"
+#define SZQUERY_EXCFILENOTFOUND  "Файл не найден! Вы желаете его добавить в список исключений?"
+// title of Find-executable-file dialog
+#define SZ_ADDTOEXCPTLIST        "Добавить в список исключений..."
+//==========================================================================\
+// - mouse_keyboard_actions_events dialog                                   |
+//==========================================================================/
+// control captions
+#define SZ_KEYBCTRLDFUNCS        "Функции, управляемые клавиатурой"
+#define SZ_MOUCTRLDFUNCS         "Функции, управляемые мышью"
+#define SZ_FEFUNCEVENT           "Функция:"
+#define SZ_ENABLE                "Разрешить"
+#define SZ_PRIMKEY               "Основная клавиша:"
+#define SZ_MOUBTN                "Кнопка мыши:"
+#define SZ_CLICK                 "Клик"
+#define SZ_DBLCLK                "Двойной клик"
+#define SZ_CTRL                  "~Ctrl"
+#define SZ_ALT                   "~Alt"
+#define SZ_SHIFT                 "~Shift"
+#define SZ_MKINSERT              "Ins"
+#define SZ_MKBKSPC               "Bkspc"
+#define SZ_MKDEL                 "Del"
+// strings to build the text of the "mouse action" buttons
+#define SZ_CMPMOUBTN             " кнопка"
+#define SZ_DELKEY                " Del"
+#define SZ_INSKEY                " Ins"
+#define SZ_BKSPKEY               " Backspace"
+#define SZ_CMPCLICK              " (клик)"
+#define SZ_CMPDBLCLK             " (двойной клик)"
+#define SZ_CMPCTRL               " Ctrl +"
+#define SZ_CMPALT                " Alt +"
+#define SZ_CMPSHIFT              " Shift +"
+// mouse/keyboard functions list
+#define SZ_BKSZMOVE              "Окна: притянуть к краям экрана"
+#define SZ_FRAMEDRAG             "Окна: перемещать перетягиванием рамки"
+#define SZ_PUTBEHIND             "Окна: поместить позади остальных окон"
+#define SZ_ROLL                  "Окна: свернуть"
+#define SZ_HTBAR                 "Окна: скрыть заголовок"
+#define SZ_EFSELALLTXT           "Поле ввода: выделить весь текст"
+#define SZ_TXTCTLSCPY            "Управление текстом: копировать выделенный текст в буфер обмена"
+#define SZ_TXTCTLSAPND           "Управление текстом: добавить выделенный текст в буфер обмена"
+#define SZ_TXTCTLSCUT            "Управление текстом: удалить выделенный"
+#define SZ_TXTCTLSPASTE          "Управление текстом: вставить текст из буфера обмена"
+#define SZ_TXTCTLSOVRWRT         "Управление текстом: вставить текст из буфера обмена, переписывая ранее выделенный текст"
+#define SZ_VIOCOPY               "VIO окна: выделить и копировать текст в буфер обмена"
+#define SZ_VIOAPND               "VIO окна: копировать все содержимое окна в буфер обмена"
+#define SZ_VIOPASTE              "VIO окна: вставить текст из буфера обмена"
+#define SZ_FLDOPPRPRT            "Папки: открыть предыдущую закладку"
+#define SZ_FLDOPPAR              "Папки: открыть исток"
+#define SZ_FLDFIND               "Папки: найти"
+#define SZ_FLDSRTNAME            "Папки: сортировать по имени"
+#define SZ_FLDSRTEXT             "Папки: сортировать по расширению"
+#define SZ_FLDSRTTYPE            "Папки: сортировать по типу"
+#define SZ_FLDRSRTRNAME          "Папки: сортировать по действительному имени"
+#define SZ_FLDRSRTSIZE           "Папки: сортировать по размеру"
+#define SZ_FLDSRTWRT             "Папки: сортировать по дате последней записи"
+#define SZ_FLDSRTACC             "Папки: сортировать по последнего обращения"
+#define SZ_FLDSRTCREAT           "Папки: сортировать по создания"
+#define SZ_FLDARRANGE            "Папки: выстроить"
+#define SZ_FLDREFRESH            "Папки: обновить"
+// mouse/keyboard functions target
+#define SZ_PERFTBAR              "Действие, выполняемое на заголовке"
+#define SZ_PERFFOCWIN            "Действие, выполняемое на фокусе окна"
+#define SZ_PERFWINBRD            "Действие, выполняемое на рамке окна"
+#define SZ_PERFTXTCTLS           "Действие, выполняемое на управлении текстом"
+#define SZ_PERFEF                "Действие, выполняемое на полях ввода"
+#define SZ_PERFVIO               "Действие, выполняемое на VIO окнах"
+#define SZ_PERFANYWIN            "Действие, выполняемое на любых окнах"
+#define SZ_PERFONFLDR            "Действие, выполняемое на папках"
+//==========================================================================\
+// - bitmap_selection dialog                                                |
+//==========================================================================/
+// control captions
+#define SZ_EDIT                  "~Правка"
+#define SZ_IMPORT___             "Импортировать..."
+#define SZ_DISABLE               "Запретить"
+#define SZ__DEFAULT              "~По умолчанию"
+#define SZ_CLOSEBTNPOS           "Нет кнопки\x09Левая сторона\x09Позиция по умолчанию\x09Правая сторона\x09"
+#define SZ_OK                    "~OK"
+#define SZ_CANCEL                "Отмена"
+#define SZ_HELP                  "Справка"
+#define SZ_EDIT_                 "Редактировать "
+// help messages
+#define SZHLP_LBOX_BMPSEL        "Клик для выбора пиктограммы, двойной клик для ее установки"
+#define SZHLP_EDITBMP            "Редактировать выбранную пиктограмму"
+#define SZHLP_FINDBMP            "Копировать файл пиктограммы в текущий каталог"
+#define SZHLP_BMPDISABLE         "Удалить пиктограмму из заголовка"
+#define SZHLP_DEFAULT            "Использовать пиктограмму по умолчанию"
+#define SZHLP_CLOSEPOS           "Установить позицию кнопки закрытия окна"
+#define SZHLP_BMPOK              "Принять выбранную пиктограмму"
+#define SZHLP_BMPCANCEL          "Выйти, не изменяя установки"
+// dialog titles
+#define SZ_BSDTITLE0             "Рисунок заголовка активного окна"
+#define SZ_BSDTITLE1             "Рисунок заголовка неактивного окна"
+#define SZ_BSDTITLE2             "Пиктограмма кнопки системного меню"
+#define SZ_BSDTITLE3             "Пиктограмма кнопки закрытия"
+#define SZ_BSDTITLE4             "Пиктограмма кнопки сокрытия"
+#define SZ_BSDTITLE5             "Пиктограмма кнопки минимизации"
+#define SZ_BSDTITLE6             "Пиктограмма кнопки восстановления"
+#define SZ_BSDTITLE7             "Пиктограмма кнопки максимизации"
+#define SZ_BSDTITLE8             "Пиктограмма кнопки свертывания"
+#define SZ_BSDTITLE9             "Пиктограмма кнопки развертывания"
+#define SZ_BSDTITLE10            "Пиктограмма кнопки сокрытия заголовка"
+#define SZ_BSDTITLE11            "Пиктограмма кнопки восстановления заголовка"
+// warning/error messages
+#define SZERR_BSDALLOC           "Невозможно выделить память для данных диалога!"
+#define SZ_ASKOVERWRITE          "Выбранный файл уже существует в текущем каталоге! Вы хотите переписать его?"
+#define SZ_ASKCONFIRM            "Пожалуйста подтвердите!"
+#define SZERR_STARTICONEDIT      "Невозможно запустить редактор значков!"
+#define SZERR_COPYBMP            "Невозможно импортировать файл пиктограммы!"
+#define SZERR_INVALIDPATH        "Неверный путь: "
+// import bitmap dialog
+#define SZ_IMPORTBMP             "Импортировать файл пиктограммы"
+#define SZ_IMPORTOK              "Импортировать"
+//==========================================================================\
+// - help_strings (view.exe parameters).                                    |
+// Only univocal portions of the titles of the various pages are needed     |
+// The string portions used here depend on the translation of the INF file  |
+// source (STYLER2.IPF)                                                     |
+//==========================================================================/
+// help strings (view parameters):
+#define SZINF_FILE               ""
+#define SZINF_LOGO               ""
+#define SZINF_GEN                ""
+#define SZINF_EXCPTN             ""
+#define SZINF_DLG                ""
+#define SZINF_TBAR               ""
+#define SZINF_TBHIDE             ""
+#define SZINF_ROLLING            ""
+#define SZINF_MAXIMIZ            ""
+#define SZINF_MOVING             ""
+#define SZINF_TEXT               ""
+#define SZINF_VIO                ""
+#define SZINF_MOUSE              ""
+#define SZINF_MOUKEY             ""
+#define SZINF_BITMAP             ""
+#define SZINF_INSTALL            ""
+#define SZINF_REGISTER           ""
+#define SZINF_WKEYS              ""
+//==========================================================================\
+// - installer_unistaller strings                                           |
+//==========================================================================/
+// installation dialog - control captions
+#define SZ_INSTTITLE             "Установка/удаление Styler/2"
+#define SZ_INSTSEL               "Выберите действие:"
+#define SZ_INSTINST              "Установить"
+#define SZ_INSTRECR              "Восстановить объекты рабочего стола"
+#define SZ_INSTUNIST             "Удалить"
+#define SZ_INSTDRV               "Выбор диска:"
+#define SZ_INSTPATH              "Путь установки:"
+#define SZ_INSTBACK              "<< ~Назад"
+#define SZ_INSTFWD               "~Вперед >>"
+#define SZ_INSTCANC              "Отмена"
+#define SZ_INSTHELP              "~Справка"
+#define SZ_INSTEXIT              "Выхо~д"
+#define SZ_INSTINSTIN            "Выберите Вперед: чтобы начать установку на:"
+#define SZ_INSTRFRSHIN           "Выберите Вперед: чтобы начать восстановление объектов!"
+#define SZ_INSTUNINSTIN          "Выберите Вперед: чтобы начать удаление!"
+#define SZ_INSTLICENSE           "Лицензионные соглашения:"
+#define SZ_INSTLOGFILE           "Файл журнала:"
+// error messages
+#define SZ_INSTERRNOLIC          "Ошибка загрузки файла license.txt."
+#define SZ_IENERDINST            "Установка прервана! Проверьте файл журнала."
+#define SZ_IENERDRFRSH           "Создание объектов прервано! Проверьте файл журнала."
+#define SZ_IENERDUNINST          "Удаление прервано! Проверьте файл журнала."
+// title of the various progress windows
+#define SZ_IPRDRVINFO            "Создание списка дисков..."
+#define SZ_IPRINSTLING           "Установка Styler/2..."
+#define SZ_IPRRFRSHING           "Восстановление объектов Styler/2..."
+#define SZ_IPRDELETING           "Удаление Styler/2..."
+// other messages
+#define SZ_IQRYMKPATH            "Пожалуйста подтвердите:\tВыбранный каталог не существует! Создать его?"
+#define SZ_INSTREPATH            "Нажмите Назад для выбора другого каталога установки!"
+#define SZ_IERRMKPATH            "Ошибка создания каталога!"
+#define SZ_IENDINSTOK            "Установка завершена успешно.\x0aПерезагрузите для загрузки нового файла SMARTWIN.DLL."
+#define SZ_IENDRFRSHOK           "Объекты Syler/2 успешно созданы."
+#define SZ_IENDUNINSTOK          "Процедура удаления успешно завершена."
+#define SZ_IENDINSTSTP           "Процедура установки была прервана."
+#define SZ_IENDRFRSHSTP          "Процедура создания объектов была прервана."
+#define SZ_IENDUNINSTSTP         "Процедура установки была прервана."
+#define SZ_IENDINSTPRB           "Во время установки возникли проблемы.\x0aБолее подробная информация в файле журнала."
+#define SZ_IENDRFRSHPRB          "Во время создания объектов возникли проблемы.\x0aБолее подробная информация в файле журнала."
+#define SZ_IENDUNINSTPRB         "Во время удаления возникли проблемы.\x0aБолее подробная информация в файле журнала."
+#define SZ_INSTPROCERR           "Ошибка!"
+#define SZ_INSTCHKPREF           "Проверяем, запущено ли выбранное приложение..."
+#define SZ_INSTSYSDLLS           "Добавляем SMARTWIN.DLL в OS2.INI/SYS_DLLS/LoadPerProcess..."
+#define SZ_INSTSYSDLLS2          "Добавляем STYLER20.DLL в OS2.INI/SYS_DLLS/LoadPerProcess..."
+#define SZ_INSTADDINI0           "Добавляем "
+#define SZ_INSTADDINI1           " в OS2.INI..."
+#define SZ_INSTDELINI1           " из OS2.INI..."
+#define SZ_ICHKSMWINI            "Проверяем на наличие старого файла конфигурации SMARTWIN.INI..."
+#define SZ_IMKOBJS               "Создаем объекты Styler/2 на рабочем столе..."
+#define SZ_IMKOBJ                "Создаем объект "
+#define SZ_IDELSYSDLLS           "Удаляем SMARTWIN.DLL из OS2.INI/SYS_DLLS/LoadPerProcess..."
+#define SZ_IDELSYSDLLS2          "Удаляем STYLER20.DLL из OS2.INI/SYS_DLLS/LoadPerProcess..."
+#define SZ_INSQRYSTRTUP          "Пожалуйста подтвердите\tВы хотите, чтобы Styler/2 запускался с установками по умолчанию (кнопка Да) или чтобы все функции были запрещены (кнопка Нет)?"
+#define SZ_IQRYREMBMPS           "Пожалуйста подтвердите\tВы хотите удалить каталог пиктограмм  с содержимым?"
+#define SZ_INSDSTROBJ            "Уничтожаем "
+#define SZ_IQRYREMIPTH           "Пожалуйста подтвердите\tВы хотите удалить установочный каталог: "
+#define SZ_IQRYREMIPTH1          " с содержимым?"
+#define SZ_IPRELAPSED            "\x0aПрошедшее время: 11 час., 22 мин. и 33 сек."
+#define SZ_ILOGCPY               "Копируем :"
+#define SZ_ILOGCPYTO             " в "
+#define SZ_IOVWRTNEW             "Пожалуйста подтвердите\t это более новый файл и он будет переписан!\x0aНажмите ""Да"", чтобы переписать его или ""Нет"", чтобы сохранить."
+#define SZ_IOVWRTCONF            "Пожалуйста подтвердите\t будет переписан!\x0aНажмите ""Да"", чтобы переписать его или ""Нет"", чтобы сохранить."
+#define SZ_ILOGREM               "Удаляем "
+#define SZ_ILOGMKPATH            "Создаем каталог "
+// Styler/2 Desktop objects titles
+// folder
+#define SZ_OBJTFOLDER            "Styler/2"
+// other objects
+#define SZ_OBJTPRPRTY            "Конфигурация"
+// this is the title of the properties object in the system setup folder:
+#define SZ_OBJTPRPRTY1           "Конфигурация Styler/2"
+#define SZ_OBJTREADME            "О программе"
+#define SZ_OBJTLICENSE           "Лицензионное соглашение"
+#define SZ_OBJTRGSTRNT           "Примечания по регистрации"
+#define SZ_OBJTINST_U            "Установка/удаление"
+#define SZ_OBJTRGSTRPR           "Регистрация"
+#define SZ_OBJTDOC               "Руководство пользователя"
+//==========================================================================\
+// - registration_dialog strings                                            |
+//==========================================================================/
+// control captions:
+#define SZ_REGTITLE              "Регистрация Styler/2"
+#define SZ_REGINSTR              "Как зарегистрироваться:"
+#define SZ_REGNAME               "~Имя:"
+#define SZ_REGADDRESS            "~Адрес:"
+#define SZ_REGCITY               "~Город:"
+#define SZ_REGZIP                "И~ндекс:"
+#define SZ_REGPROV               "~Область:"
+#define SZ_REGCTRY               "~Страна:"
+// replace "" with the name of your country (for instance "ITALY")
+#define SZ_REGCTRYEF             ""
+#define SZ_REGEMAIL              "E-~mail:"
+#define SZ_REGTPWD               "Р/С:"
+#define SZ_REGCLIENTDATA         "~Данные покупателя"
+#define SZ_REGCLIENTCODE         "~Код покупателя"
+#define SZ_REGREGCODE            "Регистрационный код"
+#define SZ_REGMLNONE             "Я не собираюсь получать информацию по электронной почте"
+#define SZ_REGMLSTLR             "Сообщайте мне все новости о Styler/2"
+#define SZ_REGMLALL              "Сообщайте мне все новости о Styler/2 и о других программах Alessandro Cantatore"
+#define SZ_REGINPUTCSTMR         "Заполните полностью имя, адрес и e-mail:"
+#define SZ_REGSENDCODE           "Отправьте код покупателя по адресу <acantatore@tin.it>!"
+#define SZ_REGINPUTREGCODE       "Введите свой регистрационный код:"
+#define SZ_REGEDIT               "~Правка"
+#define SZ_REGCPYCLPBRD          "Сохранить"
+#define SZ_REGOK                 "~OK"
+// file dialog title
+#define SZ_REGSAVECSTMRFIL       "Сохранить код покупателя как:"
+// errors
+#define SZERR_REGFAILALLOC       "Ошибка!\tНеудачная попытка распределения."
+#define SZERR_REGLOADREGFILE     "Ошибка!\tНевозможно загрузить файл REGISTER.TXT."
+#define SZERR_REGREADCSTMDAT     "Ошибка!\tНевозможно импортировать данные покупателя."
+#define SZERR_REGFAILOPPRF       "Ошибка!\tНевозможно открыть SMARTWIN.INI."
+#define SZERR_REGSAVECSTMRCD     "Ошибка!\tНевозможно сохранить код покупателя."
+#define SZERR_REGCONVCSTDATA     "Ошибка!\tНевозможно создать код покупателя."
+#define SZERR_REGREADREGCODE     "Ошибка!\tНевозможно записать регистрационный код."
+#define SZERR_REGINVKEY          "Ошибка!\tНеверный регистрационный код!"
+// contextual help strings
+#define SZHLP_REGMLEREADME       "Инструкция по регистрации."
+#define SZHLP_REGINNAME          "Заполните наименование организации (Ваше собственное имя, если программа покупается для частного использования)"
+#define SZHLP_REGINADDRESS       "Заполните адрес организации (Ваш собственный адрес, если программа покупается для частного использования)"
+#define SZHLP_REGINCITY          "Заполните наименование города"
+#define SZHLP_REGINZIP           "Заполните почтовый индекс, наберите ""-"", если индекс отсутствует."
+#define SZHLP_REGINPROV          "Заполните наименование области/региона"
+#define SZHLP_REGINNATION        "Заполните наименование страны"
+#define SZHLP_REGINEMAIL         "Заполните адрес электронной почты, наберите ""-"", если адрес отсутствует."
+#define SZHLP_REGINPIVA          "Заполните расчетный или другой счет, если он необходим для оплаты , наберите ""-"", если счет отсутствует."
+#define SZHLP_REGBTNEDIT         "Нажмите на кнопку ""Правка"" для изменения данных покупателя."
+#define SZHLP_REGMLECSTMRCODE    "Отправьте код покупателя по адресу <acantatore@tin.it>."
+#define SZHLP_REGMLEREGCODE      "Введите регистрационный код в поле редактирования и нажмите на кнопку ОК."
+#define SZHLP_REGREGREG          "Нажмите на кнопку ""ОК"" для сохранения регистрационного кода."
+#define SZHLP_REGSBAR            "Переместите указатель мыши на управление окном для получения контекстной подсказки."
+// messages
+#define SZMSG_REGCANCNEWREG      "Изменение регистрационного кода было прервано!"
+#define SZMSG_REGREGOK           "Регистрационный код сохранен!"
+#define SZMSG_REGREGCODEPRES     "Найден предыдущий ключ."
+// strings which might be longer than 256 characters:
+// context help
+#define SZHLP_REGML              "Выберите подходящий пункт для получения электронных сообщений: {A} когда обновляется Styler/2, или {B} когда обновляются любые программы, разработанные мной , или {C} никогда."
+#define SZHLP_REGCSTMRDATA       "Нажмите на кнопку ""Данные покупателя"" для заполнения полного имени, адреса и адреса электронной почты.\x0aЭто будет использовано для создания кода покупателя.\x0"
+#define SZHLP_REGCSTMRCODE       "Нажмите на кнопку ""Код покупателя"" для создания Вашего кода покупателя. Отправьте его по адресу <acantatore@tin.it> для получения регистрационного кода.\x0"
+#define SZHLP_REGREGCODE         "Если Вы уже получили регистрационный код, нажмите на кнопку ""Регистрационный код"" для ввода Вашего регистрационного кода и регистрации Styler/2.\x0"
+#define SZHLP_REGBTNCOPY         "Нажмите на кнопку ""Сохранить"" чтобы сохранить код покупателя в файл и, затем, отправить файл с помощью электронной почты по адресу <acantatore@tin.it> для получения регистрационного кода.\x0"
+// messages
+#define SZMSG_REGEDCSTDATA0      "Предупреждение\tВ случае изменения данных, Вы должны будете получить и ввести новый регистрационный код!\x0"
+#define SZMSG_REGEDCSTDATA1      "Предупреждение\tВ случае изменения данных после отправки кода покупателя по адресу <acantatore@tin.it>, регистрационный код, который Вы получите, не будет действителен!\x0"
+#define SZMSG_REGCSTMRCODESVD    "Код покупателя успешно сохранен.\x0aВам необходимо отправить файл CUSTOMER.DAT по адресу <acantatore@tin.it> для завершения регистрации!\x0"
+#define SZMSG_REGNEWCSTCODE0     "Предупреждение\tВы собираетесь создать новый код покупателя.\x0aВаш регистрационный код не будет больше действительным!!!\x0aНажмите ""Да"" для создания нового кода или ""Нет"" для отказа от операции.\x0"
+#define SZMSG_REGNEWCSTCODE1     "Предупреждение\tВы собираетесь создать новый код покупателя.\x0aЕсли Вы уже отправили предыдущий код по адресу <acantatore@tin.it>, регистрационный код, который Вы получите, не будет действителен!Нажмите ""Да"" для создания нового кода или ""Нет"" для отказа от операции.\x0"
+#define SZMSG_REGNEWREGCODE      "Предупреждение\tВы собираетесь изменить свой регистрационный код!\x0aЕсли новый код не будет действителен, программа может завершиться.\x0aНажмите ""Да"" для создания нового кода или ""Нет"" для отказа от операции.\x0"
+// system menu items
+#define SZ_SYSMNTBHIDE           "Скрыть/восстановить заголовок\x09"
+#define SZ_SYSMNRLUNRL           "Свернуть/развернуть\x09"
+#define SZ_SYSMNALT              "Alt+"
+#define SZ_SYSMNCTL              "Ctl+"
+#define SZ_SYSMNSHFT             "Shift+"
+#define SZ_SYSMNINS              "Ins"
+#define SZ_SYSMNBKSPC            "Bkspc"
+#define SZ_SYSMNDEL              "Del"
+#define SZ_SYSMNF1               "F1"
+#define SZ_SYSMNF2               "F2"
+#define SZ_SYSMNF3               "F3"
+#define SZ_SYSMNF4               "F4"
+#define SZ_SYSMNF5               "F5"
+#define SZ_SYSMNF6               "F6"
+#define SZ_SYSMNF7               "F7"
+#define SZ_SYSMNF8               "F8"
+#define SZ_SYSMNF9               "F9"
+#define SZ_SYSMNF10              "F10"
+#define SZ_SYSMNF11              "F11"
+#define SZ_SYSMNF12              "F12"
+// end file ---------------------------------------------------------------
+#endif
