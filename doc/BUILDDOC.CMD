@@ -57,6 +57,7 @@ otherwise do
    end /* do */
 end  /* select */
 
+blddir = getScriptPath()
 temp = path
 path = directory(path)
 if path = "" then do
@@ -73,7 +74,8 @@ artwork = "..\bitmaps"
 call directory path
 
 "MODE CO80,102"
-"IPFBLD STYLER2.LST"
+"SET BEGINLIBPATH="blddir"TOOLS"
+blddir"\TOOLS\IPFBLD STYLER2.LST"
 "pause"
 "IPFC -s -x -D:"country" -C:"codepage" -L:"language" STYLER2.IPF"
 "pause"
@@ -100,3 +102,9 @@ help: procedure
    say ""
    "pause"
 return
+
+/* get the path of this script ------------------------------------------- */
+getScriptPath: procedure
+   parse source . . scriptspec
+return filespec("DRIVE", scriptspec) || filespec("PATH", scriptspec)
+

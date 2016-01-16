@@ -1,0 +1,5 @@
+#define INCL_NLS
+#include <os2.h>
+
+RCINCLUDE "editcol.dlg"
+RCINCLUDE "progress.dlg"
