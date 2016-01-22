@@ -73,10 +73,12 @@ artwork = "..\bitmaps"
 "SET IPFCARTWORK="artwork
 call directory path
 
-"MODE CO80,102"
+/*"MODE CO80,102"*/
+/*
 "SET BEGINLIBPATH="blddir"TOOLS"
 blddir"\TOOLS\IPFBLD STYLER2.LST"
 "pause"
+*/
 "IPFC -s -x -D:"country" -C:"codepage" -L:"language" STYLER2.IPF"
 "pause"
 "IPFC -i -s -D:"country" -C:"codepage" -L:"language" STYLER2.IPF"

@@ -1,6 +1,6 @@
 @echo off
 set debug=
-mode co80,102
+rem mode co80,102
 
 rem if the flag file exists delete it and touch all the sources
 if not exist @debug@ if not exist @warp3@ goto build
@@ -20,7 +20,7 @@ pause > nul
 
 :build
 cls
-nmake -nologo
+nmake32 -nologo
 if errorlevel 1 goto tryagain
 copy ..\..\warp4\smartwin.dll ..\..\warp4\install\smartwin.170
 copy ..\..\warp4\styler20.dll ..\..\warp4\install\styler20.170

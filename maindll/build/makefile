@@ -11,20 +11,22 @@ CL = ilink.exe
 RC = rc.exe
 RB = rc.exe
 
+APIINC = ..\..\include
+
 # compiler and linker flags
 
 # Debug version
 !ifdef DEBUG
 
 # CFLAGS = /I..\..\headers /Ss /Q /O /Oc /Rn /Ge- /G5 /C /DDEBUGGING=2
-CFLAGS = /I..\..\headers /Ss /Q /Ti /Rn /Ge- /G5 /C /DDEBUGGING=2
+CFLAGS = /I..\..\headers /I$(APIINC) /Ss /Q /Ti /Rn /Ge- /G5 /C /DDEBUGGING=2
 # LFLAGS = /E:2 /PM:PM /PACKD /A:4 /OPTF /NOL /M /L
 LFLAGS = /DE /E:2 /PM:PM /PACKD /A:4 /OPTF /NOL /M /L
 
 !else
 # RELEASE version
 
-CFLAGS = /I..\..\headers /Ss /Q /O /Oc /Rn /Ge- /G5 /C
+CFLAGS = /I..\..\headers /I$(APIINC) /Ss /Q /O /Oc /Rn /Ge- /G5 /C
 LFLAGS = /E:2 /PM:PM /PACKD /A:4 /OPTF /NOL /M /L
 
 !endif

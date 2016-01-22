@@ -1,0 +1,35 @@
+STYLER/2 - OPEN SOURCE EDITION
+Version 1.7.5
+
+Styler/2 is a user interface enhancer for OS/2. Both the aesthetics and the 
+behavior of various OS/2 Presentation Manager windows and controls can be 
+easily modified to meet your needs. 
+
+You will be able to use bitmaps and shades as titlebar backgrounds, choose 
+any bitmap (of appropriate size) for the window buttons and enable all dialog 
+windows to use your favorite font. 
+
+Other features include: 
+- window rolling, 
+- titlebar hiding, 
+- overriding the default size and position of maximized windows, 
+- smooth horizontal movement of windows, 
+- snap windows to the desktop edges, 
+- moving a window by dragging its frame, 
+- pushing windows behind the other windows, 
+- selection of the entry field contents, 
+- facilitating clipboard operations via mouse and/or keyboard combinations
+  in entry fields and command windows, 
+- autofocus, 
+- mouse pointer hiding, 
+- mouse button double-click emulation, 
+- automatically moving the mouse pointer to the focus window. 
+
+
+INSTALLATION
+
+Unpack the distribution ZIP file into a temporary directory.  Then run the 
+program INSTALL.EXE.  Follow the instructions.  You will need to reboot once
+the installation is complete.
+
+Refer to the User Guide (STYLER2.HLP) for further information.

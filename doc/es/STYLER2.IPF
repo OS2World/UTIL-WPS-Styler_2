@@ -11,7 +11,7 @@
 Gu&ia.a de Usuario de Styler&slr.2
 :font facename=default size=0x0.
 :font facename='Helv' size=16x10.:hp2.
-versi&oa.n 1&per.7&per.4
+versi&oa.n 1&per.7&per.5
 :font facename=default size=0x0.:ehp2.
 por Alessandro Cantatore, traducida por Juan Miguel Escribano
 :elines.
@@ -137,7 +137,7 @@ de 30 d&ia.as o 300 reinicios, lo que antes se produzca&per.
 :h1 res=4 x=left y=bottom width=100% height=100%.Novedades
 .br
 :font facename='Helv' size=16x10.:hp2.
-Versi&oa.n 1&per.7&per.4
+Versi&oa.n 1&per.7&per.5
 :font facename=default size=0x0.:ehp2.
 :ul compact.
 .br

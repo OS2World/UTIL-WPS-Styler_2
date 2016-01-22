@@ -1,6 +1,6 @@
 @echo off
 set debug=
-mode co80,102
+rem mode co80,102
 
 rem if the flag file exists delete it and touch all the sources
 if not exist @debug@ if not exist @warp3@ goto build

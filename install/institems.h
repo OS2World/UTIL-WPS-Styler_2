@@ -33,9 +33,8 @@
  "AFCUTL00.DLL", "STYLER2.TXT", "STYLER2.INF", "AFCUTL01.DLL"}
 // lista file da copiare
 #define SZFLST_COPY   \
-{"AFCUTL05.DLL", "LICENSE.TXT", "INSTALL.EXE", "REGISTER.EXE", "REGISTER.TXT",\
- "SMARTWIN.EXE", "STLRES13.DLL", "STYLER2.HLP", "README.HTM", "HSAW.ICO",  \
- "RUAW.ICO"}
+{"AFCUTL05.DLL", "LICENSE.TXT", "INSTALL.EXE", "SMARTWIN.EXE", "STLRES13.DLL", \
+ "STYLER2.HLP", "README.TXT", "HSAW.ICO", "RUAW.ICO"}
 
 // lista file da cancellare alla disinstallazione
 #define SZFLST_DELETE   \
@@ -78,8 +77,8 @@
                           "EXENAME=\t\\SMARTWIN.EXE;PROGTYPE=PM"
 // setup oggetto readme
 #define SZ_STLRREADME     "CCVIEW=NO;OBJECTID="SZ_OBJIDREADME";"      \
-                          "EXENAME=NETSCAPE.EXE;"                     \
-                          "PROGTYPE=PM;PARAMETERS=\t\\README.HTM"
+                          "EXENAME=E.EXE;"                            \
+                          "PROGTYPE=PM;PARAMETERS=\t\\README.TXT"
 // setup oggetto licenza d'uso
 #define SZ_STLRLICENSE    "CCVIEW=NO;OBJECTID="SZ_OBJIDLICENSE";"     \
                           "EXENAME=E.EXE;"                            \
@@ -113,8 +112,6 @@
 #define AOBJDATA     \
 {{"WPFolder", ID_OBJTFOLDER, SZ_FLDRSETUP, SZ_OBJIDDSKTP},     \
  {"WPProgram", ID_OBJTINST_U, SZ_STLRINST, SZ_OBJIDFLDR},      \
- {"WPProgram", ID_OBJTRGSTRPR, SZ_STLRRGSTRPRG, SZ_OBJIDFLDR}, \
- {"WPProgram", ID_OBJTRGSTRNT, SZ_STLRRGSTRTXT, SZ_OBJIDFLDR}, \
  {"WPProgram", ID_OBJTLICENSE, SZ_STLRLICENSE, SZ_OBJIDFLDR},  \
  {"WPProgram", ID_OBJTPRPRTY, SZ_STLPROPRTY, SZ_OBJIDFLDR},    \
  {"WPProgram", ID_OBJTPRPRTY1, SZ_STLPROPRTY1, SZ_OBJIDSYSSTUP},\

@@ -15,6 +15,10 @@
     @echo " Compile::Resource Compiler "
     rc.exe -r %s %|dpfF.RES
 
+.asm.obj:
+    @echo " Compile::Assembler "
+    alp $<
+
 .c.obj:
     @echo " Compile::C++ Compiler "
     icc.exe /Ss /Q /O /Rn /Ge- /G5 /Gu /C %s
@@ -85,7 +89,7 @@
      .\statusbar.obj
      .\strutil.obj
 <<
-#    rc.exe -x2 .\common.res afcutl05.dll
+    rc.exe -x2 .\common.res afcutl05.dll
 
 .\common.res: \
     .\common.rc \

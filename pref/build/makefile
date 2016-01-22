@@ -4,6 +4,9 @@
 #.SUFFIXES: \
 #    .C .obj .rc .res
 
+APIINC = ..\..\include
+APILIB = ..\..\utildll
+
 # compiler, linker, resource compiler, resource binder MACRO
 
 CC = icc.exe
@@ -16,18 +19,18 @@ RB = rc.exe
 # Debug version
 !ifdef DEBUG
 
-CFLAGS = /I..\..\headers /Ss /Q /Ti /Rn /G5 /C
+CFLAGS = /I..\..\headers /I$(APIINC) /Ss /Q /Ti /Rn /G5 /C
 LFLAGS = /DE /E:2 /PM:PM /PACKD /A:4 /OPTF /NOL /M /L
 
 !else
 # RELEASE version
 
-CFLAGS = /I..\..\headers /Ss /Q /O /Oc /Ol /Rn  /G5 /C
+CFLAGS = /I..\..\headers /I$(APIINC) /Ss /Q /O /Oc /Ol /Rn  /G5 /C
 LFLAGS = /E:2 /PM:PM /PACKD /A:4 /OPTF /NOL /M /L
 
 !endif
 
-RCFLAGS = -r -n -i ..\..\headers -i ..
+RCFLAGS = -r -n -i ..\..\headers -i .. -i /I$(APIINC)
 RBFLAGS = -x2 -n
 
 all: ..\..\warp4\smartwin.exe
@@ -61,12 +64,12 @@ all: ..\..\warp4\smartwin.exe
    winkey.obj \
    initnbk.obj \
    SMARTWIN.res \
-   {$(LIB)}afcutl05.lib \
+   {$(APILIB)}afcutl05.lib \
    smartwin.def
    $(CL) @<<
       $(LFLAGS)
       /O:..\..\warp4\smartwin.exe
-      afcutl05.lib
+      $(APILIB)\afcutl05.lib
       smartwin.def
       wroll.obj
       _api.obj

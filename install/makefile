@@ -4,6 +4,9 @@
 #.SUFFIXES: \
 #    .C .obj .rc .res
 
+APIINC = ..\include
+APILIB = ..\utildll
+
 # compiler, linker, resource compiler, resource binder MACRO
 
 CC = icc.exe
@@ -16,18 +19,18 @@ RB = rc.exe
 # Debug version    ---------------------------------------------------------
 !ifdef DEBUG
 
-CFLAGS = /I..\headers /I..\pref /Q /Ss /Ti /Rn /G5 /C
+CFLAGS = /I..\headers /I..\pref /I$(APIINC) /Q /Ss /Ti /Rn /G5 /C
 LFLAGS = /DE /E:2 /PM:PM /PACKD /A:4 /OPTF /NOL /M /L
 
 !else
 # RELEASE version  ---------------------------------------------------------
 
-CFLAGS = /I..\headers /I..\pref /Q /Ss /O /Oc /Ol /Rn /G5 /C
+CFLAGS = /I..\headers /I..\pref /I$(APIINC) /Q /Ss /O /Oc /Ol /Rn /G5 /C
 LFLAGS = /E:2 /PM:PM /PACKD /A:4 /OPTF /NOL /M /L
 
 !endif           # ---------------------------------------------------------
 
-RCFLAGS = -r -n -i ..\headers -i ..\pref
+RCFLAGS = -r -n -i ..\headers -i ..\pref -i $(APIINC)
 RBFLAGS = -x2 -n
 
 .rc.res:
@@ -48,12 +51,12 @@ all: ..\warp4\install.exe
    iniconv.obj \
    install.obj \
    install.res \
-   {$(LIB)}afcutl05.lib \
+   {$(APILIB)}afcutl05.lib \
    install.def
    $(CL) @<<
       $(LFLAGS)
       /O:..\warp4\install.exe
-      afcutl05.lib
+      $(APILIB)\afcutl05.lib
       install.def
       util.obj
       instpages.obj
@@ -90,11 +93,11 @@ install.obj: \
    ..\headers\stlrWinId.h
    $(CC) $(CFLAGS) install.c util.c instaux.c instpages.c object.c iniconv.c
 
-..\warp4\install.exe: install.obj install.res {$(LIB)}afcutl05.lib install.def
+..\warp4\install.exe: install.obj install.res {$(APILIB)}afcutl05.lib install.def
    $(CL) @<<
       $(LFLAGS)
       /O:..\warp4\install.exe
-      afcutl05.lib
+      $(APILIB)\afcutl05.lib
       install.def
       install.obj
 <<

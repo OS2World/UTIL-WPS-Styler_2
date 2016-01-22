@@ -1,0 +1,8 @@
+*.obj
+*.exe
+*.map
+*.dll
+*.RES
+*.zip
+*.HLP
+*.INF

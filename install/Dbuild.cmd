@@ -1,6 +1,6 @@
 @echo off
 set debug=1
-mode co80,102
+rem mode co80,102
 
 rem if the flag file doesn't exist create it and touch all the sources
 if exist @debug@ goto build
