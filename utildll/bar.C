@@ -1,7 +1,7 @@
 //========================================================================\
 // bar.c                                                                  |
-// FUNZIONI: ------------------------------------------------------------ |
-// MESSAGGI: ------------------------------------------------------------ |
+// FUNCTION: ------------------------------------------------------------ |
+// MESSAGE:  ------------------------------------------------------------ |
 // WM_CREATE                                                              |
 // WM_ADJUSTWINDOWPOS                                                     |
 // WM_PAINT                                                               |
@@ -12,13 +12,13 @@
 #include "bar.h"
 #include "api.h"
 
-// prototipi funazioni
+// Prototypes functions
 
 MRESULT EXPENTRY EDBarWinProc(HWND hwnd, ULONG msg, MPARAM mp1, MPARAM mp2);
 
 
 //==========================================================================\
-// registrazione classe                                                     |
+// Class registration                                                       |
 //==========================================================================/
 
 BOOL APIENTRY EDBarReg(HAB hab) {
@@ -28,7 +28,7 @@ BOOL APIENTRY EDBarReg(HAB hab) {
 
 
 //==========================================================================\
-// procedura controllo bar                                                  |
+// Bar control procedure                                                    |
 // per ora ignora tutti gli stili tranne raised o depressed e disegna il    |
 // testo (se presente) in una cornice invertita rispetto alla cornice del   |
 // gruppo                                                                   |
@@ -36,7 +36,7 @@ BOOL APIENTRY EDBarReg(HAB hab) {
 
 MRESULT EXPENTRY EDBarWinProc(HWND hwnd, ULONG msg, MPARAM mp1, MPARAM mp2) {
    switch (msg) {
-      // creazione: memorizza testo controllo
+      // Creation: stores text control
       case WM_CREATE: {
          PBARDATA pbd;
          // allocate structure for caching some control data
@@ -48,10 +48,10 @@ MRESULT EXPENTRY EDBarWinProc(HWND hwnd, ULONG msg, MPARAM mp1, MPARAM mp2) {
          pbd->fl = ((PCREATESTRUCT)mp2)->flStyle;
          // se bordo non specificato usa il valore 1
          if (!(pbd->fl & CCTL_BORDER7)) pbd->fl |= CCTL_BORDER1;
-         if (pbd->fl & BARS_VERTICAL) {          // verticale
+         if (pbd->fl & BARS_VERTICAL) {          // vertical
             pbd->szl.cx = 2 * (pbd->fl & 0x7);
             pbd->szl.cy = ((PCREATESTRUCT)mp2)->cy;
-         } else {                               // orizzontale
+         } else {                               // horizontal
             pbd->szl.cx = ((PCREATESTRUCT)mp2)->cx;
             pbd->szl.cy = 2 * (pbd->fl & 0x7);
          } /* endif */
@@ -61,15 +61,15 @@ MRESULT EXPENTRY EDBarWinProc(HWND hwnd, ULONG msg, MPARAM mp1, MPARAM mp2) {
          WinSetWindowPtr(hwnd, cbWCstc, (PVOID)pbd);
          break;
       }
-      // se il controllo Š ridimensionato memorizza nuove dimensioni
+      // se il controllo Å  ridimensionato memorizza nuove dimensioni
       case WM_ADJUSTWINDOWPOS:
          if (((PSWP)mp1)->fl & SWP_SIZE) {
             PBARDATA pbd = (PBARDATA)stGetData(hwnd);
             if (pbd) {
-               if (pbd->fl & BARS_VERTICAL) {         // verticale
+               if (pbd->fl & BARS_VERTICAL) {         // vertical
                   ((PSWP)mp1)->cx = pbd->szl.cx;
                   pbd->szl.cy = ((PSWP)mp1)->cy;
-               } else {                               // orizzontale
+               } else {                               // horizontal
                   pbd->szl.cx = ((PSWP)mp1)->cx;
                   ((PSWP)mp1)->cy = pbd->szl.cy;
                } /* endif */
