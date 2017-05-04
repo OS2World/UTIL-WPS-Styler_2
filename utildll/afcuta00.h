@@ -11,7 +11,7 @@
 // api per sbloccare eseguibili lockati
 APIRET APIENTRY DosReplaceModule(PSZ pszOld, PSZ pszNew, PSZ pszBkup);
 
-// id risorsa stringhe pi— lunghe di 256 byte
+// id risorsa stringhe piâ€” lunghe di 256 byte
 #define RCLONGSTRING     301
 
 // strutture standard usate dall'applicazione ------------------------------
@@ -48,7 +48,7 @@ typedef struct {
 #pragma pack()
 
 
-// struttura stato finestra
+// status window structure
 typedef struct {
    UINT ready       : 1;       // usato per sincronizzazione con object wind
    UINT active      : 1;       // usato per sospendere help contestuale
@@ -76,7 +76,7 @@ typedef struct _WDATA {
    HWND hsbar;                 // handle eventuale statusbar
    HACCEL hacc;                // handle eventuale tabella acceleratori
    HPOINTER hico;              // handle icona applicazione
-   PSZ psztxt;                 // titolo finestra (se < 0xffff Š ID stringa)
+   PSZ psztxt;                 // titolo finestra (se < 0xffff Å  ID stringa)
    PFNWP pf;                   // procedura finestra (client)
    WRECTL wr;                  // posizione dimensioni finestra principale
    ULONG flswp;                // flag SWP_ finestra
@@ -95,7 +95,7 @@ typedef struct _WDATA {
 
 
 // struttura creazione applicazione: ----------------------------------------
-//       l'ID della finestra statusbar o per l'help contestuale Š sempre 2
+//       l'ID della finestra statusbar o per l'help contestuale Å  sempre 2
 
 #define FID_STSBAR          2
 
@@ -147,7 +147,7 @@ typedef struct _MODDLG {
    HWND hsbar;                 // handle eventuale statusbar
    HACCEL hacc;                // handle eventuale tabella acceleratori
    HPOINTER hico;              // handle icona applicazione
-   PSZ psztxt;                 // titolo finestra (se < 0xffff Š ID stringa)
+   PSZ psztxt;                 // titolo finestra (se < 0xffff Å  ID stringa)
    PFNWP pf;                   // procedura finestra (client)
    WRECTL wr;                  // posizione dimensioni finestra principale
    ULONG flswp;                // flag SWP_ finestra
@@ -209,12 +209,12 @@ typedef struct _MODDLG {
 #define FCF_STSBAR     0x20000000      // l'applicazione mostra i messaggi e
 //   #define FCF_AUTOICON               0x40000000L
 // la flag FCF_AUTOICON assume un significato speciale quando la finestra
-// principale Š un dialogo, in quanto indica che l'icona Š presente
+// principale Å  un dialogo, in quanto indica che l'icona Å  presente
 // nell'eseguibile stesso con ID 1 e non nel modulo esterno con lo stesso
 // ID del dialogo
 //   #define FCF_DBE_APPSTAT            0x80000000L
 
-// flag valide solo quando la finestra principale Š un dialogo:
+// flag valide solo quando la finestra principale Å  un dialogo:
 #define FCF_STDDFLAGS   (FCF_MENU | FCF_ACCELTABLE)
 
 // tipo di msg loop
@@ -273,7 +273,7 @@ typedef struct _MODDLG {
         (WsetWinTxt(WinWindowFromID((hwnd), (id)), (idstr)))
 
 // setta il testo di un controllo ricavandolo dalla DLL delle risorse
-// versione per stringhe pi— lunghe di 256 byte
+// versione per stringhe piâ€” lunghe di 256 byte
 #define WsetCtlTxtl(hwnd, id, idstr) \
         (WsetWinTxtl(WinWindowFromID((hwnd), (id)), (idstr)))
 
@@ -331,7 +331,7 @@ typedef struct {
 
 #define NBINS_ISFIRST      ((PPGDAT)0xffffffff)    // prima pagina notebook
 #define NBINS_PGXOFY       0x8000
-// la seguente flag Š usata da WnbkDelPg() per indicare che l'id della pagina
+// la seguente flag Å  usata da WnbkDelPg() per indicare che l'id della pagina
 // deve essere interpretato come ordine di inserzione della pagina nel notebook
 #define BKA_PAGEORDER      0x10000L
 // valore restituito da alcune funzioni in caso di errore
@@ -344,7 +344,7 @@ typedef struct {
 
 
 //==========================================================================\
-// logutil.h : funzioni di utilit… per il logging                           |
+// logutil.h : funzioni di utilitâ€¦ per il logging                           |
 //==========================================================================/
 
 #define CBLOGBUF 0x1000
@@ -362,11 +362,11 @@ typedef struct {
 
 
 //==========================================================================\
-// instutil.h: funzioni di utilit… per programma di installazione           |
+// instutil.h: funzioni di utilitâ€¦ per programma di installazione           |
 //==========================================================================/
 
 // flag usate da prfinsstr e prfdelstr
-#define PRFINCHECK     0x0000   // verifica se stringa Š presente
+#define PRFINCHECK     0x0000   // verifica se stringa Å  presente
 #define PRFINSTART     0x0001   // inserisce stringa a inizio
 #define PRFINEND       0x0002   // inserisce stringa alla fine
 #define PRFINZEROEND   0x0004   // i dati devono essere terminati da zero
@@ -385,7 +385,7 @@ typedef struct {
    CHAR achtrg[260];     // path destinazione in cui copiare
                          // entrambi i path devono includere slash finale
    HWND hprgrs;          // handle progress window
-   USHORT fl;            // modalit… copia
+   USHORT fl;            // modalitâ€¦ copia
    USHORT cbsrc;         // lunghezza nome path sorgente
    USHORT cbtrg;         // lunghezza nome path destinazione
    USHORT msg;           // msg da scrivere nel file di log
@@ -393,13 +393,13 @@ typedef struct {
    USHORT confirm;       // msg conferma sovrascrittura
    USHORT err;           // msg di errore da mostrare in caso di fallimento
    USHORT csteps;        // numero passi totali procedura
-   PULONG pidx;          // indice incremento se non Š NULL viene spedito
+   PULONG pidx;          // indice incremento se non Å  NULL viene spedito
                          // messaggio incremento alla progress window
    PLOGFILE plf;
 } FILECPY, * PFILECPY;
 
 typedef struct {
-   FILECPY fc;           // modalit… usata per copiare i singoli file
+   FILECPY fc;           // modalitâ€¦ usata per copiare i singoli file
    PSZ pdir;             // directory contenente l'albero da copiare
    PSZ pmask;            // maschera file da copiare
    ULONG fl;             // attributi file da copiare
@@ -427,14 +427,14 @@ typedef struct {
                                        // l'eventuale controllo di progresso
                                        // e restituisce 0 (errore non critico)
 // flag usata internamente da instreecpy
-#define FCPYF_ABORT       0x8000       // usata da instreecpy() quando si Š
+#define FCPYF_ABORT       0x8000       // usata da instreecpy() quando si Å 
                                        // verificato un errore nella
                                        // creazione di una directory in modo
                                        // che il programma non tenti di copiare
                                        // file nella directory mancante, ma si
                                        // limiti a riportare il messaggio di
                                        // errore (questo serve solo quando non
-                                       // c'Š FCPYF_STOPONERR
+                                       // c'Å  FCPYF_STOPONERR
 
 // struttura cancellazione file
 
@@ -446,12 +446,12 @@ typedef struct {
    USHORT cbpath;        // lunghezza nome path
    USHORT msg;           // msg da scrivere nel file di log
    USHORT err;           // msg di errore da mostrare in caso di fallimento
-   USHORT stop;          // se TRUE considera l'errore critico, cioŠ in caso
+   USHORT stop;          // se TRUE considera l'errore critico, cioÅ  in caso
                          // di errore mostra err e restituisce -1,
                          // altrimenti, se definiti membri progress window,
                          // spedisce messaggio di incremento e restituisce 0
    USHORT csteps;        // numero passi totali procedura
-   PULONG pidx;          // indice incremento se non Š NULL viene spedito
+   PULONG pidx;          // indice incremento se non Å  NULL viene spedito
                          // messaggio incremento alla progress window
    PLOGFILE plf;
 } FILEDEL, * PFILEDEL;
@@ -504,7 +504,7 @@ typedef struct {
 // - se sovrascrivere sempre i file                                         |
 // - se chiedere conferma per sovrascrivere i file + nuovi                  |
 // - se effettuare copia di backup dei file da sostituire                   |
-// - se il file Š un modulo che deve essere sbloccato                       |
+// - se il file Å  un modulo che deve essere sbloccato                       |
 // - se la copia del file deve essere deferita al riavvio (da implementare) |
 // parametri:                                                               |
 // PFILECPY pfc: dati necessari per copiare file                            |
@@ -515,7 +515,7 @@ typedef struct {
 //    CHAR achtrg[260];  // path destinazione in cui copiare                |
 //                       // entrambi i path devono includere slash finale   |
 //    HWND hprgrs;       // handle progress window                          |
-//    ULONG fl;          // modalit… copia                                  |
+//    ULONG fl;          // modalitâ€¦ copia                                  |
 //    USHORT cbsrc;      // lunghezza nome path sorgente                    |
 //    USHORT cbtrg;      // lunghezza nome path destinazione                |
 //    USHORT msg;        // msg da scrivere nel file di log                 |
@@ -545,12 +545,12 @@ INT APIENTRY insfilecpy(PFILECPY pfc, PSZ pszfile, PSZ psznew);
 //    USHORT cbpath;    lunghezza nome path sorgente                        |
 //    USHORT msg;       msg da scrivere nel file di log                     |
 //    USHORT err;       msg di errore da mostrare in caso di fallimento     |
-//    USHORT stop;      se TRUE considera l'errore critico, cioŠ in caso    |
+//    USHORT stop;      se TRUE considera l'errore critico, cioÅ  in caso    |
 //                      di errore mostra err e restituisce -1,              |
 //                      altrimenti, se definiti membri progress window,     |
 //                      spedisce messaggio di incremento e restituisce 0    |
 //    USHORT csteps;    numero passi totali procedura                       |
-//    PULONG pidx;      indice incremento se non Š NULL viene spedito       |
+//    PULONG pidx;      indice incremento se non Å  NULL viene spedito       |
 //                      messaggio incremento alla progress window           |
 //    PLOGFILE plf;                                                         |
 // } FILEDEL, * PFILEDEL;                                                   |
@@ -565,7 +565,7 @@ INT APIENTRY insfiledel(PFILEDEL pfd, PSZ pszfile);
 //==========================================================================\
 // Crea un oggetto scrivendo il resoconto dell'operazione nell'eventuale    |
 // file di log ed incrementando l'eventuale finestra di progresso.          |
-// In caso di errore se il membro stop Š TRUE restituisce FALSE altrimenti  |
+// In caso di errore se il membro stop Å  TRUE restituisce FALSE altrimenti  |
 // incrementa il contatore degli errori e restituisce TRUE                  |
 // valore restituito:                                                       |
 // BOOL rc: TRUE/FALSE = successo/interruzione o errore critico             |
@@ -605,7 +605,7 @@ BOOL APIENTRY insmakeobj(PCREATOBJ pco);
 // parametri:                                                               |
 // PTREECPY ptc: struttura dati tree da copiare                             |
 // typedef struct {                                                         |
-//    FILECPY fc;        modalit… usata per copiare i singoli file          |
+//    FILECPY fc;        modalitâ€¦ usata per copiare i singoli file          |
 //    PSZ pdir;          directory contenente l'albero da copiare (solo     |
 //                       nome directory senza path e slash)                 |
 //    PSZ pmask;         maschera file da copiare                           |
@@ -663,9 +663,9 @@ BOOL APIENTRY instreedel(PTREEDEL ptd);
 BOOL APIENTRY logAdd(PLOGFILE plf, ULONG fl, INT carg, ...);
 
 //==========================================================================\
-// copia pstr in pbuf controllando se Š una vera stringa o Š l'id di una    |
+// copia pstr in pbuf controllando se Å  una vera stringa o Å  l'id di una    |
 // risorsa e controllando l'overflow del buffer.                            |
-// se la stringa Š NULL restituisce l'indirizzo del buffer di partenza      |
+// se la stringa Å  NULL restituisce l'indirizzo del buffer di partenza      |
 // se la lunghezza della stringa da copiare supera la dimensione disponibile|
 // nel buffer restituisce NULL                                              |
 // parametri:                                                               |
@@ -695,9 +695,9 @@ BOOL APIENTRY logEnd(PLOGFILE plf, PSZ pendstr, PSZ psztime);
 //==========================================================================\
 // Alloca struttura dati per scrivere resoconto azioni contemporaneamente   |
 // in un file di log e in una finestra.                                     |
-// Se la dimensione specificata per il buffer di log in cbbuf Š inferiore a |
+// Se la dimensione specificata per il buffer di log in cbbuf Å  inferiore a |
 // 16 KB viene arrotondata.                                                 |
-// Se un file di log Š gi… presente lo cancella.                            |
+// Se un file di log Å  giâ€¦ presente lo cancella.                            |
 // parametri:                                                               |
 // HWND hwnd: eventuale finestra in cui scrivere dati                       |
 // PSZ pfname: nome file di log                                             |
@@ -713,28 +713,28 @@ BOOL APIENTRY logEnd(PLOGFILE plf, PSZ pendstr, PSZ psztime);
 PLOGFILE APIENTRY logInit(HWND hwnd, PSZ pfname, ULONG cbbuf, PSZ pdescr);
 
 //==========================================================================\
-// Controlla se l'ID di un oggetto Š registrato in OS2.INI.                 |
+// Controlla se l'ID di un oggetto Å  registrato in OS2.INI.                 |
 // parametri:                                                               |
 // PSZ pobj: una serie di stringhe di id di oggetti terminate da 0 e        |
-//           concatenate. L'ultima stringa Š una stringa vuota              |
+//           concatenate. L'ultima stringa Å  una stringa vuota              |
 // valore restituito:                                                       |
-// BOOL rc: TRUE: almeno uno degli oggetti in pobj Š presente               |
+// BOOL rc: TRUE: almeno uno degli oggetti in pobj Å  presente               |
 //==========================================================================/
 
 BOOL APIENTRY prfChkObj(PSZ pobj);
 
 //==========================================================================\
 // Cancella una substringa da un valore memorizzato in un file INI.         |
-// La ricerca non Š case insensitive                                        |
+// La ricerca non Å  case insensitive                                        |
 // parametri:                                                               |
 // HINI hini: handle file ini                                               |
 // PSZ app: nome applicazione                                               |
 // PSZ key: nome chiave                                                     |
-// PSZ str: stringa da rimuovere (la stringa pu• contenere '\0')            |
+// PSZ str: stringa da rimuovere (la stringa puâ€¢ contenere '\0')            |
 // ULONG cbstr: lunghezza della stringa                                     |
 // PSZ sep: stringa di separatori ammessi                                   |
 // ULONG cbsep: lunghezza stringa separatori (permette di usare 0)          |
-// ULONG fl: flag che indica se il valore nel file INI Š terminato da 0     |
+// ULONG fl: flag che indica se il valore nel file INI Å  terminato da 0     |
 // valore restituito:                                                       |
 // BOOL rc: TRUE/FALSE = successo/errore                                    |
 //==========================================================================/
@@ -744,20 +744,20 @@ BOOL APIENTRY prfdelstr(HINI hini, PSZ app, PSZ key, PSZ str,
 
 //==========================================================================\
 // Inserisce una stringa tra le altre stringhe presenti nei dati memorizzati|
-// in un file INI. Se la flag di inserzione non Š PRFINSTART o PRFINEND si  |
-// limita a riportare se la stringa Š presente o meno.                      |
-// La ricerca non Š case insensitive                                        |
+// in un file INI. Se la flag di inserzione non Å  PRFINSTART o PRFINEND si  |
+// limita a riportare se la stringa Å  presente o meno.                      |
+// La ricerca non Å  case insensitive                                        |
 // parametri:                                                               |
 // HINI hini: handle file ini                                               |
 // PSZ app: nome applicazione                                               |
 // PSZ key: nome chiave                                                     |
-// PSZ str: stringa da inserire ricercare (la stringa pu• contenere '\0')   |
+// PSZ str: stringa da inserire ricercare (la stringa puâ€¢ contenere '\0')   |
 // ULONG cbstr: lunghezza della stringa                                     |
 // ULONG cbfind: lunghezza stringa da ricercare                             |
 // PSZ sep: stringa di separatori ammessi                                   |
 // ULONG cbsep: lunghezza stringa separatori (permette di usare 0)          |
 // ULONG flins: se TRUE inserisce la stringa nella posizione corrispondente |
-//         PRFINCHECK     0x0000    verifica solo se stringa Š presente     |
+//         PRFINCHECK     0x0000    verifica solo se stringa Å  presente     |
 //         PRFINSTART     0x0001    inserisce stringa a inizio              |
 //         PRFINEND       0x0002    inserisce stringa alla fine             |
 //         PRFINZEROEND   0x0004    i dati devono essere terminati da zero  |
@@ -804,7 +804,7 @@ MRESULT APIENTRY WcheckMinSize(HWND hwnd, MPARAM mp1, MPARAM mp2, PSSIZE ps);
 //==========================================================================\
 // Copia cstr stringhe in trg concatenandole                                |
 // Restituisce un puntatore alla fine della stringa.                        |
-// Se l'indirizzo di una stringa Š minore di 0xffff lo considera l'id di    |
+// Se l'indirizzo di una stringa Å  minore di 0xffff lo considera l'id di    |
 // una stringa che deve essere ricavata dalla dll delle risorse             |
 // parametri:                                                               |
 // PSZ trg: stringa target                                                  |
@@ -894,7 +894,7 @@ MRESULT EXPENTRY WdefObjWinProc(HWND hwnd, ULONG msg, MPARAM mp1, MPARAM mp2);
 // PFNWP pfnwp: procedura dialogo                                           |
 // ULONG id: id dialogo                                                     |
 // PVOID pb: indirizzo dati da memorizzare nelle window words del dialogo   |
-// ULONG idbar: id statusbar che verr… resa attiva                          |
+// ULONG idbar: id statusbar che verrâ€¦ resa attiva                          |
 //==========================================================================/
 
 ULONG WdlgBox(HWND hpar, HWND hown, PMODDLG pm);
@@ -902,7 +902,7 @@ ULONG WdlgBox(HWND hpar, HWND hown, PMODDLG pm);
 //==========================================================================\
 // Alloca la struttura FILEDLG settandone opportunamente i membri. Se non   |
 // ci sono errori e il file viene chiuso tramite il bottone OK, restituisce |
-// l'indirizzo della struttura stessa, che dovr… essere liberata dopo l'uso,|
+// l'indirizzo della struttura stessa, che dovrâ€¦ essere liberata dopo l'uso,|
 // oppure NULL in caso di errore.                                           |
 // parametri:                                                               |
 // HWND hwnd: handle owner window                                           |
@@ -959,7 +959,7 @@ ULONG APIENTRY WgetChlpStr(ULONG idstr);
 ULONG APIENTRY WgetStr(ULONG idstr, PSZ psz, ULONG cbpsz);
 
 //==========================================================================\
-// Ricava un testo che pu• essere pi— lungo di 256 byte dalla risorsa       |
+// Ricava un testo che puâ€¢ essere piâ€” lungo di 256 byte dalla risorsa       |
 // RCLONGSTRING definita come 301                                           |
 // parametri:                                                               |
 // ULONG idstr: id stringa da restituire                                    |
@@ -989,7 +989,7 @@ ULONG APIENTRY WinitErr(ULONG ulerr);
 //                 PMPRNT_WARN = stile Warning                              |
 //                 PMPRNT_INFO = stile info                                 |
 //                 PMPRNT_QUERY = richiesta conferma                        |
-//          in modalit… PMPRNT_QUERY si possono usare le seguenti flag per  |
+//          in modalitâ€¦ PMPRNT_QUERY si possono usare le seguenti flag per  |
 //          mostrare un'icona differente da quella di default (?) :         |
 //          PMPRNT_QWARNICO = icona warning (!)                             |
 //          PMPRNT_QINFOICO = icona informazioni (i)                        |
@@ -1011,7 +1011,7 @@ BOOL APIENTRY WmsgBox(HWND hwnd, ULONG idstr, ULONG fl);
 //                 PMPRNT_WARN = stile Warning                              |
 //                 PMPRNT_INFO = stile info                                 |
 //                 PMPRNT_QUERY = richiesta conferma                        |
-//          in modalit… PMPRNT_QUERY si possono usare le seguenti flag per  |
+//          in modalitâ€¦ PMPRNT_QUERY si possono usare le seguenti flag per  |
 //          mostrare un'icona differente da quella di default (?) :         |
 //          PMPRNT_QWARNICO = icona warning (!)                             |
 //          PMPRNT_QINFOICO = icona informazioni (i)                        |
@@ -1031,7 +1031,7 @@ BOOL APIENTRY WmsglBox(HWND hwnd, ULONG idstr, ULONG fl);
 // ULONG id: id pagina                                                      |
 // ULONG fl: 0 libera tutta la memoria allocata senza spedire msg           |
 //           BKA_SINGLE = cancella solo una pagina                          |
-//           BKA_TAB = se la pagina corrente Š major tab cancella tutte     |
+//           BKA_TAB = se la pagina corrente Å  major tab cancella tutte     |
 //                     pagine successive fino a prossima major tab          |
 //           BKA_ALL = cancella tutte le pagine                             |
 // valore restituito:                                                       |
@@ -1047,7 +1047,7 @@ VOID APIENTRY WnbkDelPg(PNBK pnbk, ULONG id, ULONG fl);
 // PNBINSPG pnbi: indirizzo array strutture NBINSPG                         |
 // PPGLIST ppl: indirizzo struttura lista pagine                            |
 // ULONG ci: numero di pagine (elementi array) da inserire                  |
-// BOOL fl: indica necessit… calcolare e settare dimensioni tab             |
+// BOOL fl: indica necessitâ€¦ calcolare e settare dimensioni tab             |
 // valore restituito:                                                       |
 // BOOL rc: TRUE/FALSE : successo/errore                                    |
 //==========================================================================/
@@ -1081,10 +1081,10 @@ PPGDAT APIENTRY WnbkInitPg(PNBK pnbk, PBOOKPAGEINFO pbpi, PNBINSPG pnbi,
 // PBOOKPAGEINFO pbpi: indirizzo struttura dati notebook                    |
 // PNBINSPG pnbi: indirizzo struttura dati inserzione pagina                |
 // PPGDAT pprev: punta alla struttura pagina precedente                     |
-// ULONG ulpos: la posizione Š relativa a questa pagina (a meno che         |
+// ULONG ulpos: la posizione Å  relativa a questa pagina (a meno che         |
 //              pnbi->fsbka non sia BKA_LAST o BKA_FIRST)                   |
 // ULONG flins: flag inserzione: BKA_LAST BKA_FIRST BKA_NEXT BKA_PREV       |
-//              pu• anche essere NBIS_PGXOFY che indica di inserire la      |
+//              puâ€¢ anche essere NBIS_PGXOFY che indica di inserire la      |
 //              stringa "page x of y" ricavandola da pnbi->idst, pnbi->pgn  |
 //              e pnbi->cpg.                                                |
 // valore restituito:                                                       |
@@ -1269,7 +1269,7 @@ VOID APIENTRY WsetMinSize(PWDATA pw);
 //==========================================================================\
 // Imposta il testo di una finestra come:                                   |
 // "pszTerm" "pszData"                                                      |
-// se pszData Š NULL lo sostituisce con "-"                                 |
+// se pszData Å  NULL lo sostituisce con "-"                                 |
 // parametri:                                                               |
 // PAPPDATA pad: struttura dati applicazione                                |
 // HWND hwnd: handle finestra                                               |
