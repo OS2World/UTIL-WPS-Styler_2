@@ -1,5 +1,5 @@
 //==========================================================================\
-// ctxthlp.c: funzioni help contestuale controlli                           |
+// ctxthlp.c: Contextual controls help functions                            |
 // BOOL APIENTRY WsetChlp(HWND hwnd, ULONG idctl, ULONG idstr);             |
 // BOOL APIENTRY WsetChlpMulti(HWND hwnd, ULONG idstart,                    |
 //                             ULONG idend, ULONG idstr);                   |
@@ -152,7 +152,7 @@ VOID APIENTRY WsetChlpClbox(HWND hwnd, ULONG idctl, ULONG idcpt, ULONG idlst,
    HWND hfnd = WinWindowFromID(hctl, FID_FIND);
    if (idcpt) wsetulong((hcpt? hcpt: hctl), idcpt);
    if (idlst) wsetulong(hlst, idlst);
-   if (identry) {         // se Š una combobox richiama apposita funzione per
+   if (identry) {         // se ÂŠ una combobox richiama apposita funzione per
       CHAR buf[8];        // settare l'help contestuale
       WinQueryClassName(hentry, 8, buf);
       wsetulong(hentry, identry);
