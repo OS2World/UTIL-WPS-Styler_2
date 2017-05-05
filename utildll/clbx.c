@@ -1,7 +1,7 @@
 //========================================================================\
 // clbx.c                                                                 |
-// FUNZIONI: ------------------------------------------------------------ |
-// MESSAGGI: ------------------------------------------------------------ |
+// FUNCTIONS: ----------------------------------------------------------- |
+// MESSAGES: ------------------------------------------------------------ |
 // WM_CREATE                                                              |
 // WM_ADJUSTWINDOWPOS                                                     |
 // WM_PAINT                                                               |
@@ -14,7 +14,7 @@
 
 
 //==========================================================================\
-// registrazione classe                                                     |
+// Class registration                                                       |
 //==========================================================================/
 
 BOOL APIENTRY EDClbReg(HAB hab) {
@@ -24,12 +24,12 @@ BOOL APIENTRY EDClbReg(HAB hab) {
 
 
 //==========================================================================\
-// procedura controllo extended listbox                                     |
+// Extended listbox control procedure                                       |
 //==========================================================================/
 
 MRESULT EXPENTRY EDClbWinProc(HWND hwnd, ULONG msg, MPARAM mp1, MPARAM mp2) {
    switch (msg) {
-      // messaggi ordinari controllo ----------------------------------------
+      // Ordinary message control ----------------------------------------
       case WM_CREATE:
          return (MRESULT)!(clbCreateProc(hwnd, (PCLBOXCDATA)mp1,
                                          (PCREATESTRUCT)mp2, SS_TEXT));
@@ -69,14 +69,14 @@ MRESULT EXPENTRY EDClbWinProc(HWND hwnd, ULONG msg, MPARAM mp1, MPARAM mp2) {
       case WM_MEASUREITEM:
       case WM_DRAWITEM:
          return WinSendMsg(WinQueryWindow(hwnd, QW_OWNER), msg, mp1, mp2);
-      // messaggi rediretti alla checkbox ---------------------------------
+      // Redirected messages to the checkbox ---------------------------------
       case BM_SETCHECK:
          return clbSetCheck((PCLBOX)stGetData(hwnd), (ULONG)mp1);
       case BM_QUERYCHECK:
          return clbQueryCheck((PCLBOX)stGetData(hwnd));
       case CCLM_SETENTRYTEXT:
          return clbSetEntryText((PCLBOX)stGetData(hwnd), (PSZ)mp1);
-      // messaggi ridiretti alla listbox ----------------------------------
+      // Redirected messages to the listbox ----------------------------------
       case LM_DELETEALL:
       case LM_INSERTMULTITEMS:
       case LM_INSERTITEM:
@@ -97,7 +97,7 @@ MRESULT EXPENTRY EDClbWinProc(HWND hwnd, ULONG msg, MPARAM mp1, MPARAM mp2) {
          PCLBOX pclb = (PCLBOX)stGetData(hwnd);
          return pclb->pflbx(pclb->hlbx, msg, mp1, mp2);
       } // end redirection listbox messages
-      // messaggi rediretti all'entryfield/combobox -----------------------
+      // Redirected messages all'entryfield/combobox -----------------------
       case EM_SETTEXTLIMIT:
          return clbEFtxtlimit((PCLBOX)stGetData(hwnd), (ULONG)mp1);
       case CCLM_QUERYITEMCOUNT:
@@ -126,13 +126,13 @@ MRESULT EXPENTRY EDClbWinProc(HWND hwnd, ULONG msg, MPARAM mp1, MPARAM mp2) {
 
 
 //==========================================================================\
-// procedura creazione controllo extended listbox
-// - viene allocata memoria per i dati del controllo                        |
-// - vengono impostati i colori                                             |
-// - viene misurata l'altezza del font usato                                |
-// - viene resettato lo stile del controllo di default                      |
-// - viene resettato il testo del controllo di default                      |
-// - l'indirizzo della struttura Š memorizzato nelle window words           |
+// Extended listbox creation procedure                                      |
+// - Memory for the control data is allocated                               |
+// - The colors are set                                                     |
+// - The height of the font used is measured                                |
+// - The control style is reset to default                                  |
+// - The control text is reset to default                                   |
+// - The address of the structure Å  stored in the window words              |
 //==========================================================================/
 
 BOOL clbCreateProc(HWND hwnd, PCLBOXCDATA pclcd, PCREATESTRUCT pc, ULONG style) {
@@ -149,19 +149,19 @@ BOOL clbCreateProc(HWND hwnd, PCLBOXCDATA pclcd, PCREATESTRUCT pc, ULONG style) 
    pclb->szl.cy = pc->cy;
    pclb->id = pc->id;
    pclb->hOwner = pc->hwndOwner;
-   // imposta colori controllo
+   // Set color control
    if (!(hps = WinGetPS(hwnd))) goto error0;
    clbUpdColors(pclb, hps);
    if ((pclb->cyFont = stSizeFont(hps)) % 2) ++pclb->cyFont;
    WinReleasePS(hps);
-   // interpreta controldata
+   // Interprets controldata
    if (!clbSetCtlData(pclb, pclcd)) goto error0;
    if (clbSetText(pclb, pc->pszText, -1)) *pc->pszText = 0;
    // reset WC_STATIC style
    WinSetWindowBits(hwnd, QWL_STYLE, style, 0xffff);
    WinSetWindowPtr(hwnd, cbWCstc, (PVOID)pclb);
    if (pfnwpWCstc(hwnd, WM_CREATE, (MPARAM)pclcd, (MPARAM)pc)) goto error1;
-   // se non Š stile CLBXS_CHECK setta flag checkon sempre a 1
+   // If no CLBXS_CHECK style is set to checkon flags at 1
    if (!(pclb->fl & CLBXS_CHECK)) pclb->is.chkon = 1;
    if (!clbChilds(pclb, pc)) goto error2;
    if (!(pclb->fl & WS_DISABLED)) pclb->is.enbl = 1;
@@ -178,7 +178,7 @@ BOOL clbCreateProc(HWND hwnd, PCLBOXCDATA pclcd, PCREATESTRUCT pc, ULONG style) 
 
 
 //==========================================================================\
-// ridimensiona listbox e ricalcola larghezza colonne                       |
+// Resizes listbox and recalculates column width                             |
 //==========================================================================/
 
 VOID clbUpdateCtlSize(HWND hwnd, PSWP pswp) {
@@ -193,8 +193,8 @@ VOID clbUpdateCtlSize(HWND hwnd, PSWP pswp) {
 
 
 //==========================================================================\
-// quando cambia lo stato di abilitazione del controllo abilita/disabilita  |
-// componenti controllo                                                     |
+// When the status of the enabling control enable / disable                 |
+// control components                                                       |
 //==========================================================================/
 
 MRESULT clbEnable(PCLBOX pclb, BOOL fl) {
@@ -213,7 +213,7 @@ MRESULT clbEnable(PCLBOX pclb, BOOL fl) {
 
 
 //==========================================================================\
-// processa messaggi notifica:                                              |
+// Process notification messages:                                              |
 // - se stile CLBXS_CHECK click su checkbox                                 |
 // - selezione item listbox per abilitazione bottone remove                 |
 // - LN_ENTER in listbox per rimozione o editazione item                    |
@@ -294,7 +294,7 @@ MRESULT clbCommand(PCLBOX pclb, ULONG id) {
          if (!WinSendMsg(hOwner, WM_CONTROL,
                          MPFROM2SHORT(pclb->id, CLBXN_ADD), (MPARAM)psz)) {
             SHORT ins;
-            // controlla che la stringa non sia gi… presente
+            // controlla che la stringa non sia giâ€¦ presente
             if (pclb->fl & CLBXS_NODUP &&
                 LIT_NONE != (SHORT)pclb->pflbx(pclb->hlbx, LM_SEARCHSTRING,
                                                MPFROM2SHORT(0, LIT_FIRST),
@@ -602,7 +602,7 @@ MRESULT clbSetEntryText(PCLBOX pclb, PSZ psz) {
 
 
 //==========================================================================\
-// aggiorna massima quantit… caratteri ammessa nel componente entryfield    |
+// Update maximum permissible characters in the entryfield component        |
 //==========================================================================/
 
 MRESULT clbEFtxtlimit(PCLBOX pclb, ULONG cb) {
