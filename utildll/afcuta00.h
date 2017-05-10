@@ -1,27 +1,27 @@
 //==========================================================================\
-// afcuta00.h: header libreria funzioni creazione applicazioni PM           |
+// afcuta00.h: Header Library for the creation of the PM Applicaiton        |
 //==========================================================================/
 
 #ifndef AFCUTA00_H_
    #define AFCUTA00_H_
 
-// flag ricerca dati non presenti nel file INI usata da WgetPrfData
+// flag Search data not present in the INI file used by WgetPrfData
 #define GPD_ERROR             ((PVOID)0xffffffff)
 
-// api per sbloccare eseguibili lockati
+// API to unlock locked executables
 APIRET APIENTRY DosReplaceModule(PSZ pszOld, PSZ pszNew, PSZ pszBkup);
 
 // id risorsa stringhe pi— lunghe di 256 byte
 #define RCLONGSTRING     301
 
-// strutture standard usate dall'applicazione ------------------------------
+// Standard structure used by the application ------------------------------
 
-// dimensione buffer help contestuale
+// Contextual help buffer size
 #define CBSZHLP   512
 
-// struttura dati applicazione condivisi tra tutte le finestre
-// questi sono i dati definiti a runtime, mentre i dati di CREATEAPP sono
-// costanti definite alla compilazione dell'applicazione stessa
+// Application data structure shared between all windows
+// these are data is defined at runtime, while CREATEAPP data 
+// is constant and define at the compilation of the applicaiton
 #pragma pack(2)
 typedef struct {
    // inizio porzione standard struttura ----------------------------------
